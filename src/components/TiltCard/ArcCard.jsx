@@ -31,7 +31,7 @@ export const ArcCard = ({ name, desc, icon }) => {
           ev.currentTarget.style.setProperty("--y", `${yPercentage * 100}%`);
         }}
         className=" card background-glass px-4 py-10 mt-6 col-span-4 h-[300px] hover:shadow-[0_10px_50px_rgba(148,_163,_184,_0.2)]
- w-full sm:w-[400px]  rounded-xl  text-[#01A977] transition-transform ease-out hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)]"
+ w-full sm:w-[400px]  rounded-xl  border-l-2 border-primary-orange transition-transform ease-out hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)]"
       >
  
 

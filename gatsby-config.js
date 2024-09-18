@@ -31,6 +31,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `http://headless.local/graphql`, // Use the correct GraphQL endpoint from your LocalWP
+      },
+    },
+    {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: path.resolve('./src/components/MainLayout'),

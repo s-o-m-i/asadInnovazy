@@ -2,6 +2,11 @@ import React from "react"
 import { container, headingText, textwhite } from "../../styles/styles"
 import "../../ui/services.css"
 import { StaticImage } from "gatsby-plugin-image"
+import "../../components/hero/hero.css"
+import { servicesCards } from "../../utils/servicesCard-data"
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { Link } from "gatsby"
+import CallToAction from "../../ui/CallToAction"
 
 const index = () => {
   return (
@@ -21,7 +26,7 @@ const index = () => {
               </div>
 
               <h1
-                className={`${textwhite}  services_glowing_text text-center uppercase tracking-wider font-[Montserrat-Bold] text-[120px] w-[100%] font-medium`}
+                className={`${textwhite}  services_glowing_text text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[120px] w-[100%] font-medium`}
               >
                 SERVICES
               </h1>
@@ -42,7 +47,7 @@ const index = () => {
               className={`${textwhite} mt-28  text-center   font-[Montserrat-Bold] ${headingText} w-[100%] font-medium`}
             >
               Landing{" "}
-              <span className="services_heading rounded-full px-2 py-1 opacity-[.7] text-[38px]">
+              <span className="services_heading rounded-full px-4 py-1 text-[22px] sm:text-[38px]">
                 your success,
               </span>
             </h1>
@@ -53,22 +58,69 @@ const index = () => {
             </h1>
           </div>
           <div className="service_image flex justify-center">
-          <StaticImage
-                className="h-[20%] w-[20%] hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
-                src="../../assets/images/service2.png"
-                alt="Innovative ball"
-              />
+            <StaticImage
+              className="h-[20%] w-[20%] hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
+              src="../../assets/images/service2.png"
+              alt="Innovative ball"
+            />
           </div>
 
-<div className="inner bg-gray-700 h-[400px] relative">
-<div className="outer-upper bg-stone-500 h-[70%]"></div>
-<div className="outer-lower bg-orange-800 h-[30%] w-full absolute bottom-0 ">
-  
-</div>
-</div>
+
+
+          <div className="grid grid-cols-12 mt-28">
+            {servicesCards && servicesCards.length>0 && servicesCards.map((serData,index)=>{
+return (
+            <div className="col-span-12 md:col-span-6">
+              <div className={`inner ${serData.imageClass} bg-gray-700 h-[400px] relative`}>
+                <div className={`outer-upper overflow-hidden aboslute top-0 left-0  opacity-[0.95] h-[70%] transition-all duration-1000 ease-in-out px-8 ${serData.colorScheme}`}>
+
+                  <div className="h-full flex justify-center flex-col">
+                    <h1
+                      className={`${textwhite} relative   font-[Montserrat-Bold] text-[32px] sm:text-[50px] w-[100%] font-medium`}
+                    >
+{serData.title}
+                    </h1>
+                    <div className="">
+
+                      <p
+                        className={`w-[100%] sm:w-[60%] z-10 ${textwhite} mt-5  text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
+                      >
+                        {serData.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="outer-lower services_heading  flex items-center h-[30%] w-full absolute bottom-0">
+                  <div className="ser_card_footer px-2 flex items-center justify-between w-full pr-4">
+
+                    <h1 className={`${textwhite } text-[42px] sm:text-[80px] services_glowing_text uppercase tracking-wider font-[Montserrat-Bold]  w-[100%] font-medium`}
+                    >
+{serData.number}
+                    </h1>
+                    <Link to={serData.path}>
+                    <div className="text-[30px] opacity-[.8] hover:opacity-[1] border-2 border-white p-[10px] rounded-full hover:text-primary-orange text-white transition-all duration-200">
+
+                    <FaExternalLinkAlt />
+                    </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+)
+            })}
+          
+
+          </div>
+
+
+
+         
 
         </div>
       </div>
+      <CallToAction/>
     </div>
   )
 }

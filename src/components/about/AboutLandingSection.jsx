@@ -55,7 +55,7 @@ const AboutLandingSection = () => {
             WE <span className="text-primary-orange">ARE</span>{" "}
           </h1> */}
         {/* </div> */}
-        <Logo />
+        {/* <Logo /> */}
       </div>
     </div>
   )

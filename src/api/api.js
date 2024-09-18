@@ -21,3 +21,19 @@ export async function sendMail(body) {
         }
     }
 }
+
+
+
+
+export const fetchPosts = async () => {
+    try {
+      // Fetching data from WordPress REST API
+      const res = await axios.get('http://headless.local/wp-json/wp/v2/posts?_embed', config);
+      if (res && res.data) {
+        return { data: res.data, type: 'success' }; // Return data on success
+      }
+    } catch (e) {
+      const errors = e.response?.data?.errors || e.message;
+      return { data: errors, type: 'error' }; // Return errors if any
+    }
+  };

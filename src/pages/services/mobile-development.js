@@ -1,12 +1,18 @@
 import React from 'react';
-import { container } from '../../styles/styles';
-import PageUnderConstruction from '../../ui/PageUnderConstruction';
+import MDLandingPage from '../../components/mobileDevelopment/MDLandingPage';
+import MDServicesPlatforms from '../../components/mobileDevelopment/MDServicesPlatforms';
+import MDKeyFoucses from '../../components/mobileDevelopment/MDKeyFoucses';
+import MDInnovazyBestChoice from '../../components/mobileDevelopment/MDInnovazyBestChoice';
+import '../../ui/services.css'
 
 const MobileDevelopment = () => {
     return (
-        <div className={`${container} mt-[130px]`}>
-            <PageUnderConstruction />
-        </div>
+        <>
+      <MDLandingPage/>
+      <MDServicesPlatforms/>
+      <MDKeyFoucses/>
+      <MDInnovazyBestChoice/>
+        </>
     );
 };
 

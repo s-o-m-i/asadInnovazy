@@ -58,6 +58,7 @@ const HomeSection = () => {
                             className='object h-[40%] w-[40%] hidden md:block z-10 cursor-pointer transition-all ease-linear '
                             src={require('../../assets/images/heroBall.svg').default}
                             alt='Innovative ball'
+                        
                         />
                     </div>
 

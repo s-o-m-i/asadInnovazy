@@ -1,12 +1,20 @@
 import React from 'react';
-import { container } from '../../styles/styles';
-import PageUnderConstruction from '../../ui/PageUnderConstruction';
 
+import SDLandingPage from '../../components/softwareDevelopment/SDLandingPage';
+import SDOurServices from '../../components/softwareDevelopment/SDOurServices';
+import '../../ui/services.css'
+import SDDevelopment from '../../components/softwareDevelopment/SDDevelopment';
+import SDSoftwareSolution from '../../components/softwareDevelopment/SDSoftwareSolution';
+import CallToAction from '../../ui/CallToAction';
 const SoftwareDevelopment = () => {
     return (
-        <div className={`${container} mt-[130px]`}>
-            <PageUnderConstruction />
-        </div>
+        <>
+        <SDLandingPage/>
+        <SDOurServices/>
+        <SDDevelopment/>
+        <SDSoftwareSolution/>
+        <CallToAction/>
+        </>
     );
 };
 

@@ -27,7 +27,9 @@
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-source-contentful": "^8.13.0",
     "gatsby-source-filesystem": "^5.13.0",
+    "gatsby-source-wordpress": "^7.13.5",
     "gatsby-transformer-sharp": "^5.13.0",
+    "gray-matter": "^4.0.3",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.20.0",
     "matter-wrap": "^0.2.0",
@@ -45,6 +47,7 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "ajv": "^7.2.4"
+    "ajv": "^7.2.4",
+    "gatsby-cli": "^5.13.3"
   }
 }
