@@ -1,6 +1,15 @@
 const path = require('path');
 require('dotenv').config();
 
+
+
+const strapiConfig = {
+  apiURL: process.env.STRAPI_API_URL || "http://127.0.0.1:1337",
+  collectionTypes: ["post", "category", "author"],
+};
+
+
+
 module.exports = {
   siteMetadata: {
     title: `Innovazy`,
@@ -30,12 +39,12 @@ module.exports = {
         }
       }
     },
+  
     {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `http://headless.local/graphql`, // Use the correct GraphQL endpoint from your LocalWP
-      },
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
     },
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-layout`,
       options: {

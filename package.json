@@ -27,9 +27,11 @@
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-source-contentful": "^8.13.0",
     "gatsby-source-filesystem": "^5.13.0",
-    "gatsby-source-wordpress": "^7.13.5",
+    "gatsby-source-strapi": "^3.3.3",
+    "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.0",
     "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.5.0",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.20.0",
     "matter-wrap": "^0.2.0",
@@ -48,6 +50,7 @@
   },
   "devDependencies": {
     "ajv": "^7.2.4",
-    "gatsby-cli": "^5.13.3"
+    "gatsby-cli": "^5.13.3",
+    "wrangler": "^3.78.6"
   }
 }
