@@ -4,7 +4,7 @@
   "description": "We Offer Innovative, Creative and Advanced IT Solutions to Businesses and Industries around the Globe",
   "version": "0.1.0",
   "engines": {
-    "node": "20.x"
+    "node": "20.11.1"
   },
   "scripts": {
     "build": "npm install --legacy-peer-deps && gatsby build",
