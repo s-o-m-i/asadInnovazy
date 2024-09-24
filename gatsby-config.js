@@ -6,11 +6,16 @@ require('dotenv').config();
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL || "http://127.0.0.1:1337",
   collectionTypes: ["post", "category", "author"],
+  // skipFileDownloads: true,  // Add this to temporarily skip media downloads
 };
 
 
 
 module.exports = {
+  // flags: {
+  //   PRESERVE_WEBPACK_CACHE: true,
+  //   FAST_REFRESH: true,
+  // },
   siteMetadata: {
     title: `Innovazy`,
     description: `We Offer Innovative, Creative and Advanced IT Solutions to Businesses and Industries around the Globe`,

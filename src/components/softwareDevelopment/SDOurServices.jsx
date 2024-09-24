@@ -19,7 +19,7 @@ const SDOurServices = () => {
             <div className='clientGradientBlogTop'>
                 <div className='clientGradientBlogBottom'>
                     <div className={` mt-[120px]`}>
-<h1 className={`${headingText} text-start md:text-center`}>Our Services Under     <span className={`services_heading rounded-full px-4 py-1 text-[27px] sm:${headingText} text-white`}>Software Development</span> 
+<h1 className={`${headingText} text-start md:text-center`}>Our Services Under     <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:${headingText} text-white`}>Software Development</span> 
 </h1>    
                      
                         <div className="mt-14">
@@ -31,7 +31,7 @@ const SDOurServices = () => {
                         </div>
 
 
-                        <h1 className={`${headingText}  mt-28 text-start md:text-center`}>Custom Software    <br/> <span className="services_heading rounded-full px-4 py-1 opacity-[.9] text-[30px]  text-white">Solutions Services</span> 
+                        <h1 className={`${headingText}  mt-28 text-start md:text-center`}>Custom Software    <br/> <span className="services_heading_success rounded-full px-4 py-1 opacity-[.9] text-[30px]  text-white">Solutions Services</span> 
                         </h1>    
 
                         <Spotlight data={customSoftwareData} />

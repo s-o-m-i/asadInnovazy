@@ -7,7 +7,7 @@ const SDDevelopment = () => {
   return (
     <>
       <div className={`${container} mt-[130px] text-white`}>
-      <h1 className={`${headingText} text-start md:text-center`}>The Development  Method <br className='hidden sm:block'/>  <span className={`services_heading rounded-full px-4 py-1 text-[32px] sm:text-[38px] text-white`}>We Follow </span> 
+      <h1 className={`${headingText} text-start md:text-center`}>The Development  Method <br className='hidden sm:block'/>  <span className={`services_heading_success rounded-full px-4 py-1 text-[32px] sm:text-[38px] text-white`}>We Follow </span> 
       </h1>   
 
 

@@ -6,8 +6,18 @@ import PrimaryButton from '../../ui/PrimaryButton'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import CallIcon from "../../assets/icons/CallIconOrange.png";
 import Logo from '../Logo'
+import Lottie from 'react-lottie'
+import aboutAnime from '../../utils/aboutus-anime.json'
 
 const AboutLandingSection = () => {
+  const defaultOptionsSuccess = {
+    loop: true,
+    autoplay: true,
+    animationData: aboutAnime,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
   return (
     <div>
          <div className="homeSectionleftBlob  mt-[150px] z-50 pointer-events-none">
@@ -35,14 +45,22 @@ const AboutLandingSection = () => {
                             </div>
                             
               </div>
-              {/* <div className="w-full"> */}
+              <div className="w-full h-full flex justify-center items-center ">
 
-              <StaticImage
+
+              {/* <StaticImage
                 className="h-[80%] w-[80%] hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
                 src="../../assets/images/3dboy.webp"
                 alt="Innovative ball"
-              />
-              {/* </div> */}
+              /> */}
+
+<Lottie options={defaultOptionsSuccess}
+                                height={"100%"}
+                                width={500}
+                                isStopped={false}
+                                isPaused={false} />
+                                
+              </div>
             </div>
             {/* <MyMatter/> */}
           

@@ -10,7 +10,7 @@ const MDInnovazyBestChoice = () => {
     <>
     <div className={`${container} text-white`}>
 
-    <h1 className={`${headingText} text-start md:text-center mt-28`}>What Makes Innovazay the  <span className={`services_heading rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>Best Choice?</span> 
+    <h1 className={`${headingText} text-start md:text-center mt-28`}>What Makes Innovazay the  <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>Best Choice?</span> 
     </h1>    
     <div className="flex justify-center">
 

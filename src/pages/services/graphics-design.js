@@ -22,7 +22,7 @@ const GraphicsDesign = () => {
           <div className="flex justify-center ">
             <div className="flex flex-col items-center">
               <div className="self-end">
-                <div className="h-1 w-24 services_heading" />
+                <div className="h-1 w-24 services_heading_success" />
               </div>
 
               <h1
@@ -58,7 +58,7 @@ const GraphicsDesign = () => {
                                </a>
                            </div>
 
-                           <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Modern Art as our    <span className={`services_heading rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>graphic designing</span>  chemistry
+                           <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Modern Art as our    <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>graphic designing</span>  chemistry
 </h1>    
 <div className="flex justify-center">
 

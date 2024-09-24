@@ -20,7 +20,7 @@ const CCOffer = () => {
   <div className="flex justify-center  mt-28">
             <div className="flex flex-col items-center">
               <div className="self-end">
-                <div className="h-1 w-24 services_heading" />
+                <div className="h-1 w-24 services_heading_success" />
               </div>
 
               <h1 className={`${textwhite}  ${headingText} text-center  w-[100%]  font-medium`}

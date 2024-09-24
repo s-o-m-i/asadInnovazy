@@ -17,7 +17,7 @@ const UIUXLandingPage = () => {
           <div className="flex justify-center ">
             <div className="flex flex-col items-center">
               <div className="self-end">
-                <div className="h-1 w-24 services_heading" />
+                <div className="h-1 w-24 services_heading_success" />
               </div>
 
               <h1

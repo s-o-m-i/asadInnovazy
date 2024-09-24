@@ -19,21 +19,21 @@ console.log("--------=====+++++++mainArr",mainArr)
         <>
             <div className={`${container}`}>
             <BlogsLandingPage/>
-<div className="grid grid-cols-12">
+<div className="grid grid-cols-12 mt-32">
 {
     data.allStrapiPost.nodes.map(node => (
         <div className="col-span-12 lg:col-span-4 xl:col-span-3">
         <Link className="postlink" to={`/${node.slug}`}>
-            <div className="blog_card">
+            <div className="blog_card mt-8">
                   <div className="blog_card-header">
                     <img
                       
                       src={`${node.cover}`} 
                     />
                   </div>
-                  <div className="blog_card-body">
-                    <span className="blog_tag blog_tag-teal">{"title"}</span>
-                    <span className="blog_tag blog_tag-teal my-4">{"date"}</span>
+                  <div className="blog_card-body background-glass text-white">
+                    <span className="blog_tag blog_tag-teal text-white">{"title"}</span>
+                    <span className="blog_tag blog_tag-teal my-4 text-white">{"date"}</span>
                     <h4>
                      {node.title}
                     </h4>
@@ -41,7 +41,7 @@ console.log("--------=====+++++++mainArr",mainArr)
                     {/* <div dangerouslySetInnerHTML={{ __html:" excerpt "}} className='overflow-hidden py-5'/> */}
                     <div className="blog_user">
                       <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                      <div className="blog_user-info">
+                      <div className="blog_user-info text-white">
                         <h5>July Dec</h5>
                         <small>2h ago</small>
                       </div>

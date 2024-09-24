@@ -7,7 +7,7 @@ import { cloudComputingServices } from '../../utils/cloud-computing-services'
 const CCServices = () => {
   return (
     <>
-                   <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Cloud Computing    <span className={`services_heading rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>Services </span>  
+                   <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Cloud Computing    <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>Services </span>  
 </h1>    
 <div className="flex justify-center">
 
