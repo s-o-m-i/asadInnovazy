@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL || "http://127.0.0.1:1337",
+  apiURL: process.env.STRAPI_API_URL || "https://peaceful-darling-f0da2a1db5.strapiapp.com",
   collectionTypes: ["post", "category", "author"],
   // skipFileDownloads: true,  // Add this to temporarily skip media downloads
 };
