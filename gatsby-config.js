@@ -3,11 +3,7 @@ require('dotenv').config();
 
 
 
-const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL || "https://peaceful-darling-f0da2a1db5.strapiapp.com",
-  collectionTypes: ["post", "category", "author"],
-  skipFileDownloads: true,  // Add this to temporarily skip media downloads
-};
+
 
 
 
@@ -45,10 +41,7 @@ module.exports = {
       }
     },
   
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
-    },
+  
     "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-layout`,
