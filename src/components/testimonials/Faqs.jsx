@@ -3,6 +3,7 @@ import { container, paragraphTextColor, textwhite } from "../../styles/styles"
 import { FaPlus } from "react-icons/fa"
 import { FaMinus } from "react-icons/fa"
 import { faqs } from "../../utils/faqs-data"
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Faqs = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
@@ -15,28 +16,28 @@ const Faqs = () => {
     }
   }
   return (
-    <>
+    <div className="relative">
       <div className="homeSectionleftBlob  mt-[150px] z-50 ">
         <div className="homeSectionRightBlob  ">
           <div className={`${container}  `}>
-            <div className="flex justify-center my-28">
+            <div className="flex justify-center mt-28 mb-10">
               <div className="flex flex-col w-fit items-center">
-                <div className="self-end">
+                {/* <div className="self-end">
                   <div className="h-1 w-24 bg-orange-500" />
-                </div>
+                </div> */}
 
                 <h1
                   className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[60px] w-[100%] font-medium`}
                 >
-                  FAQ<span className="text-primary-orange">s</span>
+                  FAQ<span className="testi-linear">s</span>
                 </h1>
 
-                <div className="self-start">
+                {/* <div className="self-start">
                   <div className="h-1 w-24 bg-orange-500" />
-                </div>
+                </div> */}
               </div>
             </div>
-
+{/* 
             <div className="grid grid-cols-12 gap-8">
               {faqs.map((faq, index) => {
                 return (
@@ -52,7 +53,7 @@ const Faqs = () => {
                         {openFaqIndex === index ? <FaMinus /> : <FaPlus />}
                       </div>
                       {/*  */}
-                    </div>
+                    {/* </div>
                     <div
                       className={`border-l-2 ${
                         openFaqIndex === index
@@ -69,11 +70,42 @@ const Faqs = () => {
                   </div>
                 )
               })}
-            </div>
+            </div> */}
+
+<div className="grid grid-cols-12 gap-8">
+              {faqs.map((faq, index) => {
+                return (
+                  <div className="col-span-12 ">
+                    <div className={`f-ques py-5 px-5 background-glass text-white transition-all duration-500 ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
+  <div className="flex items-center justify-between">
+
+  <h1 className="">      {faq.question}</h1>
+  <div className="drop_arrow text-3xl"    onClick={() => handleToggle(index)}>
+  {/* {openFaqIndex === index ? <FaMinus /> : <FaPlus />} */}
+  <MdOutlineKeyboardArrowDown />
+  </div>
+  </div>
+  <div className="f-ans">
+    <p className="text-[14px] leading-6 sm:leading-7 mt-5">   {faq.answer}
+</p>
+</div>
+</div>
+                    </div>
+                )
+              }
+            )
+          }
+          </div>
+
+
+
+  
+  </div>
+
           </div>
         </div>
       </div>
-    </>
+    // </div>
   )
 }
 

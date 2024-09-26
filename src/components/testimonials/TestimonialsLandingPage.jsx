@@ -18,19 +18,19 @@ const TestimonialsLandingPage = () => {
   <div className="flex flex-col items-center">
     
     <div className="self-end">
-      <div className="h-1 w-24 bg-orange-500" />
+      <div className="h-1 w-24 services_heading_success" />
     </div>
     
     
     <h1
       className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[38px] sm:text-[60px] w-[100%] font-medium`}
     >
-      Testim<span className="text-primary-orange">o</span>nials
+      Testim<span className="testi-linear">o</span>nials
     </h1>
 
     
     <div className="self-start">
-      <div className="h-1 w-24 bg-orange-500" />
+      <div className="h-1 w-24 services_heading_success" />
     </div>
   </div>
 </div>
@@ -51,10 +51,10 @@ const TestimonialsLandingPage = () => {
 
 
 
-<div className="testi_linkedin flex justify-center my-28">
+<div className="testi_linkedin flex justify-center mt-28 mb-10">
 
    
-   <a href="#*" className={`btn2 testi_a glowing_text hover:text-white py-[10px] px-[10px] sm:py-[30px] sm:px-[90px] `}><StaticImage
+   <a href="#*" className={`btn2 testi_a glowing_text hover:text-white py-[7px] px-[10px] sm:py-[30px] sm:px-[50px] `}><StaticImage
                 className="w-[30px] "
                 src="../../assets/images/linkedin.png"
                 alt="Innovative ball"
@@ -66,7 +66,7 @@ const TestimonialsLandingPage = () => {
 <div className="testi_linkedin flex justify-center mt-28">
 
    
-   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[30px] sm:px-[90px] glowing_text hover:text-white"><StaticImage
+   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[30px] sm:px-[50px] glowing_text hover:text-white"><StaticImage
                 className="w-[30px] "
                 src="../../assets/images/upwork.png"
                 alt="Innovative ball"
@@ -75,7 +75,7 @@ const TestimonialsLandingPage = () => {
 <div className="testi_linkedin flex justify-center mt-28">
 
    
-   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[30px] sm:px-[90px] glowing_text hover:text-white"><StaticImage
+   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[30px] sm:px-[50px] glowing_text hover:text-white"><StaticImage
                 className="w-[30px] "
                 src="../../assets/images/freelance.png"
                 alt="Innovative ball"

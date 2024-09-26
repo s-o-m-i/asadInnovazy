@@ -13,22 +13,41 @@ import TeamSlider from "./TeamSlider"
 import '../../ui/testimonials.css'
 const TeamLandingPage = () => {
   useEffect(() => {
-    function parallax(e) {
-      const objects = document.querySelectorAll(".glowing_text")
-      if (objects) {
-        objects.forEach(move => {
-          const movingValue = move.getAttribute("data-value")
-          const x = (e.clientX * movingValue) / 150
-          const y = (e.clientY * movingValue) / 150
-          move.style.transform = `translateX(${x}px) translateY(${y}px)`
-        })
-      }
+    // function parallax(e) {
+    //   const objects = document.querySelectorAll(".glowing_text")
+    //   if (objects) {
+    //     objects.forEach(move => {
+    //       const movingValue = move.getAttribute("data-value")
+    //       const x = (e.clientX * movingValue) / 150
+    //       const y = (e.clientY * movingValue) / 150
+    //       move.style.transform = `translateX(${x}px) translateY(${y}px)`
+    //     })
+    //   }
+    // }
+
+    // document.addEventListener("mousemove", parallax)
+
+    // return () => {
+    //   document.removeEventListener("mousemove", parallax)
+    // }
+    function parallaxEffect(event) {
+const elements = document.querySelectorAll(".skill-box")
+console.log("element-----",elements)
+if(elements){
+
+  elements.forEach((item,index)=>{
+    console.log("mousemovevalue ---",event.ClientX)
+    const moveValue = item.getAttribute("data-value")
+    const x = (event.clientX * moveValue) / 150;
+    const y = (event.clientY * moveValue) / 150;
+    item.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  }) 
+}
     }
 
-    document.addEventListener("mousemove", parallax)
-
-    return () => {
-      document.removeEventListener("mousemove", parallax)
+    document.addEventListener("mousemove",parallaxEffect)
+  return () => {
+      document.removeEventListener("mousemove", parallaxEffect)
     }
   }, [])
 
@@ -70,13 +89,13 @@ const TeamLandingPage = () => {
                 )
               })}
             </div>
-
+{/* 
             <div className="vertical-container sm:block hidden">
               <h1 className="glowing_text">Harmony</h1>
               <h1 className="glowing_text">Partnership</h1>
               <h1 className="glowing_text">Synergy</h1>
               <h1 className="glowing_text">Unity</h1>
-            </div>
+            </div> */}
 
           
 
@@ -89,44 +108,49 @@ const TeamLandingPage = () => {
         role="button">Get it now
     </a>
 </div> */}
+<div className="flex justify-center">
+
 
             <h1
-              className={`${textwhite} mt-10 ${headingText} sm:text-[48px] w-[100%] sm:w-[75%] font-medium`}
+              className={`${textwhite}  text-center mt-28 ${headingText} sm:text-[42px] w-[100%] sm:w-[75%] font-medium`}
             >
               Building Bridges with <span className="text-primary-orange"> Every Line of Code</span>
             </h1>
+              </div>
 
-         
+         <div className="skill-box border-2 mt-2 border-white flex items-center justify-center transition-all ease-linear  text-white w-[50px] h-[50px] rounded-[50%]"> 
+          <h1 className="" data-value="6">JS</h1>
+         </div>
 
-<TeamSlider/>
+{/* <TeamSlider/> */}
 
 
 <div className="grid grid-cols-12 mt-48 gap-5">
-    <div className="col-span-12 sm:col-span-3">
-        <div className="team-achievement-box py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
+    <div className="col-span-12 sm:col-span-3 ">
+        <div className="team-achievement-box w-[80%] py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
     <div className="team-achievement-circle"></div>
-            <h1 className={`${headingText} ${textwhite} z-50 relative hover:text-black`}>25k+</h1>
+            <h1 className={`text-2xl ${textwhite} z-50 relative hover:text-black`}>25k+</h1>
             <h1 className={` ${textwhite} z-50 relative pb-2`}>Projects Completed</h1>
         </div>
     </div>
     <div className="col-span-12 sm:col-span-3">
-        <div className="team-achievement-box py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
+        <div className="team-achievement-box w-[80%] py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
     <div className="team-achievement-circle"></div>
-            <h1 className={`${headingText} ${textwhite}  z-50 relative hover:text-black`}>25k+</h1>
+            <h1 className={`text-2xl ${textwhite}  z-50 relative hover:text-black`}>25k+</h1>
             <h1 className={` ${textwhite} z-50 relative pb-2`}>Happy Customer</h1>
         </div>
     </div>
     <div className="col-span-12 sm:col-span-3">
-        <div className="team-achievement-box py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
+        <div className="team-achievement-box w-[80%] py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
     <div className="team-achievement-circle"></div>
-            <h1 className={`${headingText} ${textwhite} z-50 relative hover:text-black`}>10+</h1>
+            <h1 className={`text-2xl ${textwhite} z-50 relative hover:text-black`}>10+</h1>
             <h1 className={` ${textwhite} z-50 relative pb-2`}>Years of Experience</h1>
         </div>
     </div>
     <div className="col-span-12 sm:col-span-3">
-        <div className="team-achievement-box py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
+        <div className="team-achievement-box w-[80%] py-1 border-2 overflow-hidden relative border-primary-orange rounded-full text-center">
     <div className="team-achievement-circle"></div>
-            <h1 className={`${headingText} ${textwhite} z-50 relative hover:text-black`}>25k+</h1>
+            <h1 className={`text-2xl ${textwhite} z-50 relative hover:text-black`}>25k+</h1>
             <h1 className={` ${textwhite} z-50 relative pb-2`}>Projects Completed</h1>
         </div>
     </div>
