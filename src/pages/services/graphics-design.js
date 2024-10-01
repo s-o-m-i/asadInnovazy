@@ -6,10 +6,10 @@ import CallIcon from '../../assets/icons/CallIconOrange.png'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import '../../ui/services.css'
 import { StaticImage } from 'gatsby-plugin-image';
-import { FaHandPointRight } from "react-icons/fa";
 import GDServices from '../../components/graphicDesigning/GDServices';
 import CallToAction from '../../ui/CallToAction';
 import GDProcess from '../../components/graphicDesigning/GDProcess';
+import { FaCheck } from "react-icons/fa6";
 
 const GraphicsDesign = () => {
     return (
@@ -57,6 +57,10 @@ const GraphicsDesign = () => {
                                    <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
                                </a>
                            </div>
+
+                           <GDServices/>
+                           <GDProcess/>
+
 <div className="flex justify-center w-full">
                            <h1 className={`${headingText} w-full  mt-28 text-white text-start md:text-center`}>Modern Art as our Graphic Designing  Chemistry
                                <span className={` rounded-full px-4 text-[27px] sm:text-[32px]  text-white`}></span> 
@@ -66,47 +70,50 @@ const GraphicsDesign = () => {
 <div className="flex justify-center">
 
 <p
-                  className={`w-[100%] sm:w-[60%] z-10 text-center mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
+                  className={`w-[100%]  sm:w-[60%] z-10 text-start sm:text-center mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                   >
            We are a full service graphic designing services with our clients around the globe. We help businesses by solving the visual branding problems with our modern art at the hands of our expert and artistic graphic designers. We believe in,
                 </p>
                     </div>
 
-<div className="flex justify-between mt-28 gap-20">
-    <div className='w-[50%]'>
+<div className="flex flex-col sm:flex-row  justify-between mt-1 sm:mt-28 gap-20">
+    <div className='w-ful sm:w-[50%]'>
 
-    <StaticImage src='../../assets/images/graphicDesignArt.webp' className='h-full w-full' alt='graphicDesignArt'/>
+    <StaticImage src='../../assets/images/graphicDesignArt.webp' className='h-full w-full hidden sm:block' alt='graphicDesignArt'/>
     </div>
-    <div className="graphic_points w-[50%] ">
+    <div className="graphic_points w-ful sm:w-[50%] ">
         <div className='w-full'>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+{/* <FaHandPointRight /> */}
+
+                    <FaCheck />
+               
                       <h5 className={`${paragraphTextColor} text-[22px]`}>Listening to your needs</h5>
 </div>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Focusing on modern art forms
                       </h5>
 </div>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Ensuring quality
                       </h5>
 </div>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[20px]`}>  Match market standards
 
                       </h5>
 </div>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[20px]`}>  Eloquence
 
                       </h5>
 </div>
     <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Time delivery
 
 
@@ -116,8 +123,7 @@ const GraphicsDesign = () => {
 
     </div>
 </div>
-<GDServices/>
-<GDProcess/>
+
           </div>
 <CallToAction/>
           </div>

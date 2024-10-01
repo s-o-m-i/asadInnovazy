@@ -43,8 +43,15 @@ const TestimonialsSlider = () => {
                         <img className='h-[38px] w-[38px] mr-4' src={Testimonial} alt='Testimonials' />
                         <span className='h-[1px] bg-[#262626] w-[100px]'></span>
                     </div>
+                    
                     <p className={`font-normal text-primary-lighter text-[15px] italic pt-5 w-[100%] ${paragraphTextColor} z-50 hover:text-white`}>{review.message}</p>
-                    <span className='text-right mt-5 italic font-medium text-[15px] text-white z-50 hover:text-white'>- {review.name}</span>
+                    {/* <span className='text-right mt-5 italic font-medium text-[15px] text-white z-50 hover:text-white'>- {review.name}</span> */}
+                    <div className="category text-primary-orange mt-5 text-2xl flex items-center justify-between">
+                    {review.category}
+
+                    <h4 className='text-right  italic font-medium text-[15px] text-white z-50 hover:text-white'>- {review.name}</h4>
+
+                    </div>
                 </div>
             </div>
         );

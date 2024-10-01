@@ -18,13 +18,16 @@ const AboutCreation = () => {
         <div className="relative">
           <div className="flex absolute gap-5 justify-end animate-move h-full w-full">
             <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#c96547] mt-24 rounded-full"></div>
-            <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#c72aa0] rounded-full"></div>
-            <div className="w-[40px] sm:w-[250px] h-[40px] sm:h-[250px] bg-[#2ac7c7]  rounded-full absolute left-0 "></div>
-            <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#c7af2a] rounded-full absolute left-0"></div>
+            <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#7B8C9C] rounded-full"></div>
+            <div className="w-[40px] sm:w-[250px] h-[40px] sm:h-[250px] bg-[#2E2E2E]  rounded-full absolute left-0 "></div>
+            <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#8A7669] rounded-full absolute left-0"></div>
           </div>
 
+
+
+
           {/* Content Section */}
-          <div className="my_glassMorhism background-glass min-h-[320px] w-[350px] sm:w-full sm:min-h-[500px] py-4 px-4 sm:py-6 rounded-[16px]">
+          <div className="my_glassMorhism  sm:px-16 background-glass min-h-[320px] w-[350px] sm:w-full sm:min-h-[500px] py-4 px-4 sm:py-8 rounded-[16px]">
             <div className={`flex items-center justify-between`}>
               
               {/* Text Section */}
@@ -50,6 +53,8 @@ const AboutCreation = () => {
                   className="h-[100%] w-[100%] cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
                   src="../../assets/images/appDevelopment.png"
                   alt="Innovative ball"
+                  placeholder="blurred" // Displays a blurred placeholder while loading
+                  loading='eager' // Forces the image to load immediately
                 />
               </div>
             </div>

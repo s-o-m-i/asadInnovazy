@@ -1,9 +1,7 @@
 import React from 'react'
-import { container, headingText, textwhite } from '../../styles/styles'
-import { clientsBusinessArray } from '../../utils/client-business-data';
+import { container, headingText } from '../../styles/styles'
 import SDCard from './SDCard';
 import Spotlight from '../../ui/SpotlightEffect';
-
 import { customSoftwareData } from '../../utils/custom-software-data';
 import { SDServices } from '../../utils/our-services-soft-dev-data';
 
@@ -19,7 +17,7 @@ const SDOurServices = () => {
             <div className=''>
                 <div className=''>
                     <div className={` mt-[120px]`}>
-<h1 className={`${headingText} text-start md:text-center`}>Our Services Under <br/><span className={`rounded-full px-4 py-1 text-[27px] sm:text-[45px] text-white `}>Software Development</span> 
+<h1 className={`${headingText} text-start md:text-center`}>Our Services Under <br className='hidden sm:block'/><span className={`rounded-full sm:px-4 py-1 text-[32px]  sm:text-[45px] text-white `}>Software Development</span> 
 </h1>    
 
 

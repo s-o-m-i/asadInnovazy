@@ -52,12 +52,13 @@ const HomeSection = () => {
                                 </a>
                             </div>
                         </div>
-                        {/* <StaticImage data-value="6" className='h-[70%] w-[70%]  object hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300' src='../../assets/images/heroBall.svg' alt='Innovative ball' /> */}
+                        
                         <img
                             data-value="8"
                             className='object h-[40%] w-[40%] hidden md:block z-10 cursor-pointer transition-all ease-linear '
                             src={require('../../assets/images/heroBall.svg').default}
                             alt='Innovative ball'
+                            loading="lazy"
                         
                         />
                     </div>

@@ -27,7 +27,7 @@ const AboutLandingSection = () => {
 };
   return (
     <div>
-         <div className="homeSectionleftBlob  mt-[150px] z-50 pointer-events-none">
+         <div className="homeSectionleftBlob  mt-[200px] z-50 pointer-events-none">
         <div className="homeSectionRightBlob z-10 ">
           <div className={`${container} z-10 `}>
             <div className="flex items-center justify-between z-10 relative">
@@ -52,7 +52,7 @@ const AboutLandingSection = () => {
                             </div>
                             
               </div>
-              <div className="w-full h-full flex justify-center items-center relative">
+              <div className="w-full h-full sm:flex justify-center items-center relative hidden ">
 
               <div className="hidden sm:flex absolute gap-5 justify-end left-[50%] ">
   <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#d96d45] mt-24 rounded-full animate-move"></div>

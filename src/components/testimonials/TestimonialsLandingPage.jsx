@@ -1,10 +1,7 @@
 import React from 'react'
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles'
-
-import { StaticImage } from 'gatsby-plugin-image';
 import { FaLinkedin } from "react-icons/fa";
-import { SiUpwork } from "react-icons/si";
-import { SiFreelancer } from "react-icons/si";
+
 
 
 
@@ -56,47 +53,22 @@ const TestimonialsLandingPage = () => {
 
 
 
-
+{/* 
 <div className="testi_linkedin flex justify-center mt-36 mb-12">
 
    
    <a href="#*" className={`btn2 testi_a glowing_text mb-5 hover:text-white py-[7px] px-[10px] sm:py-[20px] sm:px-[30px] `}>
     
-    {/* <StaticImage
-                className="w-[30px] "
-                src="../../assets/images/linkedin.png"
-                alt="Innovative ball"
-              /> */}
+
               <FaLinkedin color="#0A66C2" />
               Linkedin
               </a>
-</div>   
+</div>    */}
+<div className="mt-36">
 
 <TestimonialsSlider/>
+</div>
 
-{/* <div className="testi_linkedin flex justify-center mt-28 mb-12">
-
-   
-   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[20px] sm:px-[30px] glowing_text hover:text-white">
-    
-  
-              <SiUpwork color="#6FDA44" />
-
-    Upwork</a>
-
-
-</div>   
-<TestimonialsSlider/>
-
-<div className="testi_linkedin flex justify-center mt-28 mb-12">
-
-   
-   <a href="#*" className="btn2 testi_a py-[10px] px-[10px] sm:py-[20px] sm:px-[30px] glowing_text hover:text-white">
-    
-              <SiFreelancer color="#29B2FE" />
-              Freelancer</a>
-</div>   
-<TestimonialsSlider/> */}
 
 
 

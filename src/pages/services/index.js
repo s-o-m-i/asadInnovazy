@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { container, headingText, textwhite } from "../../styles/styles"
 import "../../ui/services.css"
-import { StaticImage } from "gatsby-plugin-image"
+
 import "../../components/hero/hero.css"
 import { servicesCards } from "../../utils/servicesCard-data"
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -9,7 +9,8 @@ import { Link } from "gatsby"
 import CallToAction from "../../ui/CallToAction"
 import Lottie from 'react-lottie';
 import servicesAnime from '../../utils/services-anime.json'
-import { RiUserLocationFill, RiUserLocationLine } from "react-icons/ri"
+import { RiUserLocationLine } from "react-icons/ri"
+import ClientsBusiness from "../../components/hero/ClientsBusiness"
 const ServicesHome = () => {
   const location = RiUserLocationLine()
   useEffect(()=>{
@@ -71,20 +72,27 @@ const ServicesHome = () => {
               everything starts with Innovazy
             </h1>
           </div>
-          <div className="service_image flex justify-center">
-            {/* <StaticImage
-              className="h-[20%] w-[20%] hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
-              src="../../assets/images/service2.png"
-              alt="Innovative ball"
-            /> */}
-           {/* {  useLottie(options)} */}
-           <Lottie options={defaultOptionsSuccess}
-                                height={400}
-                                width={500}
-                                isStopped={false}
-                                isPaused={false} />
+          {/* <div className="relative ">
+          <div className="flex absolute gap-5 justify-end animate-move w-full z-[-1]">
+      <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#A0A0A0] mt-24 rounded-full absolute left-0"></div>
+      <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#6C7A59] rounded-full"></div>
+      <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#8A7669] mt-24 rounded-full"></div>
+      <div className="w-[40px] sm:w-[200px] h-[40px] sm:h-[200px] bg-[#2E2E2E] rounded-full"></div>
+      <div className="w-[300px] sm:w-[150px] h-[300px] sm:h-[150px] bg-[#7C6C55] rounded-full"></div>
+      <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#2E2E2E] mt-24 rounded-full"></div>
+      <div className="w-[40px] sm:w-[200px] h-[40px] sm:h-[200px] bg-[#7B8C9C] rounded-full"></div>
+    </div>
+          
+          <div className="service_image h-[300px] items-center flex justify-center my_glassMorhism background-glass  mt-28 rounded-xl">
+        
+           
+
+                                <h1 className="text-4xl z-[999] text-white">OUR SERVICES</h1>
 
           </div>
+          </div> */}
+
+{/* <ClientsBusiness/> */}
 
 
 
@@ -119,7 +127,7 @@ return (
 {serData.number}
                     </h1>
                     <Link to={serData.path}>
-                    <div className="text-[30px] opacity-[.8] hover:opacity-[1] border-2 border-white hover:border-primary-orange p-[10px] rounded-full hover:text-primary-orange text-white transition-all duration-200">
+                    <div className="text-[30px] opacity-[.8] hover:opacity-[1] border-2 border-white hover:border-[#703b30] p-[10px] rounded-full hover:text-[#703b30] text-white transition-all duration-200">
 
                     <FaExternalLinkAlt />
                     </div>

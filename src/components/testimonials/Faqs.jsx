@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { container, paragraphTextColor, textwhite } from "../../styles/styles"
-import { FaPlus } from "react-icons/fa"
-import { FaMinus } from "react-icons/fa"
+import { container,  textwhite } from "../../styles/styles"
 import { faqs } from "../../utils/faqs-data"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -22,9 +20,7 @@ const Faqs = () => {
           <div className={`${container}  `}>
             <div className="flex justify-center mt-28 ">
               <div className="flex flex-col w-fit items-center py-12">
-                {/* <div className="self-end">
-                  <div className="h-1 w-24 bg-orange-500" />
-                </div> */}
+             
 
                 <h1
                   className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[60px] w-[100%] font-medium`}
@@ -32,56 +28,20 @@ const Faqs = () => {
                   FAQ<span className="testi-linear">s</span>
                 </h1>
 
-                {/* <div className="self-start">
-                  <div className="h-1 w-24 bg-orange-500" />
-                </div> */}
+              
               </div>
             </div>
-{/* 
-            <div className="grid grid-cols-12 gap-8">
-              {faqs.map((faq, index) => {
-                return (
-                  <div className="col-span-12 sm:col-span-6">
-                    <div className={` testi_faq_ques flex items-center justify-between py-4 px-4 bg-gradient-to-tl border-l-2  border-primary-orange to-[#0d0d0d] via-[#080808] from-black `}>
-                      <h1 className={` ${   openFaqIndex === index ? "text-primary-orange":`${textwhite}`} text-xl sm:text-2xl  `}>
-                        {faq.question}
-                      </h1>
-                      <div
-                        className="text-primary-orange cursor-pointer"
-                        onClick={() => handleToggle(index)}
-                      >
-                        {openFaqIndex === index ? <FaMinus /> : <FaPlus />}
-                      </div>
-                      {/*  */}
-                    {/* </div>
-                    <div
-                      className={`border-l-2 ${
-                        openFaqIndex === index
-                          ? "max-h-[500px] "
-                          : "max-h-0 py-0 px-0"
-                      } testi_faq_ans transition-[max-height] duration-500 overflow-hidden background-glass-dark border-primary-orange mt-2 py-2 px-4`}
-                    >
-                      <p
-                        className={`w-[100%] mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
-                      >
-                       {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div> */}
+
 
 <div className="grid grid-cols-12 gap-8">
               {faqs.map((faq, index) => {
                 return (
                   <div className="col-span-12 ">
-                    <div className={`f-ques py-5 px-5 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
+                    <div className={`f-ques py-2 sm:py-5 px-5 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
   <div className="flex items-center justify-between">
 
   <h1 className="">      {faq.question}</h1>
   <div className={`drop_arrow ${openFaqIndex === index ? "rotate-180" : "rotate-0"} text-3xl cursor-pointer transition-all duration-500 ease-in-out`}    onClick={() => handleToggle(index)}>
-  {/* {openFaqIndex === index ? <FaMinus /> : <FaPlus />} */}
   <MdOutlineKeyboardArrowDown />
   </div>
   </div>

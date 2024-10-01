@@ -1,5 +1,5 @@
 import React from 'react';
-import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles';
+import {  headingText, paragraphTextColor, textwhite } from '../../styles/styles';
 import PrimaryButton from '../../ui/PrimaryButton';
 import SecondaryButton from '../../ui/SecondaryButton';
 import CallIcon from '../../assets/icons/CallIconOrange.png'

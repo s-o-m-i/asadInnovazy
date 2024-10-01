@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { paragraphTextColor, textwhite } from '../styles/styles';
-import { ArcCard } from '../components/TiltCard/ArcCard';
 import { PiTreeStructureFill } from "react-icons/pi";
 
 const CustomSpotlight = ({ data }) => {
@@ -75,27 +74,15 @@ const CustomSpotlight = ({ data }) => {
                             return (<div key={i} className={`spotlight-card-${i} relative h-full rounded-xl border-l-2 border-l-primary-orange p-px before:absolute before:w-80 before:h-80 before:-left-40 before:-top-40 before:bg-slate-400 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:group-hover:opacity-100 before:z-10 before:blur-[100px] after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:bg-zinc-500 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:hover:opacity-10 after:z-30 after:blur-[100px] overflow-hidden w-full sm:w-[400px] sm:h-[300px]`}>
 
 
-{/* <div className="relative h-full bg-gradient-to-tl to-[#0d0d0d] via-[#080808] from-black p-10 rounded-[inherit] z-20 overflow-hidden">
-                                    <div className="flex items-center">
-                                        {x.image && <img className='mr-5 w-[80px]' src={x.image} alt="Competitive Compensation" />}
-                                        <h3 className={`${textwhite} text-[20px]`}>{x.title}</h3>
-                                    </div>
-                                    <p className={`w-[100%] ${paragraphTextColor} leading-7 text-[14px] mt-4`}>{x.description}</p>
-                                </div> */}
-
-{/* <div className="flex flex-col "> */}
-  {/* <div
-    className="card background-glass px-4 py-10 mt-6 col-span-4 h-[300px]  w-full sm:w-[400px] rounded-xl border-l-2 border-primary-orange transition-transform ease-out"
-  > */}
   <div
     className="relative text-white  bg-gradient-to-tl px-4 py-10 col-span-4 h-[300px]  w-full sm:w-[400px] to-[#0d0d0d] via-[#080808] from-black p-10 rounded-[inherit] z-20 overflow-hidden"
   >
     <div className="text-4xl text-primary-orange">
-      {/* Add your icon here */}
-      <PiTreeStructureFill/>
+      {x.icon? x.icon:<PiTreeStructureFill/>}
+      
     </div>
     <div className="pt-4">
-      <h2 className="${textwhite} text-[20px]">
+      <h2 className={`${textwhite} text-[20px]`}>
      {x.title}
       </h2>
       <p className={`w-[100%] ${paragraphTextColor} leading-7 text-[14px] mt-4`}>

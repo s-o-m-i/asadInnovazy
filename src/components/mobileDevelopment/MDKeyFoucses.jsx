@@ -6,10 +6,10 @@ const MDKeyFoucses = () => {
   return (
     <>
     <div className={`${container}`}>
-    <div class="styled_one mt-28 ">
-    <h1 className={`${headingText} text-white text-start md:text-center`}>Our Key  Focuses
+    
+    <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Our Key  Focuses
     </h1>    
-    </div>
+    
      <Spotlight data={keyFocusesData} />
     </div>
     </>

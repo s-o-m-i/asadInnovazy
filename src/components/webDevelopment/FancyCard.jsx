@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { headingText, paragraphTextColor, textwhite } from '../../styles/styles'
+import { headingText,  textwhite } from '../../styles/styles'
 
 import { unitingWithUs } from '../../utils/dev-uniting-data';
 import SDCard from '../softwareDevelopment/SDCard';
@@ -20,7 +20,7 @@ const UnitingWithUs = () => {
      <div className='homeSectionRightBlob'>
     <div className='mt-32'>
           <div class="styled_one mb-28">
-    <h1 className={`${textwhite} ${headingText} font-medium  mx-auto w-[100%] text-start md:text-center`}> <span className='  '> Uniting </span> With Us</h1>
+    <h1 className={`${textwhite} ${headingText} font-medium  mx-auto w-[100%] text-center`}> <span className='  '> Uniting </span> With Us</h1>
     </div>
 {unitingWithUs.map((x,i) => {
                                 return <div key={i} className='mb-8'>

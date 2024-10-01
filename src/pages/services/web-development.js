@@ -7,7 +7,6 @@ import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import PrimaryButton from '../../ui/PrimaryButton';
 import SecondaryButton from '../../ui/SecondaryButton';
 import CallIcon from "../../assets/icons/callIcon.png";
-import { FaHandPointRight } from "react-icons/fa";
 import { corporateWebDev } from '../../utils/corporate-dev-data';
 import { ourApproach } from '../../utils/ourApproach-data';
 import { Link } from 'gatsby';
@@ -17,7 +16,7 @@ import CallToAction from '../../ui/CallToAction'
 import CustomSpotlight from '../../ui/CustomSpotlight';
 
 import UnitingWithUs from '../../components/webDevelopment/FancyCard';
-
+import { FaCheck } from "react-icons/fa6";
 const WebDevelopment = () => {
     const [showModal, setModal] = React.useState(false);
     const handleClick = () => {
@@ -48,16 +47,49 @@ const WebDevelopment = () => {
                   </div>
                 </div>
                 <div className="col-span-6 flex justify-center items-center [perspective:900px]">
-              <StaticImage src='../../assets/images/s_webdevelopment.png' alt='web_development' className='w-[80%] hidden sm:block cursor-pointer hover:transform hover:scale-110 transition-transform duration-300'/>
+              <StaticImage src='../../assets/images/s_webdevelopment.png' alt='web_development' className='w-[80%] hidden sm:block cursor-pointer hover:transform hover:scale-110 transition-transform duration-300' 
+              
+              placeholder="blurred" // Displays a blurred placeholder while loading
+              loading='eager' // Forces the image to load immediately
+              />
 
                 </div>
             </div>
+
+
+
+
+            <div className={`mt-[120px]`}>
+            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Approach</h1>
+            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] text-start md:text-center leading-7`}>Empowering Your Possibilities: Explore Our Diverse Range of Services</p>
+
+<CustomSpotlight data={ourApproach}/>
+            <div className='mt-10'>
+                <div className="grid md:grid-cols-12 gap-4 justify-center">
+
+
+                    
+                </div>
+            </div>
+            <div className='text-center mt-14'>
+                <Link to='/services'>
+                    {/* <PrimaryButton btnText="Explore Services" image={ForwardArrow} imageAlt="Get Consultation" /> */}
+                    <PrimaryButton image={CallIcon} btnText="(305)-501-8021" imageAlt="Call Innovazy for further quries" />
+                </Link>
+            </div>
+        </div>
+
+
+<UnitingWithUs/>
+
+
+
 <div className="flex items-center flex-col sm:flex-row justify-between mt-28 sm:mt-0">
     <div className='border-r-2 border-primary-orange sm:mr-8 '>
             <h1
                 className={`${textwhite}  text-[38px] w-[100%] sm:w-[80%] font-medium`}
               >
-          Attain business goals through  <br/>  <span className="text-primary-orange text-[35px]"> web development solutions
+          Attain business goals through  <br/>  <span className="text-primary-orange text-[35px] capitalize"> web development solutions
              </span>
               </h1>
 
@@ -76,8 +108,8 @@ const WebDevelopment = () => {
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-5 overflow-hidden w-[300px] h-[300px] text-center">
-            <h1 className={`${headingText} mt-10 ${textwhite}`}>01</h1>
-            <h1 className={` ${textwhite} `}>Website Development</h1>
+            <h1 className={`${headingText} mt-10 ${textwhite}`}>02</h1>
+            <h1 className={` ${textwhite} `}>Web App Development</h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
             Our experts focus on a modern and speedy development methodology to achieve quality in timely and cost-effective web solutions which leads to improved customer retention and contentment.
                       </p>
@@ -86,15 +118,15 @@ const WebDevelopment = () => {
 
     <div className=' flex sm:flex-row flex-col  items-center gap-5'>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-8 overflow-hidden w-[280px] h-[280px] text-center mt-28">
-            <h1 className={`${headingText} mt-10 ${textwhite}`}>01</h1>
-            <h1 className={` ${textwhite} `}>Website Development</h1>
+            <h1 className={`${headingText} mt-10 ${textwhite}`}>03</h1>
+            <h1 className={` ${textwhite} `}>Ecommerce Website Development</h1>
             <p className={`w-[100%]  mt-3 ${paragraphTextColor} text-[12px] `}>
             Our experts use modern, efficient development methods to deliver high-quality, cost-effective web solutions, enhancing customer retention and satisfaction.
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-5 overflow-hidden w-[300px] h-[300px] text-center">
-            <h1 className={`${headingText} mt-10 ${textwhite}`}>01</h1>
-            <h1 className={` ${textwhite} `}>Website Development</h1>
+            <h1 className={`${headingText} mt-10 ${textwhite}`}>04</h1>
+            <h1 className={` ${textwhite} `}>WordPress Development Services            </h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
             Our experts focus on a modern and speedy development methodology to achieve quality in timely and cost-effective web solutions which leads to improved customer retention and contentment.
                       </p>
@@ -109,7 +141,7 @@ const WebDevelopment = () => {
 
 <div className="flex sm:flex-row flex-col  justify-between gap-14 mt-32">
 
-<div className='p-5'>
+<div className='p-5 hidden sm:block'>
     <StaticImage src='../../assets/images/corporateWebDev.webp' alt='' className='w-full h-full cursor-pointer hover:transform hover:scale-110 transition-transform duration-300'/>
 </div>
 
@@ -129,7 +161,7 @@ const WebDevelopment = () => {
                       {corporateWebDev && corporateWebDev.length>0 && corporateWebDev.map((e,i)=> {
                         return (
 <div className="flex items-center gap-4 text-primary-orange mt-3">
-<FaHandPointRight />
+<FaCheck />
                       <h5 className={`${paragraphTextColor} text-[13px]`}>{e.data}</h5>
 </div>
 
@@ -141,30 +173,7 @@ const WebDevelopment = () => {
 </div>
 
 
-<div className={`mt-[120px]`}>
-            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Approach</h1>
-            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] text-start md:text-center leading-7`}>Empowering Your Possibilities: Explore Our Diverse Range of Services</p>
 
-<CustomSpotlight data={ourApproach}/>
-            <div className='mt-10'>
-                <div className="grid md:grid-cols-12 gap-4 justify-center">
-
-
-                    {/* {ourApproach.map((x) => {
-                        return <>
-                            <OurApproachCard fontClassName={x.fontClassName} title={x.title} description={x.description} className={x.className} link={x.link} />
-                        </>;
-                    })} */}
-                </div>
-            </div>
-            <div className='text-center mt-14'>
-                <Link to='/services'>
-                    {/* <PrimaryButton btnText="Explore Services" image={ForwardArrow} imageAlt="Get Consultation" /> */}
-                    <PrimaryButton image={CallIcon} btnText="(305)-501-8021" imageAlt="Call Innovazy for further quries" />
-                </Link>
-            </div>
-        </div>
-<UnitingWithUs/>
 
 
 

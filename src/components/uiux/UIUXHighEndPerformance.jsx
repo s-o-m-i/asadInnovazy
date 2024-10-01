@@ -1,10 +1,9 @@
 import React from 'react'
 import { headingText, paragraphTextColor, textwhite } from '../../styles/styles'
-import SecondaryButton from '../../ui/SecondaryButton'
-import { FaCheck } from "react-icons/fa6";
+
 const UIUXHighEndPerformance = () => {
   return (
-    // whiteOrange
+    
     <div className=' mt-32'>
     <div className="homeSectionleftBlob  ">
          <div className="homeSectionRightBlob  ">
@@ -40,9 +39,9 @@ const UIUXHighEndPerformance = () => {
 
     <div className="my_glassMorhism background-glass h-[320px] w-[350px] sm:w-full sm:h-[420px] flex items-center  px-4 sm:py-6  rounded-[16px]">
       <div>
-    <h1 className='text-white text-center text-3xl'>  Accessibility
+    <h1 className='text-white text-start sm:text-center text-3xl'>  Accessibility
     Testing</h1>
-    <p className='text-white mt-5 text-center'>We guarantee to follow Web Content Accessibility Guidelines (WCAG) to improve user experiences with required flexibility and availability while designing all web applications. Our focus is to create and build IT structures in accordance with market standards and user demands.</p>
+    <p className='text-white mt-5 text-start sm:text-center'>We guarantee to follow Web Content Accessibility Guidelines (WCAG) to improve user experiences with required flexibility and availability while designing all web applications. Our focus is to create and build IT structures in accordance with market standards and user demands.</p>
       </div>
     </div>
   </div>
@@ -57,7 +56,7 @@ const UIUXHighEndPerformance = () => {
     </div>
 
     {/* First Subsection */}
-    <div className="my_glassMorhism background-glass relative h-[200px] sm:h-[200px] sm:w-full w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
+    <div className="my_glassMorhism background-glass relative py-4 min-h-[200px] sm:h-[200px] sm:w-full w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
     <div>
     <h1 className='text-white text-2xl '>  Usability
     Testing</h1>
@@ -66,7 +65,7 @@ const UIUXHighEndPerformance = () => {
     </div>
 
     {/* Second Subsection */}
-    <div className="my_glassMorhism background-glass relative h-[200px] sm:h-[200px] sm:w-full mt-5 w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
+    <div className="my_glassMorhism background-glass relative py-4 min-h-[200px] sm:h-[200px] sm:w-full mt-5 w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
       <div>
       <div>
     <h1 className='text-white text-2xl'>  UX

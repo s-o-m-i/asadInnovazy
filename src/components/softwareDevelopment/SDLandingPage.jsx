@@ -31,7 +31,11 @@ const SDLandingPage = () => {
                   </div>
                 </div>
                 <div className="col-span-6 flex justify-center items-center [perspective:900px]">
-              <StaticImage src='../../assets/images/s_webdevelopment.png' alt='web_development' className='w-[80%] hidden sm:block cursor-pointer hover:transform hover:scale-110 transition-transform duration-300'/>
+              <StaticImage src='../../assets/images/s_webdevelopment.png' alt='web_development' className='w-[80%] hidden sm:block cursor-pointer hover:transform hover:scale-110 transition-transform duration-300' 
+              
+              placeholder="blurred" // Displays a blurred placeholder while loading
+              loading='eager' // Forces the image to load immediately
+              />
 
                 </div>
             </div>
