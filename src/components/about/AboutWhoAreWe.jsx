@@ -6,7 +6,7 @@ import { CgWebsite } from "react-icons/cg";
 const AboutWhoAreWe = () => {
   return (
     <>
-         <div className={`${container} my-[250px]`}>
+         <div className={`${container} mt-[250px] mb-[200px]`}>
   <div className="grid grid-cols-12 gap-4">
     <div className="col-span-12 sm:col-span-6 flex ">
       <div className="moving-border ">

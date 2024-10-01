@@ -5,7 +5,6 @@ import CallIcon from "../../assets/icons/callIcon.png";
 import PrimaryButton from '../../ui/PrimaryButton';
 import SecondaryButton from '../../ui/SecondaryButton';
 import { StaticImage } from 'gatsby-plugin-image';
-import CallToAction from '../../ui/CallToAction';
 const MDLandingPage = () => {
   return (
     <>

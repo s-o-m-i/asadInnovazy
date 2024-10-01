@@ -10,7 +10,7 @@ const GDProcess = () => {
             <h1
                 className={`${textwhite}  text-[38px] w-[100%] sm:w-[75%] font-medium`}
               >
-         Our   <span className="testi-linear text-[35px]"> Process
+         Our   <span className="text-primary-orange text-[35px]"> Process
              </span>
               </h1>
 

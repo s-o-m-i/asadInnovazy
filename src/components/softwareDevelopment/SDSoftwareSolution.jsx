@@ -18,7 +18,7 @@ setShowCustomSoftSolution(selected)
     <>
      <div className={`${container} mt-[130px] text-white`}>
       <h1 className={`${headingText} text-start md:text-center`}> 
-      <br/>  <span className={`services_heading_success rounded-full px-4 py-1 text-[32px] sm:${headingText} text-white`}>Custom Software</span> Solutions Services
+      <br/> Custom Software  Solutions Services
       </h1>   
 
 <div className="flex justify-center">

@@ -16,11 +16,13 @@ const SDOurServices = () => {
 
 
 <div className='relative'>
-            <div className='clientGradientBlogTop'>
-                <div className='clientGradientBlogBottom'>
+            <div className=''>
+                <div className=''>
                     <div className={` mt-[120px]`}>
-<h1 className={`${headingText} text-start md:text-center`}>Our Services Under     <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:${headingText} text-white`}>Software Development</span> 
+<h1 className={`${headingText} text-start md:text-center`}>Our Services Under <br/><span className={`rounded-full px-4 py-1 text-[27px] sm:text-[45px] text-white `}>Software Development</span> 
 </h1>    
+
+
                      
                         <div className="mt-14">
                             {SDServices.map((x,i) => {
@@ -30,10 +32,10 @@ const SDOurServices = () => {
                             })}
                         </div>
 
-
-                        <h1 className={`${headingText}  mt-28 text-start md:text-center`}>Custom Software    <br/> <span className="services_heading_success rounded-full px-4 py-1 opacity-[.9] text-[30px]  text-white">Solutions Services</span> 
+                        <div class="styled_one mt-28">
+                        <h1 className={`${headingText}   text-start md:text-center`}>Custom Software    <span className="">Solutions Services</span> 
                         </h1>    
-
+</div>
                         <Spotlight data={customSoftwareData} />
                     </div>
                 </div>

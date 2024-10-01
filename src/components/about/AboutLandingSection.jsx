@@ -1,15 +1,22 @@
 import React from 'react'
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles'
-import { StaticImage } from 'gatsby-plugin-image'
+
 import SecondaryButton from '../../ui/SecondaryButton'
 import PrimaryButton from '../../ui/PrimaryButton'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import CallIcon from "../../assets/icons/CallIconOrange.png";
-import Logo from '../Logo'
 import Lottie from 'react-lottie'
 import aboutAnime from '../../utils/aboutus-anime.json'
+import { PopupModal } from 'react-calendly';
 
 const AboutLandingSection = () => {
+
+  const [showModal, setModal] = React.useState(false);
+    const handleClick = () => {
+        setModal(true);
+    };
+
+
   const defaultOptionsSuccess = {
     loop: true,
     autoplay: true,
@@ -36,7 +43,7 @@ const AboutLandingSection = () => {
                 At Innovazy you get the best and advanced technological IT solutions for particular business problems. Our team of experts is highly qualified, experienced and skilled. As a result we provide your business a boost and take it to another level of success. Our specialists have got the best talent and expertise in web application development and business software solutions.
                 </p>
                 <div className="flex flex-wrap gap-3 sm:gap-0 mt-8 pointer-events-auto">
-                                <button  aria-label="Get Consultation">
+                                <button  onClick={handleClick} aria-label="Get Consultation">
                                     <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
                                 </button>
                                 <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
@@ -45,14 +52,14 @@ const AboutLandingSection = () => {
                             </div>
                             
               </div>
-              <div className="w-full h-full flex justify-center items-center ">
+              <div className="w-full h-full flex justify-center items-center relative">
 
+              <div className="hidden sm:flex absolute gap-5 justify-end left-[50%] ">
+  <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#d96d45] mt-24 rounded-full animate-move"></div>
+  <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#fff] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
+</div>
 
-              {/* <StaticImage
-                className="h-[80%] w-[80%] hidden md:block z-10 cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
-                src="../../assets/images/3dboy.webp"
-                alt="Innovative ball"
-              /> */}
+          
 
 <Lottie options={defaultOptionsSuccess}
                                 height={"100%"}
@@ -62,19 +69,21 @@ const AboutLandingSection = () => {
                                 
               </div>
             </div>
-            {/* <MyMatter/> */}
-          
+            {
+                        typeof window !== 'undefined' ?
+                            <PopupModal
+                                open={showModal}
+                                onModalClose={() => setModal(false)}
+                                url="https://calendly.com/innovazy/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=151414&text_color=ffffff&primary_color=f17840"
+                                rootElement={document.getElementById("___gatsby")}
+                            />
+                            :
+                            ''
+                    }
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-48 w-full absolute inset-0 -top-56">
-        {/* <div> */}
-          {/* <h1 className={`text-3xl font-bold ${textwhite} ${headingText} `}>
-            WE <span className="text-primary-orange">ARE</span>{" "}
-          </h1> */}
-        {/* </div> */}
-        {/* <Logo /> */}
-      </div>
+ 
     </div>
   )
 }

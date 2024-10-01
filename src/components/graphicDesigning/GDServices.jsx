@@ -14,7 +14,7 @@ const GDServices = () => {
              className={`${textwhite} mt-28 ${headingText} text-center  w-[100%]  font-medium`}
            >
     
-       <span className='testi-linear'>  Graphic Designing </span>   Services
+       <span className=''>  Graphic Designing </span>   Services
            </h1>
 
                         <p className={`w-[100%]  text-center mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] `}>

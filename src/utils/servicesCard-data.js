@@ -5,7 +5,8 @@ export const servicesCards = [
         number:"01",
         colorScheme:"purpleOrange",
         imageClass:"webAppImage",
-        path:"web-development"
+        path:"web-development",
+         footer:"services_heading"
     },
     {
         title:"Software Development",
@@ -13,7 +14,8 @@ export const servicesCards = [
         number:"02",
         colorScheme:"whiteOrange",
         imageClass:"inner-one",
-         path:"software-development"
+         path:"software-development",
+         footer:"footer_services_heading"
     },
     {
         title:"Mobile App Development",
@@ -21,7 +23,8 @@ export const servicesCards = [
         number:"03",
         colorScheme:"whiteOrange",
         imageClass:"mobileAppImage",
-         path:"mobile-development"
+         path:"mobile-development",
+          footer:"footer_services_heading"
     },
     {
         title:"Graphics Design",
@@ -29,7 +32,8 @@ export const servicesCards = [
         number:"04",
         colorScheme:"purpleOrange",
         imageClass:"inner-two",
-         path:"graphics-design"
+         path:"graphics-design",
+          footer:"footer_services_heading"
     },
     {
         title:"Cloud Computing",
@@ -37,7 +41,8 @@ export const servicesCards = [
         number:"05",
         colorScheme:"purpleOrange",
         imageClass:"inner-one",
-         path:"cloud-computing"
+         path:"cloud-computing",
+          footer:"footer_services_heading"
     },
     {
         title:"UI UX Design",
@@ -45,7 +50,8 @@ export const servicesCards = [
         number:"06",
         colorScheme:"whiteOrange",
         imageClass:"inner-two",
-         path:"ui-ux"
+         path:"ui-ux",
+          footer:"footer_services_heading"
     },
     {
         title:"Quality Assurance",

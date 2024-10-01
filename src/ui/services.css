@@ -52,7 +52,9 @@ text-shadow:0px 0px 0 rgb(215,215,215),0px 1px 0 rgb(185,185,185),0px 2px 0 rgb(
 
   .services_heading{
     /* background-image: linear-gradient(to left, rgba(104, 102, 102, 0.994), rgb(37, 36, 35)); */
-    background-image: linear-gradient(to left,rgb(0, 0, 0) 60%, rgb(255, 128, 0));
+    /* background-image: linear-gradient(to left,rgb(0, 0, 0) 60%, rgb(255, 128, 0)); */
+    /* background-image: linear-gradient(to left,rgb(20, 20, 20), rgb(37, 36, 35)); */
+    background-image: linear-gradient(to left,rgb(0, 0, 0) 60%, rgb(66, 63, 60));
    
   }
 .services_heading_success{
@@ -67,7 +69,7 @@ text-shadow:0px 0px 0 rgb(215,215,215),0px 1px 0 rgb(185,185,185),0px 2px 0 rgb(
   }
   .purpleOrange{
   /* background-image: linear-gradient(to left, rgba(104, 102, 102, 0.994), rgb(20, 20, 20)); */
-  background-image: linear-gradient(to left,rgb(0, 0, 0) 60%, rgb(255, 128, 0));
+  background-image: linear-gradient(to left,rgb(0, 0, 0) 60%, rgb(66, 63, 60));
 }
   .whitePurple{
   background-image: linear-gradient(to left, #742EE6, white);
@@ -311,10 +313,10 @@ border-radius: 999px;
 }
 .left-pointer:hover .b-line{
 width: 100%;
-transition: all .3s linear;
+opacity: .5;
 }
 .b-line{
-  transition: all .3s linear;
+  transition: all .1s ease-in-out;
 }
 
 
@@ -358,7 +360,7 @@ transition: all .3s linear;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  min-height: 475px;
+  
   -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
   transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
   -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
@@ -470,4 +472,89 @@ transition: all .3s linear;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+
+
+.styled_one h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /* font-family: "Raleway", sans-serif; */
+  /* font-weight: 300; */
+  /* font-size: 40px; */
+  color: rgb(255, 255, 255);
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* === HEADING STYLE #1 === */
+.styled_one h1 {
+  /* text-align: center; */
+  /* text-transform: uppercase; */
+  /* padding-bottom: 5px; */
+}
+.styled_one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #f27941;
+}
+.styled_one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #f27941;
+}
+
+
+
+
+.my_glassMorhism{
+
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+@keyframes moveX {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(10px); /* Adjust the distance as needed */
+  }
+}
+
+.animate-move {
+  animation: moveX 2s linear infinite;
+}
+.animate-move-two {
+  animation: s 5s linear infinite;
+}
+
+@keyframes movesX2 {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateY(100px);
+  }
 }

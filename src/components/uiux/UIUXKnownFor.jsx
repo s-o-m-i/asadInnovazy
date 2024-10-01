@@ -10,7 +10,7 @@ const UIUXKnownFor = () => {
     className={`${textwhite} mt-28 ${headingText} text-center  w-[100%]  font-medium`}
     >
 What we are 
-<span className='testi-linear'>  known for?</span>   
+<span className=''>  known for?</span>   
   </h1>
   <div className="flex justify-center">
 

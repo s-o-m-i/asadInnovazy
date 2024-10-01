@@ -12,7 +12,7 @@ const UiUxExcellence = () => {
     className={`${textwhite} mt-28 ${headingText} text-center  w-[100%]  font-medium`}
     >
 
-<span className='testi-linear'> How we achieve Excellence in </span>   UI/UX Designing?
+<span className=''> How we achieve Excellence in </span>   UI/UX Designing?
   </h1>
   <div className="flex justify-center">
                <p className={`w-[100%] sm:w-[65%] text-center mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] `}>

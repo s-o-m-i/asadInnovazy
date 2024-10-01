@@ -57,9 +57,12 @@ const GraphicsDesign = () => {
                                    <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
                                </a>
                            </div>
-
-                           <h1 className={`${headingText} mt-28 text-white text-start md:text-center`}>Modern Art as our    <span className={`services_heading_success rounded-full px-4 py-1 text-[27px] sm:text-[32px] text-white`}>graphic designing</span>  chemistry
+<div className="flex justify-center w-full">
+                           <h1 className={`${headingText} w-full  mt-28 text-white text-start md:text-center`}>Modern Art as our Graphic Designing  Chemistry
+                               <span className={` rounded-full px-4 text-[27px] sm:text-[32px]  text-white`}></span> 
 </h1>    
+
+</div>
 <div className="flex justify-center">
 
 <p
@@ -72,37 +75,37 @@ const GraphicsDesign = () => {
 <div className="flex justify-between mt-28 gap-20">
     <div className='w-[50%]'>
 
-    <StaticImage src='../../assets/images/graphicDesignArt.webp' className='h-full w-full'/>
+    <StaticImage src='../../assets/images/graphicDesignArt.webp' className='h-full w-full' alt='graphicDesignArt'/>
     </div>
     <div className="graphic_points w-[50%] ">
         <div className='w-full'>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[22px]`}>Listening to your needs</h5>
 </div>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Focusing on modern art forms
                       </h5>
 </div>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Ensuring quality
                       </h5>
 </div>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[20px]`}>  Match market standards
 
                       </h5>
 </div>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[20px]`}>  Eloquence
 
                       </h5>
 </div>
-    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-primary-orange pb-5 border-dashed">
+    <div className="flex items-center gap-4 text-primary-orange mt-3 w-full  border-b-2 border-gray-500 pb-5 border-dotted">
 <FaHandPointRight />
                       <h5 className={`${paragraphTextColor} text-[20px]`}> Time delivery
 

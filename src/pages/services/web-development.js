@@ -11,9 +11,12 @@ import { FaHandPointRight } from "react-icons/fa";
 import { corporateWebDev } from '../../utils/corporate-dev-data';
 import { ourApproach } from '../../utils/ourApproach-data';
 import { Link } from 'gatsby';
-import OurApproachCard from '../../components/webDevelopment/OurApproachCard';
+
 import CallToAction from '../../ui/CallToAction'
-import FancyCard from '../../components/webDevelopment/FancyCard';
+
+import CustomSpotlight from '../../ui/CustomSpotlight';
+
+import UnitingWithUs from '../../components/webDevelopment/FancyCard';
 
 const WebDevelopment = () => {
     const [showModal, setModal] = React.useState(false);
@@ -21,6 +24,7 @@ const WebDevelopment = () => {
         setModal(true);
     };
     return (
+        <>
         <div className={`${container} mt-[130px]`}>
             <div className="grid grid-cols-12">
                 <div className="col-span-12 sm:col-span-6 ">
@@ -51,7 +55,7 @@ const WebDevelopment = () => {
 <div className="flex items-center flex-col sm:flex-row justify-between mt-28 sm:mt-0">
     <div className='border-r-2 border-primary-orange sm:mr-8 '>
             <h1
-                className={`${textwhite}  text-[38px] w-[100%] sm:w-[75%] font-medium`}
+                className={`${textwhite}  text-[38px] w-[100%] sm:w-[80%] font-medium`}
               >
           Attain business goals through  <br/>  <span className="text-primary-orange text-[35px]"> web development solutions
              </span>
@@ -141,13 +145,16 @@ const WebDevelopment = () => {
             <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Approach</h1>
             <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] text-start md:text-center leading-7`}>Empowering Your Possibilities: Explore Our Diverse Range of Services</p>
 
+<CustomSpotlight data={ourApproach}/>
             <div className='mt-10'>
                 <div className="grid md:grid-cols-12 gap-4 justify-center">
-                    {ourApproach.map((x) => {
+
+
+                    {/* {ourApproach.map((x) => {
                         return <>
                             <OurApproachCard fontClassName={x.fontClassName} title={x.title} description={x.description} className={x.className} link={x.link} />
                         </>;
-                    })}
+                    })} */}
                 </div>
             </div>
             <div className='text-center mt-14'>
@@ -157,10 +164,8 @@ const WebDevelopment = () => {
                 </Link>
             </div>
         </div>
+<UnitingWithUs/>
 
-
-<FancyCard/>
-<CallToAction/>
 
 
 
@@ -178,6 +183,8 @@ const WebDevelopment = () => {
                             ''
                     }
         </div>
+        <CallToAction/>
+        </>
     );
 };
 

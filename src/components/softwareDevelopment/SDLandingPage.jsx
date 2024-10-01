@@ -16,11 +16,11 @@ const SDLandingPage = () => {
            <h1
                 className={`${textwhite}  ${headingText}   uppercase    font-medium`}
                 >
-               <span className='services-linear'> Software Development</span> Services <br/> in USA
+               <span className='services-linear'> Software Development</span> Services  in USA
               </h1>
-              <p className={`w-[100%] sm:w-[75%] mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] `}>
+              <p className={`w-[100%] sm:w-[75%] my-8 ${paragraphTextColor} text-[14px] sm:text-[16px] `}>
               Get a scalable and reliable development of software solutions with skilled and experienced Innovazy experts for browsers, iOS and other devices.</p>
-              <div className="flex flex-wrap gap-3 sm:gap-0 mt-8">
+              <div className="flex flex-wrap gap-3 sm:gap-0 mt-10">
                                 <button  aria-label="Get Consultation">
                                     <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
                                 </button>

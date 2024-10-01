@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { container, headingText, textwhite } from "../../styles/styles"
 import "../../ui/services.css"
 import { StaticImage } from "gatsby-plugin-image"
@@ -9,14 +9,19 @@ import { Link } from "gatsby"
 import CallToAction from "../../ui/CallToAction"
 import Lottie from 'react-lottie';
 import servicesAnime from '../../utils/services-anime.json'
-const index = () => {
+import { RiUserLocationFill, RiUserLocationLine } from "react-icons/ri"
+const ServicesHome = () => {
+  const location = RiUserLocationLine()
+  useEffect(()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  },[location.pathname])
   const defaultOptionsSuccess = {
     loop: true,
     autoplay: true,
     animationData: servicesAnime,
-    // rendererSettings: {
-    //     preserveAspectRatio: 'xMidYMid slice'
-    // }
 };
   return (
     <div className="homeSectionleftBlob  mt-[150px] z-50 ">
@@ -92,7 +97,7 @@ return (
 
                   <div className="h-full flex justify-center flex-col">
                     <h1
-                      className={`${textwhite} relative   font-[Montserrat-Bold] text-[32px] sm:text-[50px] w-[100%] font-medium`}
+                      className={`text-[rgba(255,255,255,0.6)] relative   font-[Montserrat-Bold] text-[32px] sm:text-[50px] w-[100%] font-medium`}
                     >
 {serData.title}
                     </h1>
@@ -106,15 +111,15 @@ return (
                     </div>
                   </div>
                 </div>
-                <div className="outer-lower services_heading  flex items-center h-[30%] w-full absolute bottom-0">
+                <div className={`outer-lower services_heading flex items-center h-[30%] w-full absolute bottom-0`}>
                   <div className="ser_card_footer px-2 flex items-center justify-between w-full pr-4">
 
-                    <h1 className={`${textwhite } text_effect_threeD text-[42px] sm:text-[80px] uppercase tracking-wider font-[Montserrat-Bold]  w-[100%] font-medium`}
+                    <h1 className={`${textwhite }  text-[42px] sm:text-[80px] uppercase tracking-wider font-[Montserrat-Bold]  w-[100%] font-medium`}
                     >
 {serData.number}
                     </h1>
                     <Link to={serData.path}>
-                    <div className="text-[30px] opacity-[.8] hover:opacity-[1] border-2 border-white p-[10px] rounded-full hover:text-primary-orange text-white transition-all duration-200">
+                    <div className="text-[30px] opacity-[.8] hover:opacity-[1] border-2 border-white hover:border-primary-orange p-[10px] rounded-full hover:text-primary-orange text-white transition-all duration-200">
 
                     <FaExternalLinkAlt />
                     </div>
@@ -141,4 +146,4 @@ return (
   )
 }
 
-export default index
+export default ServicesHome

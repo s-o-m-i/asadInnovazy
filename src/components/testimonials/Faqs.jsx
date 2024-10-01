@@ -20,8 +20,8 @@ const Faqs = () => {
       <div className="homeSectionleftBlob  mt-[150px] z-50 ">
         <div className="homeSectionRightBlob  ">
           <div className={`${container}  `}>
-            <div className="flex justify-center mt-28 mb-10">
-              <div className="flex flex-col w-fit items-center">
+            <div className="flex justify-center mt-28 ">
+              <div className="flex flex-col w-fit items-center py-12">
                 {/* <div className="self-end">
                   <div className="h-1 w-24 bg-orange-500" />
                 </div> */}
@@ -76,11 +76,11 @@ const Faqs = () => {
               {faqs.map((faq, index) => {
                 return (
                   <div className="col-span-12 ">
-                    <div className={`f-ques py-5 px-5 background-glass text-white transition-all duration-500 ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
+                    <div className={`f-ques py-5 px-5 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
   <div className="flex items-center justify-between">
 
   <h1 className="">      {faq.question}</h1>
-  <div className="drop_arrow text-3xl"    onClick={() => handleToggle(index)}>
+  <div className={`drop_arrow ${openFaqIndex === index ? "rotate-180" : "rotate-0"} text-3xl cursor-pointer transition-all duration-500 ease-in-out`}    onClick={() => handleToggle(index)}>
   {/* {openFaqIndex === index ? <FaMinus /> : <FaPlus />} */}
   <MdOutlineKeyboardArrowDown />
   </div>
