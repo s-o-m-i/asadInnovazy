@@ -34,7 +34,7 @@ const AboutUXUX = () => {
       <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#7B8C9C] rounded-full"></div>
     </div>
 
-    <div className="my_glassMorhism background-glass min-h-[320px] w-[350px] sm:w-full sm:min-h-[500px] py-4 px-2 sm:px-16 sm:py-6  rounded-[16px]">
+    <div className="my_glassMorhism background-glass min-h-[320px] w-[full] sm:w-full sm:min-h-[500px] py-4 px-2 sm:px-16 sm:py-6  rounded-[16px]">
 <div className={`flex  items-center justify-between`}>
 
       <div className="py-4 sm:py-6 ">

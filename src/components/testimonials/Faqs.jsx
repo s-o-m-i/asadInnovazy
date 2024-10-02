@@ -33,11 +33,11 @@ const Faqs = () => {
             </div>
 
 
-<div className="grid grid-cols-12 gap-8">
+<div className="grid grid-cols-12 sm:gap-8">
               {faqs.map((faq, index) => {
                 return (
                   <div className="col-span-12 ">
-                    <div className={`f-ques py-2 sm:py-5 px-5 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
+                    <div className={`f-ques py-2 sm:py-5 px-5 mt-4 sm:mt-0 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
   <div className="flex items-center justify-between">
 
   <h1 className="">      {faq.question}</h1>

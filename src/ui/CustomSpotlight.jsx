@@ -69,7 +69,7 @@ const CustomSpotlight = ({ data }) => {
         <div ref={containerRef} data-spotlight>
             <div className="relative group">
                 <div className="w-full pt-24">
-                    <div className="max-w-full mx-auto grid gap-6 lg:grid-cols-3 items-start justify-between lg:max-w-none group">
+                    <div className="max-w-full mx-auto grid gap-8 lg:grid-cols-3 items-start justify-between lg:max-w-none group">
                         {data.map((x, i) => {
                             return (<div key={i} className={`spotlight-card-${i} relative h-full rounded-xl border-l-2 border-l-primary-orange p-px before:absolute before:w-80 before:h-80 before:-left-40 before:-top-40 before:bg-slate-400 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:group-hover:opacity-100 before:z-10 before:blur-[100px] after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:bg-zinc-500 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:hover:opacity-10 after:z-30 after:blur-[100px] overflow-hidden w-full sm:w-[400px] sm:h-[300px]`}>
 

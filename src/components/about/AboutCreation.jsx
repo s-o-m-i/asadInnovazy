@@ -27,7 +27,7 @@ const AboutCreation = () => {
 
 
           {/* Content Section */}
-          <div className="my_glassMorhism  sm:px-16 background-glass min-h-[320px] w-[350px] sm:w-full sm:min-h-[500px] py-4 px-4 sm:py-8 rounded-[16px]">
+          <div className="my_glassMorhism  sm:px-16 background-glass min-h-[320px] w-[full] sm:w-full sm:min-h-[500px] py-4 px-4 sm:py-8 rounded-[16px]">
             <div className={`flex items-center justify-between`}>
               
               {/* Text Section */}
