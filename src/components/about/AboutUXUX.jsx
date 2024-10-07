@@ -22,16 +22,16 @@ const AboutUXUX = () => {
 
 
 <div className="hidden sm:flex absolute gap-5 justify-end left-[50%] ">
-  <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
-  <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
+  <div className="w-[50px] opacity-[.3] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
+  <div className="w-[50px] opacity-[.3] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
 </div>
 
 
 <div className={`${container}  w-full `}>
   <div className="relative">
     <div className="flex absolute gap-5 justify-end animate-move">
-      <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#4A4A4A] mt-24 rounded-full"></div>
-      <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#7B8C9C] rounded-full"></div>
+      <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] opacity-[.3] bg-[#4A4A4A] mt-24 rounded-full"></div>
+      <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] opacity-[.3] bg-[#7B8C9C] rounded-full"></div>
     </div>
 
     <div className="my_glassMorhism background-glass min-h-[320px] w-[full] sm:w-full sm:min-h-[500px] py-4 px-2 sm:px-16 sm:py-6  rounded-[16px]">

@@ -20,16 +20,16 @@ const CCServices = () => {
 
        
         <div className="hidden sm:flex absolute gap-5 justify-end left-[50%] ">
-          <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
-          <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#4A4A4A] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
+          <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] opacity-[.5] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
+          <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] opacity-[.5] bg-[#4A4A4A] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
         </div>
 
        
         <div className="col-span-12 sm:col-span-6 w-full">
           <div className="relative">
             <div className="flex absolute gap-5 justify-end animate-move">
-              <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#A0A0A0] mt-24 rounded-full"></div>
-              <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#000000] rounded-full"></div>
+              <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] opacity-[.5] bg-[#000000] mt-24 rounded-full"></div>
+              <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] opacity-[.5] bg-[#000000] rounded-full"></div>
             </div>
 
             <div className="my_glassMorhism background-glass h-[320px] w-[350px] sm:w-full sm:h-[420px]  px-4 sm:py-6 flex items-center rounded-[16px]">
@@ -51,9 +51,9 @@ const CCServices = () => {
       
         <div className="col-span-12 sm:col-span-6 w-full">
           <div className="relative w-full">
-            <div className="flex gap-5 justify-end absolute">
-              <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#4A6C82] mt-24 rounded-full animate-move"></div>
-              <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#6C7A59] rounded-full animate-move"></div>
+            <div className="flex gap-5 justify-end absolute w-full" >
+              {/* <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#23313ae2] mt-24 rounded-full animate-move"></div> */}
+              <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] opacity-[.5] absolute right-0 bg-[#392418bb] rounded-full animate-move"></div>
             </div>
 
            

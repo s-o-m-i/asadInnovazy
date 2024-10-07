@@ -37,11 +37,11 @@ const Faqs = () => {
               {faqs.map((faq, index) => {
                 return (
                   <div className="col-span-12 ">
-                    <div className={`f-ques py-2 sm:py-5 px-5 mt-4 sm:mt-0 background-glass text-white  ${openFaqIndex === index?"h-[130px]":"h-[65px]"} overflow-hidden `}>
+                    <div onClick={() => handleToggle(index)} className={`f-ques py-2 sm:py-5 px-5 mt-4 sm:mt-0 background-glass text-white cursor-pointer ${openFaqIndex === index ? "max-h-[300px]" : "max-h-[65px]"} transition-all duration-200 ease-in-out overflow-hidden `}>
   <div className="flex items-center justify-between">
 
   <h1 className="">      {faq.question}</h1>
-  <div className={`drop_arrow ${openFaqIndex === index ? "rotate-180" : "rotate-0"} text-3xl cursor-pointer transition-all duration-500 ease-in-out`}    onClick={() => handleToggle(index)}>
+  <div className={`drop_arrow ${openFaqIndex === index ? "rotate-180" : "rotate-0"} text-3xl cursor-pointer transition-all duration-500 ease-in-out`}    >
   <MdOutlineKeyboardArrowDown />
   </div>
   </div>

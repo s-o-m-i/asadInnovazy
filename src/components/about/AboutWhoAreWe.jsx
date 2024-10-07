@@ -29,9 +29,8 @@ At Innovazy LLC, we are driven by integrity, customer-centricity, and a passion 
         </div>
       <h4 className={` font-bold ${textwhite}  `}>Clean Code</h4>
         </div>
-      <p className={`${paragraphTextColor} leading-6 text-[14px]`}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A placeat hic
-        eaque cupiditate pariatur voluptates deleniti iure? Dolor, sed
+      <p className={`${paragraphTextColor} sm:w-[90%] leading-6 text-[14px]`}>
+      Enhance readability and maintainability with clean code. Our expert developers create efficient, well-structured code that ensures long-term success and scalability.
       </p>
         </div>
         <div className="col-span-12 sm:col-span-6 mt-5 sm:mt-0">
@@ -42,8 +41,7 @@ At Innovazy LLC, we are driven by integrity, customer-centricity, and a passion 
       <h4 className={` font-bold ${textwhite}  `}>Modern Design</h4>
         </div>
       <p className={`${paragraphTextColor} leading-6 text-[14px]`}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A placeat hic
-        eaque cupiditate pariatur voluptates deleniti iure? Dolor, sed
+      Transform your brand with modern design that captivates users. Our team creates stunning, intuitive interfaces that inspire and connect, keeping you ahead of the competition.
       </p>
         </div>
       </div>

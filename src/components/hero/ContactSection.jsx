@@ -31,6 +31,47 @@ const ContactSection = () => {
         setShowModalDialog(true);
     };
 
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("https://formspree.io/f/xlderwla", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    name: emailBody.name,
+                    email: emailBody.emailTo,
+                    phoneNumber: emailBody.phoneNumber,
+                    company: emailBody.company,
+                    subject: emailBody.subject,
+                    message: emailBody.message
+                })
+            });
+
+            if (response.ok) {
+                  // Parse the response to check for any message from Formspree
+            const responseData = await response.json();
+            
+                setSuccess(true);
+                onMessageSend(); // Show the success modal
+                setTimeout(() => {
+                    setShowModalDialog(false); // Close modal after 3 seconds
+                }, 3000);
+            } else {
+                setSuccess(false);
+                onMessageSend(); // Show the error modal
+                console.error("Failed to send message.");
+            }
+        } catch (error) {
+            setSuccess(false);
+            onMessageSend(); // Show the error modal
+            console.error("An error occurred while sending the message:", error);
+        }
+    };
+
     return (
         <div className='relative grid'>
             <div className='contactGradientBlobLeft'>
@@ -42,14 +83,21 @@ const ContactSection = () => {
                                 <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-center leading-7`}>Get in touch with us, we are available 24/7 for you.</p>
                             </div>
 
-                            <form className="card rounded-3xl background-glass mt-10 p-10 grid gap-10" onSubmit={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                            }}>
+                            <form 
+//                             action="https://formspree.io/f/xlderwla"
+//   method="POST" 
+  className="card rounded-3xl background-glass mt-10 p-10 grid gap-10" 
+  onSubmit={handleSubmit}
+  
+//   onSubmit={(e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+// }}
+>
                                 <div className="flex flex-wrap gap-6 md:gap-0 items-center justify-between">
                                     <div className='grid w-[100%] md:w-[30%]'>
                                         <label htmlFor="name" className='text-white font-medium mb-3 text-[14px]'>Name</label>
-                                        <input className={`background-glass rounded-xl p-5 text-white`} required onChange={(e) => { onChange(e); }} value={emailBody.name} type="text" name='name' placeholder='Enter name' />
+                                        <input  className={`background-glass rounded-xl p-5 text-white`} required onChange={(e) => { onChange(e); }} value={emailBody.name} type="text" name='name' placeholder='Enter name' />
                                     </div>
                                     <div className='grid w-[100%] md:w-[30%]'>
                                         <label htmlFor="email" className='text-white font-medium mb-3 text-[14px]'>Email</label>
@@ -79,17 +127,19 @@ const ContactSection = () => {
                                     <textarea rows={6} className={`background-glass rounded-xl p-5 text-white resize-none`} required onChange={(e) => { onChange(e); }} value={emailBody.message} type="text" name='message' placeholder='Enter your message' />
                                 </div>
                                 <div className='text-center'>
-                                    <button aria-label='send mail to innovazy' onClick={() => {
-                                        sendMail(emailBody).then(res => {
-                                            setSuccess(true);
-                                            onMessageSend();
-                                        }).catch(err => {
-                                            setSuccess(false);
-                                            onMessageSend();
-                                            console.log(err);
-                                        });
-                                    }}>
-                                        <PrimaryButton btnText="Send message" image={ForwardArrow} imageAlt="Send message to Innovazy" />
+                                    <button aria-label='send mail to innovazy' 
+                                    //  onClick={() => {
+                                    //     sendMail(emailBody).then(res => {
+                                    //         setSuccess(true);
+                                    //         onMessageSend();
+                                    //     }).catch(err => {
+                                    //         setSuccess(false);
+                                    //         onMessageSend();
+                                    //         console.log(err);
+                                    //     });
+                                    // }}
+                                    >
+                                        <PrimaryButton btnText="Send message" type='submit' image={ForwardArrow} imageAlt="Send message to Innovazy" />
                                     </button>
                                 </div>
                             </form>

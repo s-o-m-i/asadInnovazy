@@ -5,8 +5,13 @@ import SecondaryButton from '../../ui/SecondaryButton';
 import CallIcon from '../../assets/icons/CallIconOrange.png'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import '../../ui/services.css'
+import { PopupModal } from 'react-calendly';
 
 const QALandingPage = () => {
+  const [showModal, setModal] = React.useState(false);
+  const handleClick = () => {
+      setModal(true);
+  };
   return (
     <>
     <div className="homeSectionleftBlob  mt-[150px] z-50 ">
@@ -21,32 +26,32 @@ const QALandingPage = () => {
               </div>
 
               <h1
-                className={`${textwhite}  services_glowing_text text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[50px] w-[100%] font-medium`}
+                className={`${textwhite}   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[50px] w-[100%] font-medium`}
               >
      Quality Assurance and   <br/> Testing 
               </h1>
              
               <div className="self-start">
-                <div className="h-1 w-24 bg-orange-500" />
+                <div className="h-1 w-24 services_heading_success" />
               </div>
             </div>
           </div>
           <h1
-             className={`${textwhite} mt-28 ${headingText}   w-[100%]  font-medium`}
+             className={`${textwhite} mt-28 text-[30px] sm:text-[38px]   sm:w-[50%] w-[100%]  font-medium`}
            >
-    
-       <span className='testi-linear'>    Quality Assurance and Testing</span>   Services
+    Your Assurance for Error-Free 
+       <span className='testi-linear'> Experiences   </span> 
            </h1>
 
            <p
-                  className={`w-[100%] sm:w-[60%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
+                  className={`w-[100%] sm:w-[45%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
 Assuring the quality of your products to ensure that they are bug free and error free while they stream on all devices and browsers.
 
 </p>
         
                 <div className="flex flex-wrap gap-3 sm:gap-0 mt-12">
-                               <button  aria-label="Get Consultation">
+                               <button onClick={handleClick} aria-label="Get Consultation">
                                    <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
                                </button>
                                <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
@@ -56,6 +61,17 @@ Assuring the quality of your products to ensure that they are bug free and error
 
                     </div>
                     </div>
+                    {
+                        typeof window !== 'undefined' ?
+                            <PopupModal
+                                open={showModal}
+                                onModalClose={() => setModal(false)}
+                                url="https://calendly.com/innovazy/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=151414&text_color=ffffff&primary_color=f17840"
+                                rootElement={document.getElementById("___gatsby")}
+                            />
+                            :
+                            ''
+                    }
     </>
   )
 }

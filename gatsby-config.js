@@ -44,12 +44,15 @@ module.exports = {
   
   
     "gatsby-transformer-remark",
+   
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: `gatsby-plugin-nprogress`,
       options: {
-        component: path.resolve('./src/components/MainLayout'),
+        color: `tomato`,
+        showSpinner: false,
       },
     },
+
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

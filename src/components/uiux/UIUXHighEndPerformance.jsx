@@ -25,16 +25,16 @@ const UIUXHighEndPerformance = () => {
 
 
 <div className="hidden sm:flex absolute gap-5 justify-end left-[50%] ">
-  <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
-  <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
+  <div className="w-[50px] sm:w-[300px] opacity-[.3] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
+  {/* <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div> */}
 </div>
 
 {/* First Column */}
 <div className="col-span-12 sm:col-span-6 w-full">
   <div className="relative">
     <div className="flex absolute gap-5 justify-end animate-move">
-      <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#c96547] mt-24 rounded-full"></div>
-      <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#c72aa0] rounded-full"></div>
+      <div className="w-[40px] opacity-[.3] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#1e1425] mt-24 rounded-full"></div>
+      <div className="w-[40px] opacity-[.3] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#858179] rounded-full"></div>
     </div>
 
     <div className="my_glassMorhism background-glass h-[320px] w-[350px] sm:w-full sm:h-[420px] flex items-center  px-4 sm:py-6  rounded-[16px]">
@@ -50,9 +50,9 @@ const UIUXHighEndPerformance = () => {
 {/* Second Column */}
 <div className="col-span-12 sm:col-span-6 w-full">
   <div className="relative w-full">
-    <div className="flex gap-5 justify-end absolute">
-      <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#3a3939] mt-24 rounded-full animate-move"></div>
-      <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#000000] rounded-full animate-move"></div>
+    <div className="flex gap-5 justify-end absolute w-full">
+      {/* <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#342409] mt-24 rounded-full animate-move"></div> */}
+      <div className="w-[50px] opacity-[.3] sm:w-[150px] h-[50px] sm:h-[150px] absolute right-0 bg-[#0e304e8d] rounded-full animate-move"></div>
     </div>
 
     {/* First Subsection */}
@@ -60,7 +60,7 @@ const UIUXHighEndPerformance = () => {
     <div>
     <h1 className='text-white text-2xl '>  Usability
     Testing</h1>
-    <p className={`mt-5 ${paragraphTextColor}`}>Our experts are highly skilled and experienced in conducting usability testing of all UI/UX designs. It looks into both qualitative and quantitative data information regarding the satisfaction of users with the product to help clients with bug-free user experiences for usability testing.</p>
+    <p className={`mt-5 text-white`}>Our experts are highly skilled and experienced in conducting usability testing of all UI/UX designs. It looks into both qualitative and quantitative data information regarding the satisfaction of users with the product to help clients with bug-free user experiences for usability testing.</p>
       </div>
     </div>
 
@@ -70,7 +70,7 @@ const UIUXHighEndPerformance = () => {
       <div>
     <h1 className='text-white text-2xl'>  UX
     Audit</h1>
-    <p className={`mt-5 ${paragraphTextColor}`}>Our UX audit aims at gaining a better understanding of UX challenges and help customers to save money on development, increase profitability and observe beforehand about user behaviors. By following this process, we get to serve our clients better. It ensures quality.</p>
+    <p className={`mt-5 text-white`}>Our UX audit aims at gaining a better understanding of UX challenges and help customers to save money on development, increase profitability and observe beforehand about user behaviors. By following this process, we get to serve our clients better. It ensures quality.</p>
       </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {  paragraphTextColor } from '../../styles/styles';
 import { Carousel } from 'primereact/carousel';
 import { testimonials } from '../../utils/testimonials-data';
 import Testimonial from "../../assets/icons/quote.png";
 
 const TestimonialsSlider = () => {
+    const [autoplayInterval,setAutoplayInterval] = useState(3000)
     const responsiveOptions = [
         {
             breakpoint: '1199px',
@@ -33,9 +34,20 @@ const TestimonialsSlider = () => {
         }
     ];
 
+
+    const handleMouseEnter = () => {
+        setAutoplayInterval(0)
+    }
+    const handleMouseLeave = () => {
+setAutoplayInterval(3000)
+    }
+
     const reviewTemplate = (review) => {
         return (
-            <div className='card border-l-2 border-primary-orange testimonial_card background-glass relative my-7 p-8 w-[90%] mx-auto' id={review.id} style={{ borderRadius: "50px 20px" }}>
+            <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className='card border-l-2 border-primary-orange testimonial_card background-glass relative my-7 p-8 w-[90%] mx-auto' id={review.id} style={{ borderRadius: "50px 20px" }}>
             <div className="testi_circle " style={{ borderRadius: "50px 20px" }}></div>
                 <div className='grid '>
                     <div className='flex items-center justify-between z-50'>
@@ -75,7 +87,7 @@ const TestimonialsSlider = () => {
                 }}
                 showIndicators={false}
                 showNavigators={true}
-                autoplayInterval={3000} value={testimonials} numVisible={3} numScroll={1}
+                autoplayInterval={autoplayInterval} value={testimonials} numVisible={3} numScroll={1}
                 responsiveOptions={responsiveOptions} itemTemplate={reviewTemplate} circular />
         
     );

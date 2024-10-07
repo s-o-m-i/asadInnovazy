@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles';
 import { Carousel } from 'primereact/carousel';
 import { testimonials } from '../../utils/testimonials-data';
 import Testimonial from "../../assets/icons/quote.png";
 
 const Testimonials = () => {
+    const [autoplayInterval, setAutoplayInterval] = useState(3000);
     const responsiveOptions = [
         {
             breakpoint: '1199px',
@@ -23,9 +24,21 @@ const Testimonials = () => {
         }
     ];
 
+    const handleMouseEnter = () => {
+        setAutoplayInterval(0); // Stop autoplay when hovering
+    };
+
+    const handleMouseLeave = () => {
+        setAutoplayInterval(3000); // Resume autoplay when mouse leaves
+    };
+
     const reviewTemplate = (review) => {
         return (
-            <div className='card background-glass my-7 p-8 w-[100%] mx-auto' id={review.id} style={{ borderRadius: "50px 20px" }}>
+            <div
+            
+            onMouseEnter={handleMouseEnter} // Stop autoplay on hover
+            onMouseLeave={handleMouseLeave} // Resume autoplay on leave
+            className='card background-glass my-7 p-8 w-[100%] sm:w-[90%] mx-auto' id={review.id} style={{ borderRadius: "50px 20px" }}>
                 <div className='grid'>
                     <div className='flex items-center justify-between'>
                         <span className='h-[1px] bg-[#262626] w-[100px]'></span>
@@ -48,7 +61,7 @@ const Testimonials = () => {
             <Carousel
                 pt={{
                     indicators: { className: "h-[30px] w-[5%] flex justify-between mx-auto mt-5" },
-                    indicatorButton: { className: "rounded-fullf   h-[14px] w-[14px] bg-sky-600" },
+                    indicatorButton: { className: "rounded-full   h-[14px] w-[14px] bg-sky-600" },
                     nextButton: {
                         style: { height: "35px", width: "35px", borderRadius: "50%" },
                         className: "background-glass text-white hidden sm:flex "
@@ -60,7 +73,7 @@ const Testimonials = () => {
                 }}
                 showIndicators={false}
                 showNavigators={true}
-                autoplayInterval={3000} value={testimonials} numVisible={3} numScroll={1}
+                autoplayInterval={autoplayInterval} value={testimonials} numVisible={3} numScroll={1}
                 responsiveOptions={responsiveOptions} itemTemplate={reviewTemplate} circular />
         </div>
     );

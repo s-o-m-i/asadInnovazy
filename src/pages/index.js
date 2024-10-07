@@ -10,18 +10,35 @@ import Testimonials from "../components/hero/Testimonials";
 import MetaData from "../components/MetaData";
 import "../styles/global.css";
 import CallToAction from "../ui/CallToAction";
+import Loader from "../ui/Loader";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); 
+    }, 5000);
+
+    return () => clearTimeout(timer); 
+  }, [isLoading]);
   return <div className="mt-[140px] sm:mt-[120px]">
-    <MetaData title="Innovazy - Home" description="We offer innovative, creative and advanced IT solutions to Businesses and Industries around the Globe" keywords="Innovazy, IT Solutions" />
-    <HomeSection />
-    <AboutSection />
-    <ClientsBusiness />
-    <ServicesSection />
-    <CallToAction />
-    <TeamSection />
-    <BenefitSection />
-    <Testimonials />
-    <ContactSection />
+
+    {isLoading?(
+<Loader/>
+    ):(
+<>
+<MetaData title="Innovazy - Home" description="We offer innovative, creative and advanced IT solutions to Businesses and Industries around the Globe" keywords="Innovazy, IT Solutions" />
+<HomeSection />
+<AboutSection />
+<ClientsBusiness />
+<ServicesSection />
+<CallToAction />
+<TeamSection />
+<BenefitSection />
+<Testimonials />
+<ContactSection />
+</>
+    )}
   </div>;
 }

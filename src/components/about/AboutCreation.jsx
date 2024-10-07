@@ -10,17 +10,17 @@ const AboutCreation = () => {
     <div className=' relative'>
 
       <div className="hidden sm:flex absolute gap-5 justify-end left-[50%]">
-        <div className="w-[50px] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
-        <div className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
-      </div>
+        <div className="w-[50px] opacity-[.3] sm:w-[300px] h-[50px] sm:h-[300px] bg-[#2c242e] mt-24 rounded-full animate-move"></div>
+        <div className="w-[50px] opacity-[.3] sm:w-[150px] h-[50px] sm:h-[150px] bg-[#a1a49c] rounded-full absolute -left-[300px] bottom-0 animate-move-two"></div>
+      </div> opacity-[.5]
 
       <div className={`${container} w-full`}>
         <div className="relative">
           <div className="flex absolute gap-5 justify-end animate-move h-full w-full">
-            <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#c96547] mt-24 rounded-full"></div>
-            <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#7B8C9C] rounded-full"></div>
-            <div className="w-[40px] sm:w-[250px] h-[40px] sm:h-[250px] bg-[#2E2E2E]  rounded-full absolute left-0 "></div>
-            <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#8A7669] rounded-full absolute left-0"></div>
+            <div className="w-[40px] opacity-[.3] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#c96547] mt-24 rounded-full"></div>
+            <div className="w-[40px] opacity-[.3] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#7B8C9C] rounded-full"></div>
+            <div className="w-[40px] opacity-[.3] sm:w-[250px] h-[40px] sm:h-[250px] bg-[#2E2E2E]  rounded-full absolute left-0 "></div>
+            <div className="w-[40px] opacity-[.3] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#8A7669] rounded-full absolute left-0"></div>
           </div>
 
 
@@ -37,7 +37,7 @@ const AboutCreation = () => {
                 </h1>
 
                 <p className={`w-[100%] sm:w-[60%] mt-8 text-white leading-7 text-[16px]`}>
-                  We develop customized web designs to meet the demands and needs of all types of customers, from small custom websites to highly advanced online stores, ensuring that we are a 360-degree full-scale custom software development company.
+                Unleash the potential of your business with our mobile applications designed for exceptional user experiences. Our talented team creates intuitive, visually stunning apps that captivate users and drive engagement. Whether launching a new app or enhancing an existing one, we’re here to turn your vision into a reality and keep your users coming back for more.
                 </p>
 
                 <div className="mt-16">

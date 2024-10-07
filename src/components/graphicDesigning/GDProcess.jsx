@@ -25,14 +25,14 @@ const GDProcess = () => {
             <h1 className={`${headingText} mt-10 ${textwhite}`}>01</h1>
             <h1 className={` ${textwhite} `}>Research</h1>
             <p className={`w-[100%]  mt-3 ${paragraphTextColor} text-[12px] `}>
-            Our experts use modern, efficient development methods to deliver high-quality, cost-effective web solutions, enhancing customer retention and satisfaction.
+            Thorough research drives informed decisions, providing valuable insights to guide your strategy and maximize outcomes.
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange border-dashed px-5 overflow-hidden w-[300px] h-[300px] text-center">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>02</h1>
             <h1 className={` ${textwhite} `}>Planning</h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
-            Our experts focus on a modern and speedy development methodology to achieve quality in timely and cost-effective web solutions which leads to improved customer retention and contentment.
+            Strategic planning lays the foundation for success, aligning your goals with actionable steps for effective project execution.
                       </p>
         </div>
     </div>
@@ -42,14 +42,14 @@ const GDProcess = () => {
             <h1 className={`${headingText} mt-10 ${textwhite}`}>03</h1>
             <h1 className={` ${textwhite} `}>Execution</h1>
             <p className={`w-[100%]  mt-3 ${paragraphTextColor} text-[12px] `}>
-            Our experts use modern, efficient development methods to deliver high-quality, cost-effective web solutions, enhancing customer retention and satisfaction.
+            Deliver results efficiently through precise execution, ensuring your projects are completed on time and to the highest standards.
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange border-dashed px-5 overflow-hidden w-[300px] h-[300px] text-center">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>04</h1>
             <h1 className={` ${textwhite} `}>Performance Testing</h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
-            Our experts focus on a modern and speedy development methodology to achieve quality in timely and cost-effective web solutions which leads to improved customer retention and contentment.
+            Evaluate your application’s speed and stability with performance testing to ensure optimal user experience and reliability.
                       </p>
         </div>
     </div>

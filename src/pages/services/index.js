@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { container, headingText, textwhite } from "../../styles/styles"
+import { container, headingText, paragraphTextColor, textwhite } from "../../styles/styles"
 import "../../ui/services.css"
 
 import "../../components/hero/hero.css"
@@ -28,30 +28,62 @@ const ServicesHome = () => {
     <div className="homeSectionleftBlob  mt-[150px] z-50 ">
       <div className="homeSectionRightBlob  ">
         <div className={`${container} mt-[130px]`}>
-          {/* <h1
-              className={`${textwhite} services_glowing_text text-center uppercase tracking-wider font-[Montserrat-Bold] text-[120px] w-[100%] font-medium`}
-            >
-              SERVICES
-            </h1> */}
+         
 
-          <div className="flex justify-center ">
+          {/* <div className="flex justify-center ">
             <div className="flex flex-col items-center">
               <div className="self-end">
                 <div className="h-1 w-24 services_heading_success" />
               </div>
 
               <h1
-                className={`${textwhite} text_effect_threeD  services_glowing_text text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[120px] w-[100%] font-medium`}
+                className={`${textwhite} text_effect_threeD   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[120px] w-[100%] font-medium`}
               >
                 SERVICES
               </h1>
 
               <div className="self-start mt-2">
-                <div className="h-1 w-24 bg-orange-500" />
+                <div className="h-1 w-24 services_heading_success" />
               </div>
             </div>
-          </div>
-          <p
+          </div> */}
+
+<div className="flex justify-center ">
+  <div className="flex flex-col items-center">
+    
+    <div className="self-end">
+      <div className="h-1 w-24 services_heading_success" />
+    </div>
+    
+    
+    <h1
+      className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[38px] sm:text-[60px] w-[100%] font-medium`}
+    >
+      Ser<span className="testi-linear">v</span>ices
+    </h1>
+
+    
+    <div className="self-start">
+      <div className="h-1 w-24 services_heading_success" />
+    </div>
+  </div>
+</div>
+           <h1
+             className={`${textwhite} mt-28 ${headingText}   w-[100%]  font-medium`}
+           >
+     COVERING ALL YOUR 
+
+<span className='testi-linear'> DIGITAL NEEDS</span> 
+           </h1>
+
+           <p
+                  className={`w-[100%] sm:w-[60%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
+                >
+            At Innovazy, we provide a comprehensive range of digital services tailored to meet all your business needs. From innovative web development and mobile app design to cutting-edge digital marketing strategies, our solutions are crafted to elevate your online presence and drive growth. Whether you're looking for custom software, cloud solutions, or data analytics, our expert team is here to help you achieve success in the digital world.
+                </p>
+
+
+          {/* <p
             className={`w-[100%]   text-center mt-5 text-white text-[14px] sm:text-[20px] leading-6 sm:leading-7`}
           >
             COVERING ALL YOUR DIGITAL NEEDS
@@ -61,17 +93,14 @@ const ServicesHome = () => {
             <h1
               className={`${textwhite} mt-28  text-center   font-[Montserrat-Bold] ${headingText} w-[100%] font-medium`}
             >
-              Landing{" "}
-              <span className="services_heading_success rounded-full px-4 py-1 text-[22px] sm:text-[38px]">
-                your success,
-              </span>
+              Landing your success,
             </h1>
             <h1
               className={`${textwhite} mt-4  text-center   font-[Montserrat-Bold] ${headingText} w-[100%] font-medium`}
             >
               everything starts with Innovazy
             </h1>
-          </div>
+          </div> */}
           {/* <div className="relative ">
           <div className="flex absolute gap-5 justify-end animate-move w-full z-[-1]">
       <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#A0A0A0] mt-24 rounded-full absolute left-0"></div>
@@ -96,7 +125,7 @@ const ServicesHome = () => {
 
 
 
-          <div className="grid grid-cols-12 mt-28">
+          <div className="grid grid-cols-12 my-56">
             {servicesCards && servicesCards.length>0 && servicesCards.map((serData,index)=>{
 return (
             <div className="col-span-12 md:col-span-6">

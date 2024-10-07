@@ -11,16 +11,23 @@ import FacebookIcon from "../../assets/icons/facebookIcon.png";
 import "./footer.css";
 
 const Footer = () => {
+
+    const handleScrollTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior:"smooth"
+        })
+    }
     return (
         <div className={`${container} mt-[140px]`}>
             <Link to="/" className="flex items-center  sm:justify-center space-x-3 rtl:space-x-reverse">
                 <StaticImage src='../../assets/logo/InnovazyWhite.png' alt="Logo" className='!w-[150px]' />
             </Link>
             <div className="flex flex-wrap items-start sm:items-center justify-between my-8 mx-auto gap-3 sm:gap-0 flex-col sm:flex-row w-[100%] sm:w-[60%] md:w-[60%] lg:w-[40%]">
-                <Link to='/' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>Home</Link>
-                <Link to='/about-us' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>About Us</Link>
-                <Link to='/services' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>Services</Link>
-                <Link to='/testimonials' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>What Clients Say?</Link>
+                <Link to='/' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>Home</Link>
+                <Link to='/about-us' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>About Us</Link>
+                <Link to='/services' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>Services</Link>
+                <Link to='/testimonials' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>What Clients Say?</Link>
                 <Link to='/blogs' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>Blogs</Link>
             </div>
             <hr className='border-[#262626]' />
