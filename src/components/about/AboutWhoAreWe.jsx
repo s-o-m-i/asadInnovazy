@@ -2,8 +2,10 @@ import React from 'react'
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles'
 import { ImEye } from "react-icons/im";
 import { CgWebsite } from "react-icons/cg";
+import { useTranslation } from 'react-i18next';
 
 const AboutWhoAreWe = () => {
+  const {t} = useTranslation("about")
   return (
     <>
          <div className={`${container} mt-[250px] mb-[200px]`}>
@@ -16,10 +18,10 @@ const AboutWhoAreWe = () => {
       </div>
     </div>
     <div className="w-[100%] col-span-12 sm:col-span-6 sm:mt-0 mt-5">
-      <h1 className={`text-3xl font-bold ${textwhite} ${headingText} `}>WHO ARE <span className="text-primary-orange">WE?</span> </h1>
+      <h1 className={`text-3xl font-bold ${textwhite} ${headingText} `}>{t("sectionFive.mainHeadingOne")} <span className="text-primary-orange">{t("sectionFive.mainHeadingTwo")}?</span> </h1>
       <div className="h-[3px] bg-primary-orange w-[30%] my-3"/>
       <p className={`${paragraphTextColor} leading-7 text-[16px]`}>
-At Innovazy LLC, we are driven by integrity, customer-centricity, and a passion for innovation. Our team specializes in creating customized web and mobile applications, offering cloud solutions on AWS and Azure, and providing top-notch UI/UX design. We are committed to delivering exceptional service and leveraging cutting-edge technology to solve business challenges and drive success.
+      {t("sectionFive.desc")}
       </p>
       <div className="grid grid-cols-12 mt-5">
         <div className="col-span-12 sm:col-span-6">
@@ -27,10 +29,10 @@ At Innovazy LLC, we are driven by integrity, customer-centricity, and a passion 
         <div className="text-3xl text-primary-orange">
         <ImEye />
         </div>
-      <h4 className={` font-bold ${textwhite}  `}>Clean Code</h4>
+      <h4 className={` font-bold ${textwhite}  `}>  {t("sectionFive.cards.cardOne.title")}</h4>
         </div>
       <p className={`${paragraphTextColor} sm:w-[90%] leading-6 text-[14px]`}>
-      Enhance readability and maintainability with clean code. Our expert developers create efficient, well-structured code that ensures long-term success and scalability.
+      {t("sectionFive.cards.cardOne.desc")}
       </p>
         </div>
         <div className="col-span-12 sm:col-span-6 mt-5 sm:mt-0">
@@ -38,10 +40,10 @@ At Innovazy LLC, we are driven by integrity, customer-centricity, and a passion 
         <div className="text-3xl text-primary-orange">
         <CgWebsite />
         </div>
-      <h4 className={` font-bold ${textwhite}  `}>Modern Design</h4>
+      <h4 className={` font-bold ${textwhite}  `}>{t("sectionFive.cards.cardTwo.title")}</h4>
         </div>
       <p className={`${paragraphTextColor} leading-6 text-[14px]`}>
-      Transform your brand with modern design that captivates users. Our team creates stunning, intuitive interfaces that inspire and connect, keeping you ahead of the competition.
+      {t("sectionFive.cards.cardTwo.desc")}
       </p>
         </div>
       </div>

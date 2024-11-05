@@ -1,14 +1,16 @@
 import React from 'react'
 import { headingText, textwhite } from '../../styles/styles'
 import { technologies } from '../../utils/team-tech-data'
+import { useTranslation } from "react-i18next"
 
 const TeamTechnologies = () => {
+  const {t} = useTranslation("team")
   return (
     <>
     
     <div className="flex justify-start sm:justify-center mt-28">
               <h1 className={`${textwhite} text-start sm:text-center ${headingText} sm:text-[42px] w-[100%] sm:w-[75%] font-medium`}>
-                Building Bridges with <span className="achive-linear">Every Line of Code</span>
+               {t("team.techHeadingOne")} <span className="achive-linear">{t("team.techHeadingTwo")}</span>
               </h1>
             </div>
 

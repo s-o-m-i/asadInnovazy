@@ -5,6 +5,7 @@ import PrimaryButton from '../../ui/PrimaryButton'
 import { Link } from 'gatsby';
 import Lottie from 'react-lottie';
 import uiuxAnime from '../../utils/uiux-lottie.json'
+import { useTranslation } from 'react-i18next';
 
 const AboutUXUX = () => {
   const defaultOptionsSuccess = {
@@ -13,6 +14,7 @@ const AboutUXUX = () => {
     animationData: uiuxAnime,
     
 };
+const {t} = useTranslation("about")
   return (
     <div className='my-20'>
         
@@ -38,13 +40,13 @@ const AboutUXUX = () => {
 <div className={`flex  items-center justify-between`}>
 
       <div className="py-4 sm:py-6 ">
-    <h1 className={`${textwhite} ${headingText} mx-auto w-[100%]  text-start `}>UI/UX<span className="text-orange-500 font-semibold">Techniques </span> </h1>
+    <h1 className={`${textwhite} ${headingText} mx-auto w-[100%]  text-start `}>{t("sectionFour.mainHeadingOne")}<span className="text-orange-500 font-semibold">{t("sectionFour.mainHeadingTwo")} </span> </h1>
 
-    <p className={`w-[100%] sm:w-[80%] mt-8 text-white leading-7 text-[16px]  `}>We develop customize web designs to meet the demands and needs of all types of customers, it includes both small custom design websites to highly advanced online stores to make it evident that we are 360 degree full scale custom software development company. We got our clients secured as our creative team discuss the structure by giving innovative ideas and suggestion.</p>
+    <p className={`w-[100%] sm:w-[80%] mt-8 text-white leading-7 text-[16px]  `}>{t("sectionFour.desc")}</p>
 
     <div className=" mt-16">
 <Link to='/services'>
-                    <PrimaryButton btnText="Explore Services" image={ForwardArrow} imageAlt="Get Consultation" />
+                    <PrimaryButton btnText={t("buttons.exploreServices",{ns:"common"})} image={ForwardArrow} imageAlt="Get Consultation" />
                 </Link>
 </div>
 </div>

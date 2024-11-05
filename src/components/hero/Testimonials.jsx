@@ -3,8 +3,11 @@ import { container, headingText, paragraphTextColor, textwhite } from '../../sty
 import { Carousel } from 'primereact/carousel';
 import { testimonials } from '../../utils/testimonials-data';
 import Testimonial from "../../assets/icons/quote.png";
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+const {t} = useTranslation()
+
     const [autoplayInterval, setAutoplayInterval] = useState(3000);
     const responsiveOptions = [
         {
@@ -55,8 +58,8 @@ const Testimonials = () => {
     return (
         <div className={`${container} mt-[120px]`}>
             <div className='mb-8'>
-                <h1 className={`${textwhite} ${headingText} w-[100%] text-start md:text-center`}>What our clients say?</h1>
-                <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-start md:text-center leading-7`}>Discover how Innovazy has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey.</p>
+                <h1 className={`${textwhite} ${headingText} w-[100%] text-start md:text-center`}>{t("sectionSeven.mainHeading")}</h1>
+                <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-start md:text-center leading-7`}>{t("sectionSeven.desc")}</p>
             </div>
             <Carousel
                 pt={{

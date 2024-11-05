@@ -4,12 +4,14 @@ import PrimaryButton from '../../ui/PrimaryButton';
 import ProfileCard from '../../ui/ProfileCard';
 import { teamHomePageData } from '../../utils/team-data';
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
+import { useTranslation } from 'react-i18next';
 
 const TeamSection = () => {
+    const {t} = useTranslation()
     return (
         <div className={`${container}`}>
-            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Team</h1>
-            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-start md:text-center leading-7 text-[14px] sm:text-[16px]`}>Get acquainted with our dedicated team</p>
+            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>{t("sectionFive.mainHeading")}</h1>
+            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-start md:text-center leading-7 text-[14px] sm:text-[16px]`}>{t("sectionFive.desc")}</p>
             <div className='grid md:grid-cols-12 gap-4 justify-center'>
                 {teamHomePageData.map((x) => {
                     return <>

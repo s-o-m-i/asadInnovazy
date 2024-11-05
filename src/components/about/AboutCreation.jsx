@@ -4,8 +4,10 @@ import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import PrimaryButton from '../../ui/PrimaryButton';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useTranslation } from 'react-i18next';
 
 const AboutCreation = () => {
+  const {t} = useTranslation("about")
   return (
     <div className=' relative'>
 
@@ -33,16 +35,16 @@ const AboutCreation = () => {
               {/* Text Section */}
               <div className="">
                 <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start`}>
-                  We Create <span className="text-primary-orange font-semibold">Mobile Applications</span> <br/> With Best User Experiences
+                 {t('sectionThree.mainHeadingOne')} <span className="text-primary-orange font-semibold">{t('sectionThree.mainHeadingTwo')}</span> <br/>{t('sectionThree.mainHeadingThree')}
                 </h1>
 
                 <p className={`w-[100%] sm:w-[60%] mt-8 text-white leading-7 text-[16px]`}>
-                Unleash the potential of your business with our mobile applications designed for exceptional user experiences. Our talented team creates intuitive, visually stunning apps that captivate users and drive engagement. Whether launching a new app or enhancing an existing one, we’re here to turn your vision into a reality and keep your users coming back for more.
+               {t('sectionThree.desc')}
                 </p>
 
                 <div className="mt-16">
                   <Link to='/services'>
-                    <PrimaryButton btnText="Explore Services" image={ForwardArrow} imageAlt="Get Consultation" />
+                    <PrimaryButton btnText={t("buttons.exploreServices",{ns:"common"})} image={ForwardArrow} imageAlt="Get Consultation" />
                   </Link>
                 </div>
               </div>

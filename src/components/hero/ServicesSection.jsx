@@ -1,13 +1,16 @@
 import React from 'react';
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles';
-import { services } from '../../utils/services-data';
+import { services, servicesCardData } from '../../utils/services-data';
 import ServiceCard from '../../ui/ServiceCard';
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import PrimaryButton from '../../ui/PrimaryButton';
 import "./hero.css";
 import { Link } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 
 const ServicesSection = () => {
+    const {t} = useTranslation();
+    const servicesCards = servicesCardData(t)
     return (
         <div className={`${container} mt-[120px]`}>
             <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Services</h1>
@@ -15,7 +18,7 @@ const ServicesSection = () => {
 
             <div className='mt-10'>
                 <div className="grid md:grid-cols-12 gap-4 justify-center">
-                    {services.map((x) => {
+                    {servicesCards.map((x) => {
                         return <>
                             <ServiceCard fontClassName={x.fontClassName} title={x.title} description={x.description} className={x.className} link={x.link} />
                         </>;
@@ -24,7 +27,7 @@ const ServicesSection = () => {
             </div>
             <div className='text-center mt-14'>
                 <Link to='/services'>
-                    <PrimaryButton btnText="Explore Services" image={ForwardArrow} imageAlt="Get Consultation" />
+                    <PrimaryButton btnText={t("readMore",{ns:"common"})} image={ForwardArrow} imageAlt="Get Consultation" />
                 </Link>
             </div>
         </div>

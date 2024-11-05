@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Footer from './footer/Footer';
 import Navbar from './header/Navbar';
 import Loader from '../ui/Loader';
+import '../i18n.js'
 
 const MainLayout = ({ children }) => {
     // const [isLoading, setIsLoading] = React.useState(true);

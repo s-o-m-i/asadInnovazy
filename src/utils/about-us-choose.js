@@ -8,35 +8,35 @@ import { MdAccountBalanceWallet } from "react-icons/md";
 
 
 
-export const whyChooseUs = [
+export const whyChooseUs = (t) => [
     {
-      "title": "Modern Structure",
-      "description": "We ensure that in all our end products and processing, you get to see the modern and advanced scheme that the world needs in order to progress.",
+      "title": t("sectionTwo.cards.cardOne.title"),
+      "description": t("sectionTwo.cards.cardOne.desc"),
       "icon": <FaBuildingColumns />,
     },
     {
-      "title": "Artistic Design",
-      "description": "Our designs are creative which helps businesses to make a distinction among competitors. Our designs are innovative digital art.",
+    "title": t("sectionTwo.cards.cardTwo.title"),
+      "description": t("sectionTwo.cards.cardTwo.desc"),
       "icon": <PiPaintBrushFill/>
     },
     {
-      "title": "24/7 Support",
-      "description": "We have a caring customer support system which is available 24/7 so you can reach us the moment you feel uncomfortable.",
+     "title": t("sectionTwo.cards.cardThree.title"),
+      "description": t("sectionTwo.cards.cardThree.desc"),
       "icon": <IoIosClock />,
     },
     {
-      "title": "Business Evolution",
-      "description": "We ensure that in all our end products and processing, you get to see the modern and advanced scheme that the world needs in order to progress.",
+       "title": t("sectionTwo.cards.cardFour.title"),
+      "description": t("sectionTwo.cards.cardFour.desc"),
       "icon": <IoBarChartOutline />,
     },
     {
-      "title": "Market Approach",
-      "description": "Our designs are creative which helps businesses to make a distinction among competitors. Our designs are innovative digital art.",
+     "title": t("sectionTwo.cards.cardFive.title"),
+      "description": t("sectionTwo.cards.cardFive.desc"),
       "icon": <FaHandshakeAngle />,
     },
     {
-      "title": "Inexpensive",
-      "description": "We have a caring customer support system which is available 24/7 so you can reach us the moment you feel uncomfortable.",
+      "title": t("sectionTwo.cards.cardSix.title"),
+      "description": t("sectionTwo.cards.cardSix.desc"),
       "icon": <MdAccountBalanceWallet />
     }
   ];

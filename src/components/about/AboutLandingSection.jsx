@@ -8,9 +8,10 @@ import CallIcon from "../../assets/icons/CallIconOrange.png";
 import Lottie from 'react-lottie'
 import aboutAnime from '../../utils/aboutus-anime.json'
 import { PopupModal } from 'react-calendly';
+import { useTranslation } from 'react-i18next';
 
 const AboutLandingSection = () => {
-
+const {t} = useTranslation("about")
   const [showModal, setModal] = React.useState(false);
     const handleClick = () => {
         setModal(true);
@@ -35,19 +36,19 @@ const AboutLandingSection = () => {
                 <h1
                   className={`${textwhite} ${headingText} z-10  w-[100%] sm:w-[75%] font-medium`}
                 >
-                  We Build Develop IT Solutions
+                 {t("sectionOne.mainHeading")}
                 </h1>
                 <p
                   className={`w-[100%] sm:w-[60%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-                At Innovazy you get the best and advanced technological IT solutions for particular business problems. Our team of experts is highly qualified, experienced and skilled. As a result we provide your business a boost and take it to another level of success. Our specialists have got the best talent and expertise in web application development and business software solutions.
+                {t("sectionOne.desc")}
                 </p>
                 <div className="flex flex-wrap gap-3 sm:gap-0 mt-8 pointer-events-auto">
                                 <button  onClick={handleClick} aria-label="Get Consultation">
-                                    <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
+                                    <PrimaryButton btnText={t("buttons.primaryButton",{ns:"common"})} image={ForwardArrow} imageAlt="Get Consultation" />
                                 </button>
                                 <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
-                                    <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
+                                    <SecondaryButton btnText={t("buttons.secondaryButton",{ns:"common"})} image={CallIcon} imageAlt="Talk to us" />
                                 </a>
                             </div>
                             

@@ -9,9 +9,11 @@ import { teamHomePageData } from "../../utils/team-data"
 import TeamCard from "./TeamCard"
 import '../../ui/testimonials.css'
 import { technologies } from "../../utils/team-tech-data";
+import { useTranslation } from "react-i18next"
 
 
 const TeamLandingPage = () => {
+  const {t} = useTranslation("team")
   useEffect(() => {
        function parallaxEffect(event) {
 const elements = document.querySelectorAll(".skill-box")
@@ -43,14 +45,14 @@ if(elements){
               <h1
                 className={`${textwhite} ${headingText} text-start text-[42px] sm:text-[55px] w-[100%] sm:w-[75%] font-medium`}
               >
-                The Team of{""}
-                <span className="text-primary-orange "> Innovazy</span>
+             {t("team.mainHeadingOne")}
+                <span className="text-primary-orange "> {t("team.mainHeadingTwo")}</span>
               </h1>
             </div>
             <p
               className={`w-[100%] sm:w-[60%]  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
             >
-              Meet the team that's investing into the new generation
+           {t("team.desc")}
             </p>
 
             <div className="grid md:grid-cols-12 gap-4 justify-center">

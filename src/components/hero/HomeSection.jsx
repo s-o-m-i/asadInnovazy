@@ -8,8 +8,10 @@ import SecondaryButton from '../../ui/SecondaryButton';
 import "./hero.css";
 import { PopupModal } from "react-calendly";
 import { StaticImage } from 'gatsby-plugin-image';
+import { useTranslation } from 'react-i18next';
 
 const HomeSection = () => {
+    const { t } = useTranslation("home");
     const [showModal, setModal] = React.useState(false);
     const handleClick = () => {
         setModal(true);
@@ -43,17 +45,17 @@ const HomeSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between">
     <div className='w-full'>
         <h1 className={`${textwhite} ${headingText} w-full sm:w-[100%] font-medium`}>
-            We offer Advanced IT Solutions to Businesses and Industries around the Globe
+        {t("sectionOne.mainHeading")}
         </h1>
         <p className={`w-full sm:w-[75%] mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}>
-            Our team of experienced developers has won hundreds of clients throughout our years of practice. From refining your idea and prerequisites to writing code, every step is done in close collaboration with you.
+          {t("sectionOne.description")}
         </p>
         <div className="flex flex-wrap gap-3 sm:gap-0 mt-8">
             <button onClick={handleClick} aria-label="Get Consultation">
-                <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
+                <PrimaryButton btnText={t("buttons.primaryButton", { ns: 'common' })}image={ForwardArrow} imageAlt="Get Consultation" />
             </button>
             <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
-                <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
+                <SecondaryButton btnText={t('buttons.secondaryButton', { ns: 'common' })} image={CallIcon} imageAlt="Talk to us" />
             </a>
         </div>
     </div>
@@ -69,7 +71,7 @@ const HomeSection = () => {
 </div>
 
                     <div className='mt-7'>
-                        <p className={`${textwhite} text-[14px] font-semibold mt-4`}>Affiliated with</p>
+                        <p className={`${textwhite} text-[14px] font-semibold mt-4`}>{t("sectionOne.affiliatedWith")}</p>
                         <img className='mt-2 w-[150px] h-fit' src={Microsoft} alt="Innovazy Affiliated with Microsoft"></img>
                     </div>
 

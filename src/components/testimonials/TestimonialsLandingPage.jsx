@@ -1,13 +1,11 @@
 import React from 'react'
 import { container, headingText, paragraphTextColor, textwhite } from '../../styles/styles'
 import { FaLinkedin } from "react-icons/fa";
-
-
-
-
-
 import TestimonialsSlider from './TestimonialsSlider';
+import { useTranslation } from 'react-i18next';
+
 const TestimonialsLandingPage = () => {
+  const {t} = useTranslation("testimonials")
   return (
     <>
          
@@ -40,13 +38,13 @@ const TestimonialsLandingPage = () => {
            <h1
              className={`${textwhite} mt-28 ${headingText}   w-[100%]  font-medium`}
            >
-       What Our<span className='testi-linear'> Client</span> Says
+     {t("testimonials.subHeadingSliceOne")}<span className='testi-linear'> {t("testimonials.subHeadingSliceTwo")}</span>  {t("testimonials.subHeadingSliceThree")}
            </h1>
 
            <p
                   className={`w-[100%] sm:w-[60%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-              At Innovazy, we deliver cutting-edge IT solutions tailored to solve your unique business challenges. Our team of highly skilled and experienced professionals is dedicated to elevating your business with innovative strategies and advanced technology. By partnering with Innovazy, you not only gain access to top-tier expertise in web application development and business software solutions, but also unlock the potential to drive your business to new heights of success.
+             {t("testimonials.desc")}
                 </p>
         
        

@@ -3,9 +3,11 @@ import {  paragraphTextColor } from '../../styles/styles';
 import { Carousel } from 'primereact/carousel';
 import { testimonials } from '../../utils/testimonials-data';
 import Testimonial from "../../assets/icons/quote.png";
+import { useTranslation } from 'react-i18next';
 
 const TestimonialsSlider = () => {
     const [autoplayInterval,setAutoplayInterval] = useState(3000)
+    const {t} = useTranslation("testimonials");
     const responsiveOptions = [
         {
             breakpoint: '1199px',

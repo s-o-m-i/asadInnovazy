@@ -1,1 +1,27 @@
-export const clientsBusinessArray = [{ number: "1", heading: "WEB APPLICATIONS", subHeading: "We build software that builds your business", description: "Innovazy LLC provides technological solutions to solve specific business problems. We specialize in providing customized solutions to our customers based on their specific business needs. We have specialized team having expertise in Web Applications development and business software solutions. We help you boost your business through our ready software solutions." }, { number: "2", heading: "UI/UX DESIGN", subHeading: "We create websites with great UI/UX techniques", description: "We can build any type or size website you require, from small custom designed websites to highly advanced online stores. We also offer lots of help and advice along the way, so don't stress on the off chance that you are not a web master, we have you secured. Not just this but we also give basic training for the best way to utilize your website." }, { number: "3", heading: "MOBILE APPLICATIONS", subHeading: "We create mobile applications with best interactivity", description: "We provide custom mobile app development services. This includes expert business analysis, design and development of your mobile application from idea to launch, integrating the new product into your infrastructure and providing further optimization and scale-up on demand. We also offer lots of help and advice along the way, so don’t stress on the off chance that you are not a web master, we have you secured." }, { number: "4", heading: "CLOUD CONSULTATION", subHeading: "We provide AWS & AZURE based cloud solutions", description: "Harnessing the power of leading cloud platforms, we offer cutting-edge AWS and Azure solutions that empower your business with unprecedented scalability and reliability. Whether it's optimizing your infrastructure on AWS or leveraging Azure's extensive suite of services, our expertise ensures a seamless transition to the cloud, unlocking new levels of efficiency, flexibility, and innovation for your organization." }];
+export const clientsBusinessArray = (t) => [
+    {
+      number: t("sectionThree.cards.cardOne.number"),
+      heading: t("sectionThree.cards.cardOne.mainTitle"),
+      subHeading:  t("sectionThree.cards.cardOne.subTitle"),
+      description: t("sectionThree.cards.cardOne.desc"),
+    },
+    {
+        number: t("sectionThree.cards.cardTwo.number"),
+        heading: t("sectionThree.cards.cardTwo.mainTitle"),
+        subHeading:  t("sectionThree.cards.cardTwo.subTitle"),
+        description: t("sectionThree.cards.cardTwo.desc"),
+      },
+      {
+        number: t("sectionThree.cards.cardThree.number"),
+        heading: t("sectionThree.cards.cardThree.mainTitle"),
+        subHeading:  t("sectionThree.cards.cardThree.subTitle"),
+        description: t("sectionThree.cards.cardThree.desc"),
+      },
+      {
+        number: t("sectionThree.cards.cardFour.number"),
+        heading: t("sectionThree.cards.cardFour.mainTitle"),
+        subHeading:  t("sectionThree.cards.cardFour.subTitle"),
+        description: t("sectionThree.cards.cardFour.desc"),
+      },
+  ]
+   

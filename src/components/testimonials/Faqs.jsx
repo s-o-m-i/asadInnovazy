@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import { container,  textwhite } from "../../styles/styles"
 import { faqs } from "../../utils/faqs-data"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const Faqs = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
-
+const {t} = useTranslation("testimonials")
   const handleToggle = index => {
     if (openFaqIndex === index) {
       setOpenFaqIndex(null)

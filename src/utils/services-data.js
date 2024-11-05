@@ -1,47 +1,41 @@
-export const services = [
+export const  servicesCardData = (t) => [
   {
     fontClassName:
       "fa-solid fa-laptop-code mb-8 text-primary-orange text-[40px]",
-    title: "Web Design & Development",
-    description:
-      "Get highly customized web solutions to enhance your business by taking our advanced web development services.",
+    title: t("sectionFour.cards.cardOne.title"),
+    description: t("sectionFour.cards.cardOne.desc"),
     link: "/services/web-development",
   },
   {
     fontClassName:
       "fa-brands fa-uncharted mb-8 text-primary-orange text-[40px]",
-    title: "Software Development",
-    description:
-      "We have the best talent of software engineers and IT individuals to serve you with exceptional, unique and innovative IT platters.",
+      title: t("sectionFour.cards.cardTwo.title"),
+      description: t("sectionFour.cards.cardTwo.desc"),
     link: "/services/software-development",
   },
   {
     fontClassName: "fa fa-cloud mb-8 text-primary-orange text-[40px]",
-    title: "Cloud Computing & Consulting",
-    description:
-      " Make your business life easier and get your data managed in a cost effective way with our cloud computing and consulting experts.",
+    title: t("sectionFour.cards.cardThree.title"),
+    description: t("sectionFour.cards.cardThree.desc"),
     link: "/services/cloud-computing",
   },
   {
     fontClassName: "fa-solid fa-mobile mb-8 text-primary-orange text-[40px]",
-    title: "Mobile App Development",
-    description:
-      "Let us polish your experiences with our mobile development services. Our apps serves an uneven and smooth platform for your business.",
+    title: t("sectionFour.cards.cardFour.title"),
+    description: t("sectionFour.cards.cardFour.desc"),
     link: "/services/mobile-development",
   },
   {
     fontClassName:
       "fa-solid fa-fingerprint mb-8 text-primary-orange text-[40px]",
-    title: "Quality Assurance Services",
-    description:
-      "Don’t take any risks with any web solution as we are here to help you with quality assurance services so you know how your products will result before you even launch them.",
+      title: t("sectionFour.cards.cardFive.title"),
+      description: t("sectionFour.cards.cardFive.desc"),
     link: "/services/quality-assurance",
   },
   {
     fontClassName: "fa-solid fa-pen-nib mb-8 text-primary-orange text-[40px]",
-    title: "Graphics Designing Services",
-    description:
-      "Our team of creative designers specializes in transforming your concepts into captivating visual presentations to convey your messages to the target audience.",
+    title: t("sectionFour.cards.cardSix.title"),
+    description: t("sectionFour.cards.cardSix.desc"),
     link: "/services/graphics-design",
   },
 ]
