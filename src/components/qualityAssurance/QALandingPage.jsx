@@ -6,12 +6,14 @@ import CallIcon from '../../assets/icons/CallIconOrange.png'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import '../../ui/services.css'
 import { PopupModal } from 'react-calendly';
+import { useTranslation } from 'react-i18next';
 
 const QALandingPage = () => {
   const [showModal, setModal] = React.useState(false);
   const handleClick = () => {
       setModal(true);
   };
+  const {t} = useTranslation("qa")
   return (
     <>
     <div className="homeSectionleftBlob  mt-[150px] z-50 ">
@@ -28,7 +30,7 @@ const QALandingPage = () => {
               <h1
                 className={`${textwhite}   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[50px] w-[100%] font-medium`}
               >
-     Quality Assurance and   <br/> Testing 
+   {t("qa.mainHeadingSliceOne")}  <br/> {t("qa.mainHeadingSliceTwo")}
               </h1>
              
               <div className="self-start">
@@ -39,23 +41,23 @@ const QALandingPage = () => {
           <h1
              className={`${textwhite} mt-28 text-[30px] sm:text-[38px]   sm:w-[50%] w-[100%]  font-medium`}
            >
-    Your Assurance for Error-Free 
-       <span className='testi-linear'> Experiences   </span> 
+   {t("qa.subHeadingSliceOne")}
+       <span className='testi-linear'>   {t("qa.subHeadingSliceTwo")}   </span> 
            </h1>
 
            <p
                   className={`w-[100%] sm:w-[45%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-Assuring the quality of your products to ensure that they are bug free and error free while they stream on all devices and browsers.
+  {t("qa.desc")}
 
 </p>
         
                 <div className="flex flex-wrap gap-3 sm:gap-0 mt-12">
                                <button onClick={handleClick} aria-label="Get Consultation">
-                                   <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
+                                   <PrimaryButton btnText={t("buttons.primaryButton",{ns:"common"})}image={ForwardArrow} imageAlt="Get Consultation" />
                                </button>
                                <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
-                                   <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
+                                   <SecondaryButton btnText={t("buttons.secondaryButton",{ns:"common"})} image={CallIcon} imageAlt="Talk to us" />
                                </a>
                            </div>
 

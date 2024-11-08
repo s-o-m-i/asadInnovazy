@@ -14,6 +14,7 @@ const {t} = useTranslation("testimonials")
       setOpenFaqIndex(index)
     }
   }
+  const faqsData = faqs(t)
   return (
     <div className="relative">
       <div className="homeSectionleftBlob  mt-[150px] z-50 ">
@@ -26,7 +27,7 @@ const {t} = useTranslation("testimonials")
                 <h1
                   className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[60px] w-[100%] font-medium`}
                 >
-                  FAQ<span className="testi-linear">s</span>
+                  {t("testimonials.faqs.mainHeadingSliceOne")}<span className="testi-linear">{t("testimonials.faqs.mainHeadingSliceTwo")}</span>
                 </h1>
 
               
@@ -35,7 +36,7 @@ const {t} = useTranslation("testimonials")
 
 
 <div className="grid grid-cols-12 sm:gap-8">
-              {faqs.map((faq, index) => {
+              {faqsData.map((faq, index) => {
                 return (
                   <div className="col-span-12 ">
                     <div onClick={() => handleToggle(index)} className={`f-ques py-2 sm:py-5 px-5 mt-4 sm:mt-0 background-glass text-white cursor-pointer ${openFaqIndex === index ? "max-h-[300px]" : "max-h-[65px]"} transition-all duration-200 ease-in-out overflow-hidden `}>

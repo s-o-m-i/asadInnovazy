@@ -2,17 +2,19 @@ import React from 'react'
 import { headingText, paragraphTextColor } from '../../styles/styles'
 import { cloudComputingServices } from '../../utils/cloud-computing-services'
 import { FaCheck } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
 
 const CCServices = () => {
-  const itemsPerDiv = Math.ceil(cloudComputingServices.length / 3); 
-
+  const {t} = useTranslation("cloudComputing")
+  const cloudComputingServicesData = cloudComputingServices(t)
+  const itemsPerDiv = Math.ceil(cloudComputingServicesData.length / 3); 
   return (
     <>
-      <h1 className={`${headingText} mt-12 sm:mt-28 text-white text-start md:text-center`}>Cloud Computing Services</h1>
+      <h1 className={`${headingText} mt-12 sm:mt-28 text-white text-start md:text-center`}>{t("cc.sectionThree.mainHeading")}</h1>
       
       <div className="flex justify-start sm:justify-center">
         <p className={`w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] z-10 text-start sm:text-center mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}>
-          Our experts put all their efforts to remain at the forefront in cloud evolution through the adoption of virtual and converged solutions. It provides a defined model that improves user experiences.
+        {t("cc.sectionThree.desc")}
         </p>
       </div>
       
@@ -34,7 +36,7 @@ const CCServices = () => {
 
             <div className="my_glassMorhism background-glass h-[320px] w-[350px] sm:w-full sm:h-[420px]  px-4 sm:py-6 flex items-center rounded-[16px]">
               <div>
-                {cloudComputingServices.slice(0, itemsPerDiv).map((item, index) => (
+                {cloudComputingServicesData.slice(0, itemsPerDiv).map((item, index) => (
                   <div className="flex items-center gap-4 text-green-500 w-full" key={index}>
                     <FaCheck />
                     <div>
@@ -59,7 +61,7 @@ const CCServices = () => {
            
             <div className="my_glassMorhism background-glass relative h-[200px] sm:h-[200px] sm:w-full w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
               <div>
-                {cloudComputingServices.slice(itemsPerDiv, itemsPerDiv * 2).map((item, index) => (
+                {cloudComputingServicesData.slice(itemsPerDiv, itemsPerDiv * 2).map((item, index) => (
                   <div className="flex items-center gap-4 text-green-500 w-full" key={index}>
                     <FaCheck />
                     <div>
@@ -74,7 +76,7 @@ const CCServices = () => {
          
             <div className="my_glassMorhism background-glass relative h-[200px] sm:h-[200px] sm:w-full mt-5 w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
               <div>
-                {cloudComputingServices.slice(itemsPerDiv * 2).map((item, index) => (
+                {cloudComputingServicesData.slice(itemsPerDiv * 2).map((item, index) => (
                   <div className="flex items-center gap-4 text-green-500 w-full" key={index}>
                     <FaCheck />
                     <div>

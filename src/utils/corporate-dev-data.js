@@ -1,26 +1,26 @@
-export const corporateWebDev = [
+export const corporateWebDev = (t) => [
     {
-        data:"You can get top-notch UI/UX design services here."
+        data:t("wd.sectionFour.points.one"),
     },
     {
-        data:"Accelerate your sales with an improved user interaction through our attractive and fascinating IT solutions."
+        data:t("wd.sectionFour.points.two"),
     },
     {
-        data:"Take your business to high peaks of success with our high potential web solutions."
+        data:t("wd.sectionFour.points.three"),
     },
     {
-        data:"Our designs are featured with mobile responsive layouts to make them an easy platform for your target audience."
+        data:t("wd.sectionFour.points.four"),
     },
     {
-        data:"An effective and easy to use Content Management System- CMS."
+        data:t("wd.sectionFour.points.five"),
     },
     {
-        data:"We optimize your sites with an adherence to SEO to help you reach more potential organic traffic."
+        data:t("wd.sectionFour.points.six"),
     },
     {
-        data:"We have got the most established agile processes."
+        data:t("wd.sectionFour.points.seven"),
     },
     {
-        data:"Get the most innovative and upgraded maintenance services."
+        data:t("wd.sectionFour.points.eight"),
     },
 ]

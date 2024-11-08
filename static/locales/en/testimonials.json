@@ -1,6 +1,8 @@
 {
     "testimonials":{
-        "mainHeading":"Testimonials",
+        "mainHeadingSliceOne":"Testim",
+        "mainHeadingSliceTwo":"O",
+        "mainHeadingSliceThree":"nials",
         "subHeadingSliceOne":"What Our",
         "subHeadingSliceTwo":"Clients",
         "subHeadingSliceThree":"Says",
@@ -12,6 +14,8 @@
             }
         },
         "faqs":{
+            "mainHeadingSliceOne":"FAQ",
+            "mainHeadingSliceTwo":"S",
             "one":{
                 "question":"What does Innovazy Technologies specialize in?",
                 "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id tellus magna. Mauris congue venenatis diam, vel posuere elit molestie sed. Pellentesque efficitur urna quam, vitae efficitur risus cursus at."

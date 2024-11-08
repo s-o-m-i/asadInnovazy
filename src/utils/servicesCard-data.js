@@ -1,70 +1,70 @@
-export const servicesCards = [
+export const servicesCards = (t) => [
     {
-        title:"Web App Development",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"01",
+        title:t("services.listing.one.title"),
+        desc:t("services.listing.one.desc"),
+        number:t("services.listing.one.count"),
         colorScheme:"purpleOrange",
         imageClass:"webAppImage",
         path:"web-development",
          footer:"services_heading"
     },
     {
-        title:"Software Development",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"02",
+        title:t("services.listing.two.title"),
+        desc:t("services.listing.two.desc"),
+        number:t("services.listing.two.count"),
         colorScheme:"whiteOrange",
         imageClass:"inner-one",
          path:"software-development",
          footer:"footer_services_heading"
     },
     {
-        title:"Mobile App Development",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"03",
+        title:t("services.listing.three.title"),
+        desc:t("services.listing.three.desc"),
+        number:t("services.listing.three.count"),
         colorScheme:"whiteOrange",
         imageClass:"mobileAppImage",
          path:"mobile-development",
           footer:"footer_services_heading"
     },
     {
-        title:"Graphics Design",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"04",
+        title:t("services.listing.four.title"),
+        desc:t("services.listing.four.desc"),
+        number:t("services.listing.four.count"),
         colorScheme:"purpleOrange",
         imageClass:"inner-two",
          path:"graphics-design",
           footer:"footer_services_heading"
     },
     {
-        title:"Cloud Computing",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"05",
+        title:t("services.listing.five.title"),
+        desc:t("services.listing.five.desc"),
+        number:t("services.listing.five.count"),
         colorScheme:"purpleOrange",
         imageClass:"inner-one",
          path:"cloud-computing",
           footer:"footer_services_heading"
     },
     {
-        title:"UI UX Design",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"06",
+        title:t("services.listing.six.title"),
+        desc:t("services.listing.six.desc"),
+        number:t("services.listing.six.count"),
         colorScheme:"whiteOrange",
         imageClass:"inner-two",
          path:"ui-ux",
           footer:"footer_services_heading"
     },
     {
-        title:"Quality Assurance",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"07",
+        title:t("services.listing.seven.title"),
+        desc:t("services.listing.seven.desc"),
+        number:t("services.listing.seven.count"),
         colorScheme:"whiteOrange",
         imageClass:"qaImage",
          path:"quality-assurance"
     },
     {
-        title:"Blogs",
-        desc:"We provide you the leverage of doing all tech things with innovazy",
-        number:"08",
+        title:t("services.listing.eight.title"),
+        desc:t("services.listing.eight.desc"),
+        number:t("services.listing.eight.count"),
         colorScheme:"purpleOrange",
         imageClass:"inner-two",
          path:"quality-assurance"

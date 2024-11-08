@@ -8,55 +8,55 @@ import { IoTimeOutline } from "react-icons/io5";
 
 
 
-export const ourApproach = [
+export const ourApproach = (t) => [
     {
       fontClassName:
         "fa-solid fa-laptop-code mb-8 text-primary-orange text-[40px]",
-      title: "Development Procedure",
+      title: t("wd.sectionOne.cardOne.title"),
       description:
-        "Our experts focus on a modern and speedy development methodology to achieve quality in timely and cost-effective web solutions which leads to improved customer retention and contentment.",
+      t("wd.sectionOne.cardOne.desc"),
       link: "/services/web-development",
       icon:<IoSettings/>,
     },
     {
       fontClassName:
         "fa-brands fa-uncharted mb-8 text-primary-orange text-[40px]",
-      title: "Development Cycle",
+      title: t("wd.sectionOne.cardTwo.title"),
       description:
-        "We focus on building an error free and bug free software by replying on the spiral development model and quality assurance. Our engineers choose the most appropriate yet creative and innovative architecture.",
+      t("wd.sectionOne.cardTwo.desc"),
       link: "/services/software-development",
       icon:<PiRecycleFill />,
     },
     {
       fontClassName: "fa fa-cloud mb-8 text-primary-orange text-[40px]",
-      title: "Development Procedure",
+      title: t("wd.sectionOne.cardThree.title"),
       description:
-        " Make your business life easier and get your data managed in a cost effective way with our cloud computing and consulting experts.",
+      t("wd.sectionOne.cardThree.desc"),
       link: "/services/cloud-computing",
       icon:<MdLoop/>,
     },
     {
       fontClassName: "fa-solid fa-mobile mb-8 text-primary-orange text-[40px]",
-      title: "Delivering Quality and Valued Products",
+      title:t("wd.sectionOne.cardFour.title"),
       description:
-        "We follow our development processes under a collaborative umbrella between our team and our clients to attain transparency.",
+      t("wd.sectionOne.cardFour.desc"),
       link: "/services/mobile-development",
       icon:<SlBadge/>,
     },
     {
       fontClassName:
         "fa-solid fa-fingerprint mb-8 text-primary-orange text-[40px]",
-      title: "Cost Effective Ways",
+      title:t("wd.sectionOne.cardFive.title"),
       description:
-        "The underlying agenda of our company is to make IT solutions accessible for every small and large enterprises and businesses by making them cost effective.",
+      t("wd.sectionOne.cardFive.desc"),
       link: "/services/quality-assurance",
       icon:<GiInjustice/>,
     },
     {
       fontClassName: "fa-solid fa-pen-nib mb-8 text-primary-orange text-[40px]",
-      title: "Well-timed Delivery",
+      title: t("wd.sectionOne.cardSix.title"),
       description:
-        "Our team of experts and specialists put all their efforts to ensure quality and timely delivery to our clients before the deadline reaches our clocks.",
+      t("wd.sectionOne.cardSix.desc"),
       link: "/services/graphics-design",
       icon:<IoTimeOutline/>,
     },

@@ -1,7 +1,9 @@
 import React from 'react'
 import { headingText, paragraphTextColor, textwhite } from '../../styles/styles'
+import { useTranslation } from 'react-i18next'
 
 const UIUXHighEndPerformance = () => {
+  const {t} = useTranslation("uiux")
   return (
     
     <div className=' mt-32'>
@@ -12,8 +14,8 @@ const UIUXHighEndPerformance = () => {
     <h1
              className={`${textwhite}  text-center ${headingText}   w-[100%]  font-medium`}
            >
-    Ensuring 
-       <span className='testi-linear'>    High-end Performance   </span> <br/>  
+    {t("ui.sectionThree.mainHeadingSliceOne")}
+       <span className='testi-linear'>    {t("ui.sectionThree.mainHeadingSliceTwo")}   </span> <br/>  
            </h1>
            </div>
 
@@ -39,9 +41,8 @@ const UIUXHighEndPerformance = () => {
 
     <div className="my_glassMorhism background-glass h-[320px] w-[350px] sm:w-full sm:h-[420px] flex items-center  px-4 sm:py-6  rounded-[16px]">
       <div>
-    <h1 className='text-white text-start sm:text-center text-3xl'>  Accessibility
-    Testing</h1>
-    <p className='text-white mt-5 text-start sm:text-center'>We guarantee to follow Web Content Accessibility Guidelines (WCAG) to improve user experiences with required flexibility and availability while designing all web applications. Our focus is to create and build IT structures in accordance with market standards and user demands.</p>
+    <h1 className='text-white text-start sm:text-center text-3xl'>  {t("ui.sectionThree.cardOne.mainHeading")} </h1>
+    <p className='text-white mt-5 text-start sm:text-center'>{t("ui.sectionThree.cardOne.desc")}</p>
       </div>
     </div>
   </div>
@@ -58,9 +59,8 @@ const UIUXHighEndPerformance = () => {
     {/* First Subsection */}
     <div className="my_glassMorhism background-glass relative py-4 min-h-[200px] sm:h-[200px] sm:w-full w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
     <div>
-    <h1 className='text-white text-2xl '>  Usability
-    Testing</h1>
-    <p className={`mt-5 text-white`}>Our experts are highly skilled and experienced in conducting usability testing of all UI/UX designs. It looks into both qualitative and quantitative data information regarding the satisfaction of users with the product to help clients with bug-free user experiences for usability testing.</p>
+    <h1 className='text-white text-2xl '> {t("ui.sectionThree.cardTwo.mainHeading")}</h1>
+    <p className={`mt-5 text-white`}>{t("ui.sectionThree.cardTwo.desc")}</p>
       </div>
     </div>
 
@@ -68,9 +68,8 @@ const UIUXHighEndPerformance = () => {
     <div className="my_glassMorhism background-glass relative py-4 min-h-[200px] sm:h-[200px] sm:w-full mt-5 w-[350px] px-4 sm:py-6 flex items-center rounded-[16px]">
       <div>
       <div>
-    <h1 className='text-white text-2xl'>  UX
-    Audit</h1>
-    <p className={`mt-5 text-white`}>Our UX audit aims at gaining a better understanding of UX challenges and help customers to save money on development, increase profitability and observe beforehand about user behaviors. By following this process, we get to serve our clients better. It ensures quality.</p>
+    <h1 className='text-white text-2xl'>  {t("ui.sectionThree.cardThree.mainHeading")}</h1>
+    <p className={`mt-5 text-white`}>{t("ui.sectionThree.cardThree.desc")}</p>
       </div>
       </div>
     </div>

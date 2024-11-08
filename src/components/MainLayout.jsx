@@ -2,19 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from './footer/Footer';
 import Navbar from './header/Navbar';
-import Loader from '../ui/Loader';
 import '../i18n.js'
+import { LanguageProvider } from '../context/LanguageContext.js';
 
 const MainLayout = ({ children }) => {
-    // const [isLoading, setIsLoading] = React.useState(true);
-
-    // React.useLayoutEffect(() => {
-    //   const timer = setTimeout(() => {
-    //     setIsLoading(false); 
-    //   }, 3000);
-  
-    //   return () => clearTimeout(timer); 
-    // }, []);
     return (
         <>
              <Helmet>
@@ -23,15 +14,11 @@ const MainLayout = ({ children }) => {
                 <link rel="icon" type="image/x-icon" />
                 <link rel="apple-touch-icon" />
             </Helmet>
-              {/* {isLoading ? (
-        <Loader /> // Show loader while loading is true
-      ) : ( */}
-      {/* <> */}
+            <LanguageProvider>
           <Navbar />
             {children}
             <Footer />
-      {/* </> */}
-      {/* )} */}
+            </LanguageProvider>
 
        
         

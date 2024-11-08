@@ -6,12 +6,14 @@ import CallIcon from '../../assets/icons/CallIconOrange.png'
 import ForwardArrow from "../../assets/icons/forwardArrow.png";
 import '../../ui/services.css'
 import { PopupModal } from 'react-calendly';
+import { useTranslation } from 'react-i18next';
 
 const CCLandingPage = () => {
   const [showModal, setModal] = React.useState(false);
   const handleClick = () => {
       setModal(true);
   };
+  const {t} = useTranslation("cloudComputing")
   return (
     <>
       <div className="homeSectionleftBlob  mt-[150px] z-50 ">
@@ -28,7 +30,7 @@ const CCLandingPage = () => {
               <h1
                 className={`${textwhite}   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[50px] w-[100%] font-medium`}
               >
-       Cloud Computing <br/> Services in USA
+      {t("cc.mainHeadingSliceOne")} <br/> {t("cc.mainHeadingSliceTwo")}
               </h1>
              
               <div className="self-start">
@@ -40,21 +42,21 @@ const CCLandingPage = () => {
              className={`${textwhite} mt-28  text-[30px] sm:text-[38px]  sm:w-[50%] w-[100%]  font-medium`}
            >
     
-       <span className='testi-linear'>  Empowering Businesses with   </span>   Scalable Solutions
+       <span className='testi-linear'>  {t("cc.subHeadingSliceOne")}   </span>   {t("cc.subHeadingSliceTwo")}
            </h1>
 
            <p
                   className={`w-[100%] sm:w-[45%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-            We provide cost effective cloud computing services to enterprises, industrial businesses, organizations and government institutions to help them build efficiency and security in their systems.
+          {t("cc.desc")}
                 </p>
         
                 <div className="flex flex-wrap gap-3 sm:gap-0 mt-12">
                                <button onClick={handleClick}  aria-label="Get Consultation">
-                                   <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
+                                   <PrimaryButton btnText={t("buttons.primaryButton",{ns:"common"})}image={ForwardArrow} imageAlt="Get Consultation" />
                                </button>
                                <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
-                                   <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
+                                   <SecondaryButton btnText={t("buttons.secondaryButton",{ns:"common"})} image={CallIcon} imageAlt="Talk to us" />
                                </a>
                            </div>
 

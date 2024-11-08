@@ -11,6 +11,7 @@ import Lottie from 'react-lottie';
 import servicesAnime from '../../utils/services-anime.json'
 import { RiUserLocationLine } from "react-icons/ri"
 import ClientsBusiness from "../../components/hero/ClientsBusiness"
+import { useTranslation } from "react-i18next"
 const ServicesHome = () => {
   const location = RiUserLocationLine()
   useEffect(()=>{
@@ -24,30 +25,15 @@ const ServicesHome = () => {
     autoplay: true,
     animationData: servicesAnime,
 };
+const {t} = useTranslation("services")
+const servicesCardData = servicesCards(t)
   return (
     <div className="homeSectionleftBlob  mt-[150px] z-50 ">
       <div className="homeSectionRightBlob  ">
         <div className={`${container} mt-[130px]`}>
          
 
-          {/* <div className="flex justify-center ">
-            <div className="flex flex-col items-center">
-              <div className="self-end">
-                <div className="h-1 w-24 services_heading_success" />
-              </div>
-
-              <h1
-                className={`${textwhite} text_effect_threeD   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[120px] w-[100%] font-medium`}
-              >
-                SERVICES
-              </h1>
-
-              <div className="self-start mt-2">
-                <div className="h-1 w-24 services_heading_success" />
-              </div>
-            </div>
-          </div> */}
-
+         
 <div className="flex justify-center ">
   <div className="flex flex-col items-center">
     
@@ -59,7 +45,7 @@ const ServicesHome = () => {
     <h1
       className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[38px] sm:text-[60px] w-[100%] font-medium`}
     >
-      Ser<span className="testi-linear">v</span>ices
+      {t("services.mainHeadingSliceOne")}<span className="testi-linear">{t("services.mainHeadingSliceTwo")}</span>{t("services.mainHeadingSliceThree")}
     </h1>
 
     
@@ -71,62 +57,25 @@ const ServicesHome = () => {
            <h1
              className={`${textwhite} mt-28 ${headingText}   w-[100%]  font-medium`}
            >
-     COVERING ALL YOUR 
+     {t("services.subHeadingSliceOne")}
 
-<span className='testi-linear'> DIGITAL NEEDS</span> 
+<span className='testi-linear'>   {t("services.subHeadingSliceTwo")}</span> 
            </h1>
 
            <p
                   className={`w-[100%] sm:w-[60%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-            At Innovazy, we provide a comprehensive range of digital services tailored to meet all your business needs. From innovative web development and mobile app design to cutting-edge digital marketing strategies, our solutions are crafted to elevate your online presence and drive growth. Whether you're looking for custom software, cloud solutions, or data analytics, our expert team is here to help you achieve success in the digital world.
+          {t("services.desc")}
+
                 </p>
 
 
-          {/* <p
-            className={`w-[100%]   text-center mt-5 text-white text-[14px] sm:text-[20px] leading-6 sm:leading-7`}
-          >
-            COVERING ALL YOUR DIGITAL NEEDS
-          </p>
-
-          <div>
-            <h1
-              className={`${textwhite} mt-28  text-center   font-[Montserrat-Bold] ${headingText} w-[100%] font-medium`}
-            >
-              Landing your success,
-            </h1>
-            <h1
-              className={`${textwhite} mt-4  text-center   font-[Montserrat-Bold] ${headingText} w-[100%] font-medium`}
-            >
-              everything starts with Innovazy
-            </h1>
-          </div> */}
-          {/* <div className="relative ">
-          <div className="flex absolute gap-5 justify-end animate-move w-full z-[-1]">
-      <div className="w-[40px] sm:w-[100px] h-[40px] sm:h-[100px] bg-[#A0A0A0] mt-24 rounded-full absolute left-0"></div>
-      <div className="w-[40px] sm:w-[150px] h-[40px] sm:h-[150px] bg-[#6C7A59] rounded-full"></div>
-      <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#8A7669] mt-24 rounded-full"></div>
-      <div className="w-[40px] sm:w-[200px] h-[40px] sm:h-[200px] bg-[#2E2E2E] rounded-full"></div>
-      <div className="w-[300px] sm:w-[150px] h-[300px] sm:h-[150px] bg-[#7C6C55] rounded-full"></div>
-      <div className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-[#2E2E2E] mt-24 rounded-full"></div>
-      <div className="w-[40px] sm:w-[200px] h-[40px] sm:h-[200px] bg-[#7B8C9C] rounded-full"></div>
-    </div>
-          
-          <div className="service_image h-[300px] items-center flex justify-center my_glassMorhism background-glass  mt-28 rounded-xl">
-        
-           
-
-                                <h1 className="text-4xl z-[999] text-white">OUR SERVICES</h1>
-
-          </div>
-          </div> */}
-
-{/* <ClientsBusiness/> */}
+    
 
 
 
           <div className="grid grid-cols-12 my-56">
-            {servicesCards && servicesCards.length>0 && servicesCards.map((serData,index)=>{
+            {servicesCardData && servicesCardData.length>0 && servicesCardData.map((serData,index)=>{
 return (
             <div className="col-span-12 md:col-span-6">
               <div className={`inner ${serData.imageClass} bg-gray-700 h-[400px] relative`}>

@@ -1,6 +1,8 @@
 {
     "testimonials": {
-        "mainHeading": "آراء العملاء",
+      "mainHeadingSliceOne": "آراء",
+"mainHeadingSliceTwo": "العم",
+"mainHeadingSliceThree": "لاء",
         "subHeadingSliceOne": "ماذا يقول",
         "subHeadingSliceTwo": "عملاؤنا",
         "subHeadingSliceThree": "عنا",
@@ -12,6 +14,8 @@
             }
         },
         "faqs": {
+            "mainHeadingSliceOne": "الأسئلة",
+"mainHeadingSliceTwo": "الشائعة",
             "one": {
                 "question": "ما هو تخصص شركة Innovazy Technologies؟",
                 "answer": "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسكينغ إليت. أوت إيد تيليس ماجنا. موريس كونج فينيناتيس ديام، فيل بوسيري إيليت مولستيه سيد. بيلينتيسك إفكيتور أرنا كوام، فيتي إفكيتور ريسس كورسس آت."

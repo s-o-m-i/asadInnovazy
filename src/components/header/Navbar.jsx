@@ -1,28 +1,26 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { container, navListItem } from '../../styles/styles';
 import "./navbar.css";
 import i18next from 'i18next';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Navbar = () => {
+    const { language, toggleLanguage } = useLanguage();
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [smallScreen, setSmallScreen] = React.useState(false);
-const [language,setLanguage] = React.useState("en")
-    const handleLanguageClick = () => {
-        
-        if (language === "en") {
-            setLanguage("ar")
-            i18next.changeLanguage("ar")
-        }
-        if(language === "ar"){
-            setLanguage("en")
-            i18next.changeLanguage("en")
-        }
-    }
-    React.useEffect(()=>{
-        document.body.dir = i18next.dir()
-    },[i18next,i18next.language,language])
+    // const [language, setLanguage] = React.useState("en")
+
+    const handleLanguageClick = useCallback(() => {
+        const newLanguage = language === "en" ? "ar" : "en";
+        // setLanguage(newLanguage);
+        i18next.changeLanguage(newLanguage);
+    }, [language]);
+
+    // React.useEffect(() => {
+    //     document.body.dir = i18next.dir(language);
+    // }, [language]);
 
     React.useEffect(() => {
         const handleResize = () => {
@@ -124,8 +122,8 @@ const [language,setLanguage] = React.useState("en")
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
                                 <Link onClick={() => { setMobileMenuOpen(false); }} to="/blogs" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">Blogs</Link>
                             </li>
-                            <li activeClassName="!font-semibold !text-white activeLink" className='self-start md:self-center mb-4 sm:mb-0 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500"' onClick={handleLanguageClick}>
-                           {language}
+                            <li activeClassName="!font-semibold !text-white activeLink" className='self-start md:self-center mb-4 sm:mb-0 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500"' onClick={toggleLanguage}>
+                            {language === "en" ? "Arabic" : "English"}
                             </li>
                         </ul>
                     </div>

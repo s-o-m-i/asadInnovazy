@@ -4,8 +4,12 @@ import SDCard from './SDCard';
 import Spotlight from '../../ui/SpotlightEffect';
 import { customSoftwareData } from '../../utils/custom-software-data';
 import { SDServices } from '../../utils/our-services-soft-dev-data';
+import { useTranslation } from 'react-i18next';
 
 const SDOurServices = () => {
+    const {t} = useTranslation("softwareDevelopment")
+    const SDServicesData = SDServices(t) 
+    const customSoftwareCards = customSoftwareData(t) 
   return (
     <>
     <div className={`${container} mt-[130px] text-white`}>
@@ -17,13 +21,21 @@ const SDOurServices = () => {
             <div className=''>
                 <div className=''>
                     <div className={` mt-[120px]`}>
-<h1 className={`${headingText} text-start md:text-center`}>Our Services Under <br className='hidden sm:block'/><span className={`rounded-full sm:px-4 py-1 text-[32px]  sm:text-[45px] text-white `}>Software Development</span> 
+<h1 className={`${headingText} text-start md:text-center`}>{t("sd.sectionOne.mainHeading").split(' ').map((text,index)=>(
+    <React.Fragment>
+        {`${text} `}  {text === "Under" && (
+            <>
+            <br className='hidden sm:block'/>
+            </>
+        )}
+         </React.Fragment>
+))} 
 </h1>    
 
 
                      
                         <div className="mt-14">
-                            {SDServices.map((x,i) => {
+                            {SDServicesData.map((x,i) => {
                                 return <div key={i} className='mb-8'>
                                     <SDCard number={x.number} heading={x.heading} subHeading={x.subHeading} description={x.description} />
                                 </div>;
@@ -31,10 +43,10 @@ const SDOurServices = () => {
                         </div>
 
                         <div class="styled_one mt-28">
-                        <h1 className={`${headingText}   text-start md:text-center`}>Custom Software    <span className="">Solutions Services</span> 
+                        <h1 className={`${headingText}   text-start md:text-center`}>{t("sd.sectionTwo.mainHeading")}
                         </h1>    
 </div>
-                        <Spotlight data={customSoftwareData} />
+                        <Spotlight data={customSoftwareCards} />
                     </div>
                 </div>
             </div>

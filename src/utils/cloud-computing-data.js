@@ -1,15 +1,15 @@
-export const cloudComputingAccompanies = [
-    { title: "High Speed", 
-        description: "Cloud computing help businesses to rely on smooth and high speed systems.", 
+export const cloudComputingAccompanies = (t) => [
+    { title: t("cc.sectionOne.cardOne.title"), 
+        description: t("cc.sectionOne.cardOne.desc"), 
     },
-    { title: "Reliability",
-        description: "Clouds are reliable for enterprises, industrial businesses", 
+    { title: t("cc.sectionOne.cardTwo.title"),
+        description:t("cc.sectionOne.cardTwo.desc"), 
     },
-    { title: "Cost Effective", 
-        description: "It is very cost effective as it minimizes the expenses and maximizes the output.", 
+    { title: t("cc.sectionOne.cardThree.title"), 
+        description:t("cc.sectionOne.cardThree.desc"), 
     },
-    { title: "Security",
-        description: "All the databases are encrypted and the information remains intact.", 
+    { title: t("cc.sectionOne.cardFour.title"),
+        description:t("cc.sectionOne.cardFour.desc"), 
     },
     
 ]

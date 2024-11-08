@@ -4,22 +4,22 @@ import { FaBriefcase } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
 
 
-export const bestChoices = [
+export const bestChoices = (t) => [
     {
-        title:"Consummate Experience",
-        description:"We prioritize quality in all our products by achieving quality assurance as our main goal before we release a final product. This makes matchless experiences with bug free web applications.",
+        title: t("md.sectionThree.cardOne.title"),
+        description:t("md.sectionThree.cardOne.desc"),
         imagePath:"imageOne" ,
         icon:<FaOpencart />,
     },
     {
-        title:"Industry Expertise",
-        description:"At Innovazay, we have diverse expert team with specialized knowledge and extra-ordinary skills to help us feed the needs of all types of customers and match various industrial standards.",
+        title:t("md.sectionThree.cardTwo.title"),
+        description:t("md.sectionThree.cardTwo.desc"),
         imagePath:"imageTwo" ,
         icon:<FaBriefcase />,
     },
     {
-        title:"Stand Out Apps",
-        description:"We have been the developers of award-winning apps and our effort is continuous to help more businesses with more stand out apps. We ensure that it makes a way to your target audience.",
+        title:t("md.sectionThree.cardThree.title"),
+        description:t("md.sectionThree.cardThree.desc"),
         imagePath:"imageThree" ,
         icon:<FaTrophy />,
     }

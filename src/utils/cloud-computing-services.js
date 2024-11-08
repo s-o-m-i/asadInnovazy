@@ -1,39 +1,39 @@
-export const cloudComputingServices = [
+export const cloudComputingServices = (t) => [
     {
-      "title": "Virtualization"
+      "title": t("cc.sectionThree.cardOne.pointOne")
     },
     {
-      "title": "Software Defined Data Centers (SDDC)"
+      "title":t("cc.sectionThree.cardOne.pointTwo")
     },
     {
-      "title": "Digital Transformation"
+      "title":t("cc.sectionThree.cardOne.pointThree")
     },
     {
-      "title": "Converged and Hyper Converged Infrastructure"
+      "title":t("cc.sectionThree.cardOne.pointFour")
     },
     {
-      "title": "LaaS and SaaS solutions"
+      "title":t("cc.sectionThree.cardTwo.pointOne")
     },
     {
-      "title": "IaaS and PaaS solutions"
+      "title":t("cc.sectionThree.cardTwo.pointTwo")
     },
     {
-      "title": "Hybrid cloud"
+      "title":t("cc.sectionThree.cardTwo.pointThree")
     },
     {
-      "title": "Multi cloud"
+      "title":t("cc.sectionThree.cardTwo.pointFour")
     },
     {
-      "title": "Test and Development"
+      "title":t("cc.sectionThree.cardThree.pointOne")
     },
     {
-      "title": "Big Data Analytics"
+      "title":t("cc.sectionThree.cardThree.pointTwo")
     },
     {
-      "title": "Disaster Recovery"
+      "title":t("cc.sectionThree.cardThree.pointThree")
     },
     {
-      "title": "Data Backup"
+      "title":t("cc.sectionThree.cardThree.pointFour")
     }
   ]
   

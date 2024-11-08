@@ -17,46 +17,19 @@ import CustomSpotlight from '../../ui/CustomSpotlight';
 
 import UnitingWithUs from '../../components/webDevelopment/FancyCard';
 import { FaCheck } from "react-icons/fa6";
+import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 const WebDevelopment = () => {
     const [showModal, setModal] = React.useState(false);
     const handleClick = () => {
         setModal(true);
     };
+const {t} = useTranslation("webDevelopment")
+const ourApproachData = ourApproach(t)
+const corporateWebDevData = corporateWebDev(t)
     return (
         <>
         <div className={`${container} mt-[130px]`}>
-            {/* <div className="grid grid-cols-12">
-                <div className="col-span-12 sm:col-span-6 ">
-                    <div className='mt-8'>
-
-           <h1
-                className={`${textwhite}  ${headingText}   uppercase    font-medium`}
-                >
-               <span className='services-linear'> Web Development</span> Services <br/> in USA
-              </h1>
-              <p className={`w-[100%] sm:w-[75%] mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}>
-              We prioritize the unique needs and preferences of our valued clients and provide them with creative and supremely functional end to end web designs and development services.</p>
-              <div className="flex flex-wrap gap-3 sm:gap-0 mt-8">
-                                <button onClick={handleClick} aria-label="Get Consultation">
-                                    <PrimaryButton btnText="Get Consultation" image={ForwardArrow} imageAlt="Get Consultation" />
-                                </button>
-                                <a href="/#contact-us" role="button" rel="noreferrer" aria-label="Contact">
-                                    <SecondaryButton btnText="Talk to us" image={CallIcon} imageAlt="Talk to us" />
-                                </a>
-                            </div>
-                  </div>
-                </div>
-                <div className="col-span-6 flex justify-center items-center [perspective:900px]">
-              <StaticImage src='../../assets/images/s_webdevelopment.png' alt='web_development' className='w-[80%] hidden sm:block cursor-pointer hover:transform hover:scale-110 transition-transform duration-300' 
-              
-              placeholder="blurred" // Displays a blurred placeholder while loading
-              loading='eager' // Forces the image to load immediately
-              />
-
-                </div>
-            </div> */}
-
-
 <div className="flex justify-center ">
             <div className="flex flex-col items-center">
               <div className="self-end">
@@ -66,8 +39,13 @@ const WebDevelopment = () => {
               <h1
                 className={`${textwhite}   text-center uppercase tracking-wider font-[Montserrat-Bold] text-[42px] sm:text-[50px] w-[100%] font-medium`}
               >
-          Web Development<br/>  Services
-          in USA
+          {t("wd.mainHeading").split(" ").map((text,index)=>(
+            <React.Fragment key={index}>
+                {text}
+                {text === "Development" || text === "الويب" ? <br/>: " "}
+
+            </React.Fragment>
+          ))}
               </h1>
              
               <div className="self-start">
@@ -79,13 +57,13 @@ const WebDevelopment = () => {
              className={`${textwhite} mt-28 text-[30px] sm:text-[38px] sm:w-[50%] w-[100%]  font-medium`}
            >
     
-       <span className='testi-linear'>  Crafting Scalable and  </span>   Future-Ready Web Solutions 
+       <span className='testi-linear'> {t("wd.subHeadingSliceOne")} </span>   {t("wd.subHeadingSliceTwo")} 
            </h1>
 
            <p
                   className={`w-[100%] sm:w-[45%] z-10  mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}
                 >
-     We prioritize the unique needs and preferences of our valued clients and provide them with creative and supremely functional end to end web designs and development services.
+ {t("wd.desc")} 
 
 
 
@@ -105,10 +83,10 @@ const WebDevelopment = () => {
 
 
             <div className={`mt-[120px]`}>
-            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}>Our Approach</h1>
-            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] text-start md:text-center leading-7`}>Empowering Your Possibilities: Explore Our Diverse Range of Services</p>
+            <h1 className={`${textwhite} ${headingText} mx-auto w-[100%] text-start md:text-center`}> {t("wd.sectionOne.mainHeading")} </h1>
+            <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] text-start md:text-center leading-7`}> {t("wd.sectionOne.desc")} </p>
 
-<CustomSpotlight data={ourApproach}/>
+<CustomSpotlight data={ourApproachData}/>
             <div className='mt-10'>
                 <div className="grid md:grid-cols-12 gap-4 justify-center">
 
@@ -134,12 +112,12 @@ const WebDevelopment = () => {
             <h1
                 className={`${textwhite}  text-[38px] w-[100%] sm:w-[80%] font-medium`}
               >
-          Attain business goals through  <br/>  <span className="text-primary-orange text-[35px] capitalize"> web development solutions
+          {t("wd.sectionThree.mainHeadingSliceOne")}  <br/>  <span className="text-primary-orange text-[35px] capitalize"> {t("wd.sectionThree.mainHeadingSliceTwo")}
              </span>
               </h1>
 
               <p className={`w-[100%] sm:w-[70%] mt-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}>
-                     At Innovazy, you get the most advanced and diverse options for a modern interface mobile app for your business to stand from your competitors.
+              {t("wd.sectionThree.desc")}
                       </p>
     </div>
 
@@ -147,16 +125,16 @@ const WebDevelopment = () => {
     <div className=' flex sm:flex-row flex-col items-center gap-5'>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-8 overflow-hidden  w-[280px] h-[280px] text-center mt-28">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>01</h1>
-            <h1 className={` ${textwhite} `}>Website Development</h1>
+            <h1 className={` ${textwhite} `}> {t("wd.sectionThree.circleOne.title")}</h1>
             <p className={`w-[100%]  mt-3 ${paragraphTextColor} text-[12px] `}>
-            Establish a strong online presence with our responsive, user-friendly websites. Tailored to your business needs, we help elevate your brand and engage your audience.
+            {t("wd.sectionThree.circleOne.desc")}
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-5 overflow-hidden w-[300px] h-[300px] text-center">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>02</h1>
-            <h1 className={` ${textwhite} `}>Web App Development</h1>
+            <h1 className={` ${textwhite} `}>{t("wd.sectionThree.circleTwo.title")}</h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
-            Develop robust web applications that enhance user experience and drive efficiency. Our team creates tailored solutions to meet your unique business needs.
+            {t("wd.sectionThree.circleTwo.desc")}
                       </p>
         </div>
     </div>
@@ -164,16 +142,16 @@ const WebDevelopment = () => {
     <div className=' flex sm:flex-row flex-col  items-center gap-5'>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-8 overflow-hidden w-[280px] h-[280px] text-center mt-28">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>03</h1>
-            <h1 className={` ${textwhite} `}>Ecommerce Website Development</h1>
+            <h1 className={` ${textwhite} `}>{t("wd.sectionThree.circleThree.title")}</h1>
             <p className={`w-[100%]  mt-3 ${paragraphTextColor} text-[12px] `}>
-            Build a robust online store with user-friendly, scalable platforms that drive sales and boost customer engagement.
+            {t("wd.sectionThree.circleThree.desc")}
                       </p>
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange px-5 overflow-hidden w-[300px] h-[300px] text-center">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>04</h1>
-            <h1 className={` ${textwhite} `}>WordPress Development Services            </h1>
+            <h1 className={` ${textwhite} `}>{t("wd.sectionThree.circleFour.title")}           </h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
-            Custom WordPress development services that unlock your website's potential with responsive, easy-to-manage, and high-performance sites.
+            {t("wd.sectionThree.circleFour.desc")}
                       </p>
         </div>
     </div>
@@ -195,15 +173,15 @@ const WebDevelopment = () => {
 <h1
                 className={`${textwhite}  ${headingText} w-[100%]  font-medium`}
                 >
-        Corporate Web <span className="text-primary-orange ">Development
+       {t("wd.sectionFour.mainHeadingSliceOne")} <span className="text-primary-orange ">{t("wd.sectionFour.mainHeadingSliceTwo")}
         
              </span>
               </h1>
 
               <p className={`w-[100%] sm:w-[70%] my-5 ${paragraphTextColor} text-[14px] sm:text-[16px] leading-6 sm:leading-7`}>
-              Our experts make us claim to be the best web development company with their creative, meaningful and functional web designs which provides businesses a sustainable marketing strength.
+              {t("wd.sectionFour.desc")}
                       </p>
-                      {corporateWebDev && corporateWebDev.length>0 && corporateWebDev.map((e,i)=> {
+                      {corporateWebDevData && corporateWebDevData.length>0 && corporateWebDevData.map((e,i)=> {
                         return (
 <div className="flex items-center gap-4 text-primary-orange mt-3">
 <FaCheck />

@@ -26,7 +26,7 @@ const TestimonialsLandingPage = () => {
     <h1
       className={`${textwhite} text-center uppercase tracking-wider font-[Aeonik-Bold] text-[38px] sm:text-[60px] w-[100%] font-medium`}
     >
-      Testim<span className="testi-linear">o</span>nials
+      {t("testimonials.mainHeadingSliceOne")}<span className="testi-linear">{t("testimonials.mainHeadingSliceTwo")}</span>{t("testimonials.mainHeadingSliceThree")}
     </h1>
 
     
