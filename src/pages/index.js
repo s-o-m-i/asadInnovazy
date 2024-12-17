@@ -11,9 +11,11 @@ import MetaData from "../components/MetaData";
 import "../styles/global.css";
 import CallToAction from "../ui/CallToAction";
 import Loader from "../ui/Loader";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const [isLoading, setIsLoading] = React.useState(true);
+  const {i18n} = useTranslation()
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -36,7 +38,8 @@ export default function Home() {
 <CallToAction />
 <TeamSection />
 <BenefitSection />
-<Testimonials />
+{i18n.language === "en" && <Testimonials />}
+
 <ContactSection />
 </>
     )}

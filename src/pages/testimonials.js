@@ -7,18 +7,18 @@ import { RiUserLocationFill } from 'react-icons/ri';
 
 const Testimonials = () => {
     const location = RiUserLocationFill();
-    useEffect(()=>{
-window.scrollTo({
-    top:0,
-    behaviour:"smooth"
-})
-    },[location.pathname])
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behaviour: "smooth"
+        })
+    }, [location.pathname])
     return (
-       <>
-        <TestimonialsLandingPage/>
-<Faqs/>
-<CallToAction/>
-       </>
+        <>
+            <TestimonialsLandingPage />
+            <Faqs />
+            <CallToAction />
+        </>
     );
 };
 

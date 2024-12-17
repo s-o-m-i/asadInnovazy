@@ -3,12 +3,12 @@ import { headingText, paragraphTextColor, textwhite } from '../../styles/styles'
 import { useTranslation } from 'react-i18next'
 
 const GDProcess = () => {
-    const {t} = useTranslation("graphicDesign")
+    const {t,i18n} = useTranslation("graphicDesign")
   return (
     <>
     
     <div className="flex items-center flex-col sm:flex-row justify-between mt-28 sm:mt-0">
-    <div className='border-r-2 border-primary-orange border-dashed sm:mr-8 '>
+    <div className={`${i18n.language === "en"?"border-r-2":"border-l-2"} border-primary-orange border-dashed sm:mr-8 `}>
             <h1
                 className={`${textwhite}  text-[38px] w-[100%] sm:w-[75%] font-medium`}
               >
@@ -49,9 +49,9 @@ const GDProcess = () => {
         </div>
         <div className="dev-circle border-2 rounded-full border-primary-orange border-dashed px-5 overflow-hidden w-[300px] h-[300px] text-center">
             <h1 className={`${headingText} mt-10 ${textwhite}`}>04</h1>
-            <h1 className={` ${textwhite} `}>Performance Testing</h1>
+            <h1 className={` ${textwhite} `}>{t("gd.sectionTwo.circleFour.title")}</h1>
             <p className={`w-[100%]  mt-5 ${paragraphTextColor} text-[12px] `}>
-            Evaluate your application’s speed and stability with performance testing to ensure optimal user experience and reliability.
+            {t("gd.sectionTwo.circleFour.desc")}
                       </p>
         </div>
     </div>

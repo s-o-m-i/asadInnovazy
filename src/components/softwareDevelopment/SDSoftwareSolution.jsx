@@ -6,6 +6,7 @@ import { customSoftwareSolutions } from '../../utils/custom-sof-sol-data'
 import { useTranslation } from 'react-i18next'
 const SDSoftwareSolution = () => {
     const [showCusSoftSolution,setShowCustomSoftSolution] = useState(false)
+    const {i18n} = useTranslation()
 
     const handleShowSoftSolution = (selected) => {
 if(selected === showCusSoftSolution) {
@@ -32,9 +33,9 @@ const customSoftwareSolutionsData = customSoftwareSolutions(t)
   <div key={i} className="col-span-12 sm:col-span-6 mt-5 w-full">
     <div 
       onClick={() => handleShowSoftSolution(i)} 
-      className="s-custom-sol-box s_faq background-glass py-4 sm:px-4 border-l-2 border-orange-500 flex items-center justify-between overflow-hidden cursor-pointer"
+      className={`s-custom-sol-box s_faq background-glass py-4 sm:px-4 ${i18n.language === "en"? " border-l-2":" border-r-2"} border-orange-500 flex items-center justify-between overflow-hidden cursor-pointer `}
     >
-      <div className="s-custom-sol-box-circle w-[100%]"></div>
+      <div className={`s-custom-sol-box-circle w-[100%] ${i18n.language === "ar" ? "translate-x-[50%]" : ""}`}></div>
       <h5 className="z-50">{e.question}</h5>
       <div className={`${showCusSoftSolution === i ? "text-primary-orange" : "text-primary-orange"} cursor-pointer sm:block hidden`}>
         {showCusSoftSolution === i ? <FaMinus /> : <FaPlus />}

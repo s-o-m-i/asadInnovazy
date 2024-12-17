@@ -270,30 +270,19 @@ text-align: justify;
 .s-custom-sol-box-circle
 {
     position: absolute;
- 
-
     width: 5px;
     height: 50px;
-    /* background: radial-gradient(circle at 50% 50%, #ffcc80 0%, #ffb74d 40%, #fb8c00 70%, #e65100 100%); */
-    /* background-image: linear-gradient(to left, #742EE6, orange); */
-    /* background-image: linear-gradient(to left, #000000, #5a5856); */
     background-image: linear-gradient(to left, #000000, #5f4e3d);
-
     border-radius: 50%;
     transition: all 0.5s;
-    
     left: 0;
     transform: translateX(-50%); 
-    
 }
 .s-custom-sol-box:hover h1{
   color: black;
-
 }
 
 .s-custom-sol-box:hover .s-custom-sol-box-circle{
- 
-/* background: radial-gradient(circle at 50% 50%, #ffcc80 0%, #ffb74d 40%, #fb8c00 70%, #e65100 100%); */
 background-image: linear-gradient(to left, #000000, #5f4e3d);
 width: 100%;    
 height: 100%;
@@ -310,11 +299,6 @@ opacity: .5;
 .b-line{
   transition: all .1s ease-in-out;
 }
-
-
-
-
-
 
 .box-container {
   align-items: center;

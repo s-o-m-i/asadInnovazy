@@ -3,24 +3,19 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React, { useCallback } from 'react';
 import { container, navListItem } from '../../styles/styles';
 import "./navbar.css";
-import i18next from 'i18next';
 import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+
+    const {t} = useTranslation("header")
     const { language, toggleLanguage } = useLanguage();
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [smallScreen, setSmallScreen] = React.useState(false);
-    // const [language, setLanguage] = React.useState("en")
 
-    const handleLanguageClick = useCallback(() => {
-        const newLanguage = language === "en" ? "ar" : "en";
-        // setLanguage(newLanguage);
-        i18next.changeLanguage(newLanguage);
-    }, [language]);
 
-    // React.useEffect(() => {
-    //     document.body.dir = i18next.dir(language);
-    // }, [language]);
+
+
 
     React.useEffect(() => {
         const handleResize = () => {
@@ -82,16 +77,16 @@ const Navbar = () => {
                     <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 transition-all ease-in-out ${isMobileMenuOpen ? "" : "hidden"}`} id="navbar-cta">
                         <ul className="flex flex-col font-medium p-0 py-5 sm:py-0 sm:p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 transition-all ease-in-out float-none sm:float-left">
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
-                                <Link to="/" onClick={() => { setMobileMenuOpen(false); }} activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">Home</Link>
+                                <Link to="/" onClick={() => { setMobileMenuOpen(false); }} activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">{t("home")}</Link>
                             </li>
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
-                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/about-us" activeClassName="!font-semibold !text-white activeLink" className=" my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">About Us</Link>
+                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/about-us" activeClassName="!font-semibold !text-white activeLink" className=" my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">{t("aboutus")}</Link>
                             </li>
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
                                 <div className="mx-auto flex w-full items-center justify-center">
                                     <div className="group relative cursor-pointer">
                                         <div className="flex items-center justify-between space-x-5">
-                                            <Link onClick={() => { setMobileMenuOpen(false); }} to='/services' activeClassName="!font-semibold !text-white activeLink" className="menu-hover flex items-center justify-between w-full px-3 rounded text-[#9F9E9E] text-[14px]">Services
+                                            <Link onClick={() => { setMobileMenuOpen(false); }} to='/services' activeClassName="!font-semibold !text-white activeLink" className="menu-hover flex items-center justify-between w-full px-3 rounded text-[#9F9E9E] text-[14px]">{t("service")}
                                                 <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                                                 </svg>
@@ -99,30 +94,30 @@ const Navbar = () => {
                                         </div>
                                         <div className="dropdown invisible absolute z-50 flex rounded-xl w-max flex text-gray-800 shadow-md opacity-0 transition-opacity ease-in-out duration-300 background-glass-dark">
                                             <div>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/web-development' className={`${navListItem}`}>Web App Development</Link>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/mobile-development' className={`${navListItem}`}>Mobile App Development</Link>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/cloud-computing' className={`${navListItem}`}>Cloud Computing</Link>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/quality-assurance' className={`${navListItem} !border-b-0`}>Quality Assurance</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/web-development' className={`${navListItem}`}>{t("services.webappdev")}</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/mobile-development' className={`${navListItem}`}>{t("services.mobileapp")}</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/cloud-computing' className={`${navListItem}`}>{t("services.cloudcomputing")}</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/quality-assurance' className={`${navListItem} !border-b-0`}>{t("services.qualityassurance")}</Link>
                                             </div>
                                             <div>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/software-development' className={`${navListItem}`}>Software Development</Link>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/graphics-design' className={`${navListItem}`}>Graphics Design</Link>
-                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/ui-ux' className={`${navListItem}`}>UI UX Design</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/software-development' className={`${navListItem}`}>{t("services.softwaredevelopment")}</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/graphics-design' className={`${navListItem}`}>{t("services.graphicsdesign")}</Link>
+                                                <Link onClick={() => { setMobileMenuOpen(false); }} to='/services/ui-ux' className={`${navListItem}`}>{t("services.uiuxdesign")}</Link>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
-                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/team" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">Team</Link>
+                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/team" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">{t("team")}</Link>
                             </li>
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
-                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/testimonials" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">What Clients Say?</Link>
+                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/testimonials" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">{t("clientsay")}</Link>
                             </li>
                             <li className='self-start md:self-center mb-4 sm:mb-0'>
-                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/blogs" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">Blogs</Link>
+                                <Link onClick={() => { setMobileMenuOpen(false); }} to="/blogs" activeClassName="!font-semibold !text-white activeLink" className="my-2 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500">{t("blogs")}</Link>
                             </li>
-                            <li activeClassName="!font-semibold !text-white activeLink" className='self-start md:self-center mb-4 sm:mb-0 px-3 md:p-0 text-[#9F9E9E] text-[14px] transition-all ease-in-out duration-500"' onClick={toggleLanguage}>
+                            <li activeClassName="!font-semibold !text-white activeLink" className='self-start md:self-center mb-4 sm:mb-0 px-3 md:p-0 text-[#9F9E9E] text-[14px] cursor-pointer transition-all ease-in-out duration-500"' onClick={toggleLanguage}>
                             {language === "en" ? "Arabic" : "English"}
                             </li>
                         </ul>

@@ -311,3 +311,6 @@ border-radius: 999px;
   top:  0px;
   left: 0px;
   }
+  .rtl {
+    direction: rtl;
+}

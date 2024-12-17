@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const CallToAction = () => {
     const {t} = useTranslation()
+    // const { language } = useLanguage();
     return (
         <div className='relative h-[600px] grid'>
             <div className='ctaGradientBlobLeft'>

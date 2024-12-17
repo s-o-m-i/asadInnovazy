@@ -20,7 +20,7 @@ const TeamSection = () => {
                 })}
             </div>
             <div className='text-center mt-10'>
-                <PrimaryButton btnText="Explore Team" image={ForwardArrow} imageAlt="Get Consultation" link="/team" />
+                <PrimaryButton btnText={t("buttons.exploreTeam",{ns:"common"})} image={ForwardArrow} imageAlt="Get Consultation" link="/team" />
             </div>
         </div>
     );

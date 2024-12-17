@@ -37,6 +37,7 @@ const {t} = useTranslation()
 
     const reviewTemplate = (review) => {
         return (
+            <>
             <div
             
             onMouseEnter={handleMouseEnter} // Stop autoplay on hover
@@ -52,6 +53,13 @@ const {t} = useTranslation()
                     <span className='text-right mt-5 italic font-medium text-[15px] text-white'>- {review.name}</span>
                 </div>
             </div>
+
+
+            {/* <div className="min-h-80 bg-red-500">
+            <h1>hello world</h1>
+          </div> */}
+
+            </>
         );
     };
 
@@ -62,6 +70,7 @@ const {t} = useTranslation()
                 <p className={`w-[100%] sm:w-[65%] mx-auto mt-5 ${paragraphTextColor} text-start md:text-center leading-7`}>{t("sectionSeven.desc")}</p>
             </div>
             <Carousel
+//  className={ 'rtl-carousel'}
                 pt={{
                     indicators: { className: "h-[30px] w-[5%] flex justify-between mx-auto mt-5" },
                     indicatorButton: { className: "rounded-full   h-[14px] w-[14px] bg-sky-600" },

@@ -18,7 +18,7 @@ const ContactSection = () => {
         subject: "",
         message: ""
     });
-const {t} = useTranslation()
+const {t} = useTranslation("home")
     const onChange = (e) => {
         const { name, value } = e.target;
         setEmailBody(prevState => ({
@@ -161,7 +161,7 @@ const {t} = useTranslation()
                                             />)
                                         }
                       {!recaptchaToken ?<button type='button' className='text-white'>do captcha</button>:
-                                        <PrimaryButton btnText={t("sectctionEight.buttonText")} type='submit' image={ForwardArrow} imageAlt="Send message to Innovazy" />
+                                        <PrimaryButton btnText={t("sectionEight.buttonText")} type='submit' image={ForwardArrow} imageAlt="Send message to Innovazy" />
                       }
                                     </button>
                                 </div>

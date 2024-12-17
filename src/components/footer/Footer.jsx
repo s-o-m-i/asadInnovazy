@@ -9,9 +9,10 @@ import LinkedinIcon from "../../assets/icons/linkedinIcon.png";
 import TwitterIcon from "../../assets/icons/twitterIcon.png";
 import FacebookIcon from "../../assets/icons/facebookIcon.png";
 import "./footer.css";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-
+    const {t} = useTranslation("header")
     const handleScrollTop = () => {
         window.scrollTo({
             top: 0,
@@ -24,11 +25,11 @@ const Footer = () => {
                 <StaticImage src='../../assets/logo/InnovazyWhite.png' alt="Logo" className='!w-[150px]' />
             </Link>
             <div className="flex flex-wrap items-start sm:items-center justify-between my-8 mx-auto gap-3 sm:gap-0 flex-col sm:flex-row w-[100%] sm:w-[60%] md:w-[60%] lg:w-[40%]">
-                <Link to='/' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>Home</Link>
-                <Link to='/about-us' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>About Us</Link>
-                <Link to='/services' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>Services</Link>
-                <Link to='/testimonials' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>What Clients Say?</Link>
-                <Link to='/blogs' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>Blogs</Link>
+                <Link to='/' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>{t("home")}</Link>
+                <Link to='/about-us' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`} onClick={handleScrollTop}>{t("aboutus")}</Link>
+                <Link to='/services' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>{t("service")}</Link>
+                <Link to='/testimonials' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}onClick={handleScrollTop}>{t("clientsay")}</Link>
+                <Link to='/blogs' className={`${textSizeNormal} text-[#B3B3B3] cursor-pointer`}>{t("blogs")}</Link>
             </div>
             <hr className='border-[#262626]' />
             <div className="flex flex-wrap my-10 justify-between items-start sm:items-center mx-auto gap-3 sm:gap-0 flex-col sm:flex-row w-[100%] sm:w-[60%] md:w-[70%] lg:w-[50%]">
@@ -52,8 +53,8 @@ const Footer = () => {
                     <a target="_blank" rel='noreferrer' aria-label='Twitter' href="https://www.twitter.com/innovazy1"><span className='span-social'><img className='w-[18px]' src={TwitterIcon} alt="Innovazy Twitter"></img></span></a>
                     <a target="_blank" rel='noreferrer' aria-label='LinkedIn' href="https://www.linkedin.com/company/innovazy-llc/"><span className='span-social'><img className='w-[18px]' src={LinkedinIcon} alt="Innovazy Linkedin"></img></span></a>
                 </div>
-                <p className={`${lightTextColor} leading-7 ${textSizeNormal}`}>© 2024 Innovazy LLC. All rights reserved</p>
-                <p className={`${lightTextColor} leading-7 ${textSizeNormal}`}><Link to='/privacy-policy'>Privacy Policy</Link>&nbsp; <span>|</span> &nbsp;<Link to='/terms-of-service'>Terms of Service</Link></p>
+                <p className={`${lightTextColor} leading-7 ${textSizeNormal}`}>{t("rightsReserved")}</p>
+                <p className={`${lightTextColor} leading-7 ${textSizeNormal}`}><Link to='/privacy-policy'>{t("privacyPolicy")}</Link>&nbsp; <span>|</span> &nbsp;<Link to='/terms-of-service'>{t("termsService")}</Link></p>
             </div>
         </div>
     );

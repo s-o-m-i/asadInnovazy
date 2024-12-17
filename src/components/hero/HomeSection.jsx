@@ -9,6 +9,8 @@ import "./hero.css";
 import { PopupModal } from "react-calendly";
 import { StaticImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'react-i18next';
+import { language } from 'gray-matter';
+import { useLanguage } from '../../context/LanguageContext';
 
 const HomeSection = () => {
     const { t } = useTranslation("home");
@@ -16,6 +18,7 @@ const HomeSection = () => {
     const handleClick = () => {
         setModal(true);
     };
+    const { language, toggleLanguage } = useLanguage();
 
     useEffect(() => {
         document.addEventListener("mousemove", parallax);
@@ -36,7 +39,6 @@ const HomeSection = () => {
             document.removeEventListener("mousemove", parallax);
         };
     }, []);
-
 
     return (
         <div className='homeSectionleftBlob'>
@@ -59,15 +61,15 @@ const HomeSection = () => {
             </a>
         </div>
     </div>
-    {/* <div> */}
+    <div className=' flex justify-center'>
 
     <img
         data-value="8"
-        className='object h-[90%] w-[90%] hidden md:block z-10 cursor-pointer transition-all ease-linear'
+        className={`object h-[90%] w-[90%] hidden md:block z-10 cursor-pointer transition-all ease-linear ${language === "en"?"":"mr-20"}`}
         src={require('../../assets/images/heroBall.svg').default}
         alt='Innovative ball'
         />
-        {/* </div> */}
+        </div>
 </div>
 
                     <div className='mt-7'>
