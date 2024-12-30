@@ -18,7 +18,8 @@ const HomeSection = () => {
     const handleClick = () => {
         setModal(true);
     };
-    const { language, toggleLanguage } = useLanguage();
+ const {i18n} =    useTranslation()
+ const language = i18n.language;
 
     useEffect(() => {
         document.addEventListener("mousemove", parallax);

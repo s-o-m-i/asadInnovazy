@@ -143,20 +143,11 @@ const {t} = useTranslation("home")
                                 </div>
                                 <div className='text-center'>
                                     <button aria-label='send mail to innovazy' 
-                                    //  onClick={() => {
-                                    //     sendMail(emailBody).then(res => {
-                                    //         setSuccess(true);
-                                    //         onMessageSend();
-                                    //     }).catch(err => {
-                                    //         setSuccess(false);
-                                    //         onMessageSend();
-                                    //         console.log(err);
-                                    //     });
-                                    // }}
+                                  
                                     >
                                          {recaptchaToken === "" &&(
                                             <ReCAPTCHA
-                                            sitekey="6LfCW3IqAAAAAJB2VJ43iJsYtwEJaNrYL2uaTHRf"
+                                            sitekey="6LcPJJ8qAAAAAB8RTHl37VytGQsWjMvo4k7TSvSh"
                                             onChange={handleRecaptchaChange}
                                             />)
                                         }

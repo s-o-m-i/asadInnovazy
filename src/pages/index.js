@@ -18,17 +18,14 @@ export default function Home() {
   const {i18n} = useTranslation()
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false); 
-    }, 5000);
+    setIsLoading(false)
 
-    return () => clearTimeout(timer); 
-  }, [isLoading]);
+  }, []);
   return <div className="mt-[140px] sm:mt-[120px]">
 
-    {isLoading?(
+ {isLoading?(
 <Loader/>
-    ):(
+    ):( 
 <>
 <MetaData title="Innovazy - Home" description="We offer innovative, creative and advanced IT solutions to Businesses and Industries around the Globe" keywords="Innovazy, IT Solutions" />
 <HomeSection />

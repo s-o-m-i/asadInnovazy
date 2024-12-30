@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const PrimaryButton = ({ image, btnText, imageAlt, classBtn, classText, fontAwesome }) => {
-    const languageContext = useLanguage();
-    const language = languageContext?.language || "en";
+const {i18n} =    useTranslation()
+const language = i18n.language;
     return (
         <div>
             <button className={`button-primary py-[12px] px-[5px] sm:px-[40px] relative  ${language === "en"?'mr-5':'ml-5'} overflow-hidden font-medium text-gray-600 bg-white border border-gray-100 rounded-lg shadow-inner group ${classBtn}`}>

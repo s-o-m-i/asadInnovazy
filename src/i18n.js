@@ -9,7 +9,7 @@ i18next
     debug: true,
     lng: "en", // Set default language
     fallbackLng: "en",
-      ns: ['home', 'about','common'],
+      ns: ['home', 'about','common','cloudComputing','graphicDesign','header','mobileDevelopment','qa','services','softwareDevelopment','team','testimonials','uiux','webDevelopment'],
   defaultNS: 'home',
     backend: {
     //   loadPath: "/locales/{{lng}}/translation.json", // Static folder serves from root
