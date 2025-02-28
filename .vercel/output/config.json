@@ -1,1 +1,0 @@
-{"version":3,"routes":[{"src":"^/\\.well-known(?:/.*)?$"},{"src":"^/((?:[^/]+/)*[^/\\.]+)$","headers":{"Location":"/$1/"},"status":308},{"src":"^/((?:[^/]+/)*[^/]+\\.\\w+)/$","headers":{"Location":"/$1"},"status":308},{"handle":"filesystem"},{"handle":"error"},{"status":404,"src":"^(?!/api).*$","dest":"404.html"}]}
